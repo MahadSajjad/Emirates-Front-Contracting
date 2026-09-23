@@ -10,27 +10,27 @@ export const Footer = () => {
   const footerWhatsAppUrl = buildWhatsAppLink();
 
   return (
-    <footer className="bg-primary-950 text-white border-t border-white/10 pt-16 pb-12">
+    <footer className="bg-[#f8fafc] text-slate-800 border-t border-slate-200/90 pt-16 pb-12 w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Col 1: Brand & Positioning (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-primary-800 border border-cta/60 rounded-lg flex items-center justify-center text-cta font-mono font-bold text-base group-hover:bg-cta group-hover:text-black transition-colors shadow-md">
+              <div className="w-10 h-10 bg-primary-600 border border-primary-500 rounded-lg flex items-center justify-center text-white font-mono font-bold text-base group-hover:bg-primary-700 transition-colors shadow-sm">
                 EF
               </div>
               <div>
-                <span className="font-display font-extrabold text-lg uppercase tracking-tight text-white block">
+                <span className="font-display font-extrabold text-lg uppercase tracking-tight text-slate-900 block group-hover:text-primary-600 transition-colors">
                   Emirates Front
                 </span>
-                <span className="font-display text-xs font-medium text-cta tracking-wider block">
+                <span className="font-display text-xs font-semibold text-primary-700 tracking-wider block">
                   شركة واجهة الامارات للمقاولات
                 </span>
               </div>
             </Link>
 
-            <p className="text-white/70 text-sm leading-relaxed max-w-sm">
-              Riyadh-based general contracting delivering building envelopes, civil engineering, MEP infrastructure, and commercial fit-outs across Saudi Arabia.
+            <p className="text-slate-600 text-sm leading-relaxed max-w-sm">
+              Riyadh-based general contracting delivering building envelopes, civil engineering superstructures, electromechanical systems, and commercial fit-outs across Saudi Arabia.
             </p>
 
             <div className="pt-2">
@@ -48,32 +48,32 @@ export const Footer = () => {
 
           {/* Col 2: Navigation Links (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs font-bold text-cta uppercase tracking-widest">
+            <h4 className="font-mono text-xs font-bold text-primary-700 uppercase tracking-widest">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/" className="text-white/70 hover:text-cta transition-colors">
+                <Link to="/" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white/70 hover:text-cta transition-colors">
+                <Link to="/about" className="text-slate-600 hover:text-primary-600 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/70 hover:text-cta transition-colors">
+                <Link to="/services" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/sectors" className="text-white/70 hover:text-cta transition-colors">
+                <Link to="/sectors" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Sectors & Capabilities
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white/70 hover:text-cta transition-colors">
+                <Link to="/contact" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Contact & Map
                 </Link>
               </li>
@@ -82,7 +82,7 @@ export const Footer = () => {
 
           {/* Col 3: Core Scopes (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-xs font-bold text-cta uppercase tracking-widest">
+            <h4 className="font-mono text-xs font-bold text-primary-700 uppercase tracking-widest">
               Core Capabilities
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -90,7 +90,7 @@ export const Footer = () => {
                 <li key={cat.id}>
                   <Link
                     to={`/services#${cat.id}`}
-                    className="text-white/70 hover:text-white transition-colors flex items-center gap-1.5"
+                    className="text-slate-600 hover:text-primary-600 transition-colors flex items-center gap-1.5"
                   >
                     <span className="text-cta text-xs">›</span>
                     <span>{cat.name}</span>
@@ -102,10 +102,10 @@ export const Footer = () => {
 
           {/* Col 4: Riyadh Contact & Direct Lines (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-xs font-bold text-cta uppercase tracking-widest">
+            <h4 className="font-mono text-xs font-bold text-primary-700 uppercase tracking-widest">
               Riyadh Head Office
             </h4>
-            <div className="space-y-3 text-sm text-white/75">
+            <div className="space-y-3 text-sm text-slate-700">
               <div className="flex items-start gap-2.5">
                 <FaMapMarkerAlt className="w-4 h-4 text-cta shrink-0 mt-1" />
                 <span>Riyadh, Kingdom of Saudi Arabia</span>
@@ -115,7 +115,7 @@ export const Footer = () => {
                 <FaPhoneAlt className="w-4 h-4 text-cta shrink-0" />
                 <a
                   href={`tel:${siteConfig.phone.number}`}
-                  className="hover:text-cta transition-colors font-mono"
+                  className="hover:text-primary-600 transition-colors font-mono"
                 >
                   {siteConfig.phone.display}
                 </a>
@@ -125,13 +125,13 @@ export const Footer = () => {
                 <FaEnvelope className="w-4 h-4 text-cta shrink-0" />
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="hover:text-cta transition-colors break-all"
+                  className="hover:text-primary-600 transition-colors break-all"
                 >
                   {siteConfig.email}
                 </a>
               </div>
 
-              <div className="pt-1 text-xs text-white/50 font-mono">
+              <div className="pt-1 text-xs text-slate-500 font-mono">
                 {siteConfig.workingHours}
               </div>
             </div>
@@ -139,11 +139,11 @@ export const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {currentYear} {siteConfig.name} ({siteConfig.nameAr}). All rights reserved.
           </div>
-          <div className="flex items-center gap-6 font-mono text-[11px] text-white/40">
+          <div className="flex items-center gap-6 font-mono text-[11px] text-slate-500">
             <span>Riyadh · Kingdom of Saudi Arabia</span>
           </div>
         </div>

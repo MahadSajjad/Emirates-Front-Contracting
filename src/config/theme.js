@@ -5,20 +5,20 @@
 
 export const theme = {
   colors: {
-    // Primary brand palette (Light Blue / Azure architectural tone)
+    // Primary brand palette (Light Blue #0d6efd architectural tone)
     primary: {
-      DEFAULT: '#0284c7', // Vibrant architectural light blue
-      50: '#f0f9ff',      // Clean cloud white-blue
-      100: '#e0f2fe',     // Light sky tint
-      200: '#bae6fd',
-      300: '#7dd3fc',
-      400: '#38bdf8',     // Bright sky blue
-      500: '#0ea5e9',     // Vivid light blue
-      600: '#0284c7',     // Main Light Blue primary
-      700: '#0369a1',     // Deep azure
-      800: '#075985',     // Navy-azure
-      900: '#0c4a6e',     // Dark slate-azure
-      950: '#082f49',     // Deepest slate-navy base
+      DEFAULT: '#0d6efd', // Vibrant professional light blue
+      50: '#edf5ff',      // Soft ice blue tint
+      100: '#dbeafe',     // Crisp sky tint
+      200: '#bfdbfe',
+      300: '#93c5fd',
+      400: '#60a5fa',     // Bright light blue
+      500: '#3b82f6',
+      600: '#0d6efd',     // Main Light Blue primary #0d6efd
+      700: '#0b5ed7',     // Deep sapphire blue
+      800: '#0a4ebd',     // Prestigious navy-blue
+      900: '#083b8e',     // Dark royal base
+      950: '#052559',     // Deepest corporate navy
     },
     // Slate text tones for crisp contrast on light backgrounds
     slate: {

@@ -4,19 +4,25 @@
 
 @layer base {
   :root {
-    --color-primary: #0e72ff;
-    --color-cta: #fca311;
-    --color-alabaster: #f1f4f8;
+    --color-primary: #0d6efd;
+    --color-cta: #f59e0b;
+    --color-alabaster: #f8fafc;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   body {
-    @apply bg-[#f8fafc] text-primary font-body overflow-x-hidden;
+    @apply bg-[#f8fafc] text-slate-800 font-body;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   /* Accessible focus rings */
@@ -90,16 +96,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #183054;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #335384;
+  background: #93c5fd;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fca311;
+  background: #0d6efd;
 }
 
 /* Reduced motion support */
