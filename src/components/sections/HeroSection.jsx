@@ -8,7 +8,7 @@ export const HeroSection = () => {
   const heroWhatsAppUrl = buildWhatsAppLink();
 
   return (
-    <section className="relative min-h-[94vh] flex items-center bg-slate-950 text-white overflow-hidden w-full max-w-full">
+    <section className="relative min-h-[94vh] flex items-center bg-primary-900/90 text-white overflow-hidden w-full max-w-full">
       {/* Background with construction photography + Light Blue Ambient Lighting */}
       <div className="absolute inset-0 z-0">
         <div
@@ -18,8 +18,8 @@ export const HeroSection = () => {
           }}
         />
         {/* Modern Light Blue & Slate radial glow */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-primary-950/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-600/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/90 to-primary-950/95" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/25 via-transparent to-transparent" />
         {/* Diagonal steel truss architectural pattern */}
         <div className="absolute inset-0 bg-steel-truss opacity-30 pointer-events-none" />
       </div>
