@@ -17,11 +17,12 @@ export const CraneLiftSection = ({
     offset: ["start end", "center center"],
   });
 
-  // Mathematically locked hoisting animation:
-  // As the user scrolls, the hoist cables reel in (shorten by 150px)
-  // lifting the hook block, rigging slings, and structural card upward by exactly 150px!
-  const liftY = useTransform(scrollYProgress, [0, 0.5, 1], [150, 60, 0]);
-  const cableHeight = useTransform(liftY, [150, 0], [215, 65]);
+  // Physically linked cable shortening and constant height compensation:
+  // As the user scrolls, the hoist cables shorten from 150px to 45px.
+  // The hook block, slings, and card naturally rise 105px in direct physical flow.
+  // The bottom spacer expands from 0px to 105px, keeping total section height strictly constant!
+  const cableHeight = useTransform(scrollYProgress, [0, 1], [150, 45]);
+  const bottomSpacer = useTransform(scrollYProgress, [0, 1], [0, 105]);
   const hookGlow = useTransform(scrollYProgress, [0, 0.85, 1], [0.4, 0.8, 1]);
 
   return (
@@ -115,15 +116,14 @@ export const CraneLiftSection = ({
         </div>
 
         {/* ========================================================================= */}
-        {/* 2. ATTACHED HORIZONTAL BOOM (DEAD-STRAIGHT PARALLEL RAILS AT FIXED Y)     */}
+        {/* 2. HEAVY INDUSTRIAL WORKING BOOM (MASSIVE LATTICE TRUSS WITH HEAVY CHORDS)*/}
         {/* Physically connected at left-0 to the vertical mast, shooting dead-straight */}
-        {/* across the section with zero curve or distortion!                         */}
         {/* ========================================================================= */}
-        <div className="relative w-full z-20 pointer-events-none mb-1">
-          <div className="w-full h-20 relative">
+        <div className="hidden md:block relative w-full z-20 pointer-events-none mb-1">
+          <div className="w-full h-28 sm:h-32 lg:h-36 relative">
             <svg
               className="w-full h-full overflow-visible"
-              viewBox="0 0 1400 80"
+              viewBox="0 0 1400 110"
               preserveAspectRatio="xMinYMid meet"
               fill="none"
             >
@@ -145,65 +145,82 @@ export const CraneLiftSection = ({
               {/* Center at x=40 (the exact coordinates of the left mast!)      */}
               {/* ------------------------------------------------------------- */}
               {/* Turntable Bearing Ring */}
-              <rect x="12" y="52" width="56" height="12" fill="#0f172a" stroke="#f59e0b" strokeWidth="2.5" rx="2" />
-              <rect x="16" y="56" width="48" height="4" fill="url(#crane-hazard)" />
+              <rect x="10" y="74" width="60" height="16" fill="#0f172a" stroke="#f59e0b" strokeWidth="3" rx="2" />
+              <rect x="14" y="78" width="52" height="8" fill="url(#crane-hazard)" />
 
-              {/* Triangular A-Frame Apex directly above the mast */}
-              <polygon points="14,52 40,8 66,52" fill="#0f172a" stroke="#f59e0b" strokeWidth="3" />
-              <line x1="40" y1="8" x2="40" y2="52" stroke="#f59e0b" strokeWidth="2" strokeDasharray="3 3" />
-              <circle cx="40" cy="8" r="3.5" fill="#ef4444" className="animate-ping" />
+              {/* Heavy A-Frame Tower Apex directly above mast */}
+              <polygon points="10,74 40,6 70,74" fill="#0f172a" stroke="#f59e0b" strokeWidth="4.5" />
+              <line x1="40" y1="6" x2="40" y2="74" stroke="#f59e0b" strokeWidth="3" strokeDasharray="4 4" />
+              <circle cx="40" cy="6" r="5" fill="#ef4444" className="animate-ping" />
 
-              {/* Counter-Jib projecting leftwards with counterweight slabs */}
-              <line x1="0" y1="42" x2="40" y2="42" stroke="#0f172a" strokeWidth="4" />
-              <line x1="0" y1="58" x2="40" y2="58" stroke="#0f172a" strokeWidth="4" />
-              <rect x="0" y="34" width="34" height="26" fill="#1e293b" stroke="#0f172a" strokeWidth="1.5" rx="1" />
-              <text x="3" y="50" fill="#fbbf24" fontSize="7" fontFamily="monospace" fontWeight="bold">
-                18.5T
+              {/* Heavy Counter-Jib projecting left with 32.5T Ballast Blocks */}
+              <line x1="0" y1="24" x2="40" y2="24" stroke="#0f172a" strokeWidth="10" />
+              <line x1="0" y1="84" x2="40" y2="84" stroke="#0f172a" strokeWidth="12" />
+              <rect x="0" y="16" width="38" height="68" fill="#1e293b" stroke="#0f172a" strokeWidth="3" rx="2" />
+              <rect x="2" y="20" width="34" height="12" fill="url(#crane-hazard)" />
+              <text x="3" y="56" fill="#fbbf24" fontSize="9" fontFamily="monospace" fontWeight="black">
+                32.5T
               </text>
-              <line x1="40" y1="8" x2="4" y2="34" stroke="#475569" strokeWidth="2.5" />
+              <line x1="40" y1="6" x2="4" y2="16" stroke="#475569" strokeWidth="4" />
 
-              {/* Modern Operator Cabin directly attached next to slewing ring */}
-              <rect x="68" y="34" width="34" height="26" fill="#0f172a" stroke="#f59e0b" strokeWidth="2" rx="4" />
-              <path d="M 82 36 L 100 36 Q 101 46 100 58 L 82 58 Z" fill="url(#cab-glass)" stroke="#38bdf8" strokeWidth="1" />
-              <circle cx="88" cy="44" r="2.5" fill="#0f172a" />
-              <rect x="86" y="48" width="5" height="7" fill="#0f172a" rx="1" />
-              <line x1="66" y1="62" x2="106" y2="62" stroke="#f59e0b" strokeWidth="3" />
-              <line x1="70" y1="52" x2="106" y2="52" stroke="#f59e0b" strokeWidth="1.5" />
+              {/* Modern Liebherr Operator Cabin directly next to slewing ring */}
+              <rect x="70" y="20" width="42" height="42" fill="#0f172a" stroke="#f59e0b" strokeWidth="3" rx="4" />
+              <path d="M 86 22 L 110 22 Q 111 40 110 60 L 86 60 Z" fill="url(#cab-glass)" stroke="#38bdf8" strokeWidth="2" />
+              <circle cx="96" cy="36" r="3.5" fill="#0f172a" />
+              <rect x="94" y="44" width="7" height="10" fill="#0f172a" rx="1" />
+              <line x1="68" y1="70" x2="114" y2="70" stroke="#f59e0b" strokeWidth="4" />
 
               {/* ------------------------------------------------------------- */}
-              {/* B. DEAD-STRAIGHT HORIZONTAL WORKING BOOM                      */}
-              {/* Both top and bottom chords are at EXACT constant Y values:    */}
-              {/* Top rail: y = 42, Bottom rail: y = 58 across the entire span! */}
+              {/* B. ULTRA-HEAVY WORKING BOOM (DEEP 60PX HEAVY TRUSS CHORDS)    */}
               {/* ------------------------------------------------------------- */}
-              <line x1="40" y1="42" x2="1390" y2="42" stroke="#0f172a" strokeWidth="4" strokeLinecap="round" />
-              <line x1="40" y1="58" x2="1390" y2="58" stroke="#0f172a" strokeWidth="4" strokeLinecap="round" />
+              {/* Top Main Chord (Heavy Steel Pipe with dual wall visual) */}
+              <line x1="40" y1="24" x2="1390" y2="24" stroke="#0f172a" strokeWidth="12" strokeLinecap="round" />
+              <line x1="40" y1="24" x2="1390" y2="24" stroke="#f59e0b" strokeWidth="4" strokeLinecap="round" />
 
-              {/* Perfectly Level Triangular Lattice Webbing */}
+              {/* Internal Mid-Height Reinforcing Chord */}
+              <line x1="40" y1="54" x2="1390" y2="54" stroke="#d97706" strokeWidth="3.5" strokeDasharray="12 4" />
+
+              {/* Bottom Main Chord / Heavy Flanged Trolley Runway Track */}
+              <line x1="40" y1="84" x2="1390" y2="84" stroke="#0f172a" strokeWidth="14" strokeLinecap="round" />
+              <line x1="40" y1="84" x2="1390" y2="84" stroke="#fbbf24" strokeWidth="6" strokeLinecap="round" />
+              {/* Lower Runway Lip */}
+              <line x1="40" y1="90" x2="1390" y2="90" stroke="#334155" strokeWidth="3" strokeLinecap="round" />
+
+              {/* Heavy Lattice Webbing (Diagonal Warren Struts + Vertical Compression Posts) */}
               {Array.from({ length: 42 }, (_, i) => {
                 const x1 = 44 + i * 32;
                 const x2 = x1 + 32;
                 return (
                   <g key={i}>
+                    {/* Heavy Diagonal Struts */}
                     <line
                       x1={x1}
-                      y1={i % 2 === 0 ? 42 : 58}
+                      y1={i % 2 === 0 ? 24 : 84}
                       x2={x2}
-                      y2={i % 2 === 0 ? 58 : 42}
+                      y2={i % 2 === 0 ? 84 : 24}
                       stroke="#f59e0b"
-                      strokeWidth="2.2"
+                      strokeWidth="5.5"
                     />
-                    <line x1={x1} y1="42" x2={x1} y2="58" stroke="#d97706" strokeWidth="1.4" />
+                    {/* Vertical Heavy Compression Post */}
+                    <line x1={x1} y1="24" x2={x1} y2="84" stroke="#0f172a" strokeWidth="4" />
+                    <line x1={x1} y1="24" x2={x1} y2="84" stroke="#d97706" strokeWidth="2" />
+
+                    {/* Industrial Heavy Connection Gusset Plates */}
+                    <circle cx={x1} cy="24" r="5.5" fill="#0f172a" />
+                    <circle cx={x1} cy="24" r="2.5" fill="#fbbf24" />
+                    <circle cx={x1} cy="84" r="5.5" fill="#0f172a" />
+                    <circle cx={x1} cy="84" r="2.5" fill="#fbbf24" />
                   </g>
                 );
               })}
 
-              {/* Steel Pendant Guy-Wires from Apex to Boom */}
-              <line x1="40" y1="8" x2="480" y2="42" stroke="#475569" strokeWidth="2.5" strokeDasharray="6 3" />
-              <line x1="40" y1="8" x2="940" y2="42" stroke="#475569" strokeWidth="2" strokeDasharray="8 4" />
+              {/* Heavy High-Tensile Steel Guy-Wires from Apex to Boom */}
+              <line x1="40" y1="6" x2="450" y2="24" stroke="#334155" strokeWidth="4" />
+              <line x1="40" y1="6" x2="900" y2="24" stroke="#475569" strokeWidth="3.5" />
 
-              {/* Boom Tip with Red Aviation Warning Flasher */}
-              <polygon points="1390,42 1400,50 1390,58" fill="#f59e0b" stroke="#0f172a" strokeWidth="2" />
-              <circle cx="1400" cy="50" r="3.5" fill="#ef4444" className="animate-ping" />
+              {/* Boom Tip with Aviation Warning Flasher */}
+              <polygon points="1388,24 1400,54 1388,84" fill="#f59e0b" stroke="#0f172a" strokeWidth="4" />
+              <circle cx="1400" cy="54" r="5" fill="#ef4444" className="animate-ping" />
             </svg>
           </div>
         </div>
@@ -223,8 +240,6 @@ export const CraneLiftSection = ({
               </span>
             </div>
             <div className="hidden sm:flex items-center gap-5 text-slate-500 text-[11px]">
-              <span>MAST: 72.0M (FLUSH-LEFT)</span>
-              <span>BOOM: 68.0M (LEVEL_ATTACHED)</span>
               <span>CAPACITY: 12,500 KG</span>
               <m.span
                 style={{ opacity: hookGlow }}
@@ -236,57 +251,62 @@ export const CraneLiftSection = ({
             </div>
           </div>
 
-          {/* Centralized Hoisting Column: Trolley & Vertical Cables */}
-          <div className="w-full max-w-5xl mx-auto flex flex-col items-center pointer-events-none">
-            {/* The Motorized Trolley (Positioned on the boom bottom rail, centered over card) */}
-            <div className="w-16 h-4 bg-slate-900 border-2 border-slate-950 rounded-sm flex flex-col items-center justify-between shadow-md relative z-30">
+          {/* Centralized Hoisting Column: Trolley -> Cables -> Hook Block -> Slings -> Card */}
+          <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
+            {/* 1. Heavy Motorized Trolley on Boom Bottom Rail */}
+            <div className="w-20 h-5 bg-slate-900 border-2 border-slate-950 rounded flex flex-col items-center justify-between shadow-xl relative z-30 pointer-events-none">
               {/* Hazard Stripes Band on Trolley */}
               <div
-                className="w-full h-1.5 rounded-xs"
+                className="w-full h-2 rounded-t-sm"
                 style={{
                   backgroundImage:
-                    "repeating-linear-gradient(45deg, #f59e0b, #f59e0b 4px, #0f172a 4px, #0f172a 8px)",
+                    "repeating-linear-gradient(45deg, #f59e0b, #f59e0b 5px, #0f172a 5px, #0f172a 10px)",
                 }}
               />
               {/* Cable Sheaves Outlets */}
-              <div className="w-full flex justify-between px-3 -mb-1">
-                <div className="w-2 h-2 rounded-full bg-slate-400 border border-slate-900" />
-                <div className="w-2 h-2 rounded-full bg-slate-400 border border-slate-900" />
+              <div className="w-10 flex justify-between px-1 -mb-1.5">
+                <div className="w-3 h-3 rounded-full bg-slate-400 border border-slate-900 flex items-center justify-center">
+                  <div className="w-1 h-1 rounded-full bg-slate-950" />
+                </div>
+                <div className="w-3 h-3 rounded-full bg-slate-400 border border-slate-900 flex items-center justify-center">
+                  <div className="w-1 h-1 rounded-full bg-slate-950" />
+                </div>
               </div>
             </div>
 
-            {/* 100% DEAD-STRAIGHT VERTICAL HOIST CABLES */}
-            {/* These cables drop straight down from the trolley sheaves into the hook block */}
+            {/* 2. 100% DEAD-STRAIGHT VERTICAL HOIST CABLES */}
+            {/* Shortens smoothly on scroll as the card is hoisted up */}
             <m.div
               style={{ height: cableHeight }}
-              className="w-8 flex justify-between px-1 items-stretch pointer-events-none"
+              className="w-10 flex justify-between px-1.5 items-stretch pointer-events-none relative z-20"
             >
-              <div className="w-[3px] bg-slate-900 shadow-sm" />
-              <div className="w-[3px] bg-slate-900 shadow-sm" />
+              <div className="w-[3.5px] bg-slate-900 shadow-sm" />
+              <div className="w-[3.5px] bg-slate-900 shadow-sm" />
             </m.div>
-          </div>
 
-          {/* ========================================================================= */}
-          {/* HOISTED ASSEMBLY (HOOK + SLINGS + CARD MOVES UP TOGETHER IN SYNC)         */}
-          {/* ========================================================================= */}
-          <m.div
-            style={{
-              y: liftY,
-            }}
-            className="w-full max-w-5xl mx-auto relative z-10 transition-shadow duration-300"
-          >
-            {/* Heavy-Duty German / Liebherr Style Crane Hook Block */}
-            <div className="flex flex-col items-center pointer-events-none -mt-1 mb-1">
-              {/* Dual-Sheave Block with Safety Hazard Warning Stripes */}
-              <div className="w-16 h-11 rounded-md bg-slate-900 border-2 border-slate-950 flex flex-col items-center justify-between p-1 shadow-2xl overflow-hidden relative">
+            {/* 3. HEAVY-DUTY LIEBHERR HOOK BLOCK (DIRECTLY CONNECTED TO CABLES) */}
+            {/* Overlaps cable ends by 1px so cables physically enter the sheaves with 0 gap */}
+            <div className="flex flex-col items-center pointer-events-none relative z-20 -mt-1 mb-1">
+              {/* Top Cable Entry Pulleys directly receiving the cables */}
+              <div className="w-10 flex justify-between px-1.5 -mb-1 relative z-30">
+                <div className="w-3 h-3 rounded-full bg-slate-300 border-2 border-slate-900 flex items-center justify-center shadow">
+                  <div className="w-1 h-1 rounded-full bg-slate-950" />
+                </div>
+                <div className="w-3 h-3 rounded-full bg-slate-300 border-2 border-slate-900 flex items-center justify-center shadow">
+                  <div className="w-1 h-1 rounded-full bg-slate-950" />
+                </div>
+              </div>
+
+              {/* Main Dual-Sheave Hook Block Body with Hazard Stripes */}
+              <div className="w-18 h-12 rounded-lg bg-slate-900 border-2 border-slate-950 flex flex-col items-center justify-between p-1.5 shadow-2xl relative">
                 <div
-                  className="w-full h-3.5 rounded-sm shadow-inner"
+                  className="w-full h-4 rounded shadow-inner"
                   style={{
                     backgroundImage:
                       "repeating-linear-gradient(45deg, #f59e0b, #f59e0b 6px, #0f172a 6px, #0f172a 12px)",
                   }}
                 />
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   <div className="w-3.5 h-3.5 rounded-full bg-slate-400 border border-slate-800 flex items-center justify-center">
                     <div className="w-1.5 h-1.5 rounded-full bg-slate-900" />
                   </div>
@@ -296,8 +316,8 @@ export const CraneLiftSection = ({
                 </div>
               </div>
 
-              {/* Massive Forged Alloy Steel Swivel Crane Hook with Spring Safety Latch */}
-              <svg width="36" height="44" viewBox="0 0 34 42" fill="none" className="-mt-1 drop-shadow-xl">
+              {/* Massive Forged Alloy Steel Swivel Crane Hook with Safety Latch */}
+              <svg width="40" height="48" viewBox="0 0 34 42" fill="none" className="-mt-1 drop-shadow-2xl">
                 <rect x="14" y="0" width="6" height="8" fill="#1e293b" />
                 <path
                   d="M 17 8 C 17 18, 6 20, 6 27 C 6 34, 20 38, 26 30 C 29 26, 28 20, 24 19"
@@ -316,13 +336,12 @@ export const CraneLiftSection = ({
               </svg>
 
               {/* Perfectly Straight, Symmetrical Rigging Wire Slings */}
-              {/* Spreading symmetrically from hook eye (x=350) to left lug (x=60) & right lug (x=640) */}
               <div className="w-full max-w-3xl h-10 relative mt-0.5">
                 <svg viewBox="0 0 700 40" className="w-full h-full" fill="none">
-                  {/* Left rigging wire: dead straight */}
+                  {/* Left rigging wire */}
                   <line x1="350" y1="2" x2="60" y2="38" stroke="#0f172a" strokeWidth="3.5" strokeLinecap="round" />
                   <line x1="350" y1="2" x2="60" y2="38" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="6 3" />
-                  {/* Right rigging wire: dead straight */}
+                  {/* Right rigging wire */}
                   <line x1="350" y1="2" x2="640" y2="38" stroke="#0f172a" strokeWidth="3.5" strokeLinecap="round" />
                   <line x1="350" y1="2" x2="640" y2="38" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="6 3" />
                   {/* High-Tensile Certified Shackles at attachment points */}
@@ -332,20 +351,22 @@ export const CraneLiftSection = ({
               </div>
             </div>
 
-            {/* Symmetrical Structural Rigging Mounts on Top Edge of Card */}
-            <div className="flex justify-between px-3 sm:px-14 -mb-2 relative z-20 pointer-events-none">
-              <div className="px-2 sm:px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1 sm:gap-1.5">
-                <span>⚓</span>
-                <span>LUG_L<span className="hidden sm:inline">EFT // RIG_LOCKED</span></span>
+            {/* 4. Symmetrical Structural Rigging Mounts & Main Section Card */}
+            <div className="w-full relative z-10 transition-shadow duration-300">
+              {/* Symmetrical Structural Rigging Mounts on Top Edge of Card */}
+              <div className="flex justify-between px-3 sm:px-14 -mb-2 relative z-20 pointer-events-none">
+                <div className="px-2 sm:px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1 sm:gap-1.5">
+                  <span>⚓</span>
+                  <span>LUG_L<span className="hidden sm:inline">EFT // RIG_LOCKED</span></span>
+                </div>
+                <div className="px-2 sm:px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1 sm:gap-1.5">
+                  <span>⚓</span>
+                  <span>LUG_R<span className="hidden sm:inline">IGHT // RIG_LOCKED</span></span>
+                </div>
               </div>
-              <div className="px-2 sm:px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1 sm:gap-1.5">
-                <span>⚓</span>
-                <span>LUG_R<span className="hidden sm:inline">IGHT // RIG_LOCKED</span></span>
-              </div>
-            </div>
 
-            {/* Main Section Card: Crisp White Structural Card */}
-            <div className="relative rounded-2xl bg-white border-2 border-slate-200/90 p-5 sm:p-10 lg:p-14 shadow-2xl backdrop-blur-xl">
+              {/* Main Section Card: Crisp White Structural Card */}
+              <div className="relative rounded-2xl bg-white border-2 border-slate-200/90 p-5 sm:p-10 lg:p-14 shadow-2xl backdrop-blur-xl">
               {/* Technical Watermark */}
               <div className="hidden md:block absolute top-4 right-6 font-mono text-xs text-primary-600/40 uppercase tracking-widest pointer-events-none">
                 [SECTION_MODULE_01 // ACTIVE_LIFT]
@@ -422,7 +443,11 @@ export const CraneLiftSection = ({
                 </div>
               </div>
             </div>
-          </m.div>
+          </div>
+
+            {/* 5. Compensatory Bottom Spacer: Maintains strictly constant section height */}
+            <m.div style={{ height: bottomSpacer }} className="w-full pointer-events-none" aria-hidden="true" />
+          </div>
         </div>
       </section>
     </LazyMotion>

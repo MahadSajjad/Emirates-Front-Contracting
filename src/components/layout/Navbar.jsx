@@ -42,17 +42,17 @@ export const Navbar = () => {
     <>
       <header
         className={clsx(
-          "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-200 border-b border-white/10",
           isScrolled
-            ? "bg-primary-900/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
-            : "bg-primary py-4 border-b border-white/10"
+            ? "bg-primary-900/95 backdrop-blur-md shadow-lg"
+            : "bg-primary"
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Link
             to="/"
-            className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta rounded p-1"
+            className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta rounded p-1 shrink-0"
           >
             <div className="w-10 h-10 bg-primary-800 border border-cta/60 rounded-lg flex items-center justify-center text-cta font-mono font-bold text-base group-hover:bg-cta group-hover:text-black transition-all shadow-md group-hover:rotate-3">
               EF
@@ -150,8 +150,9 @@ export const Navbar = () => {
             })}
           </nav>
 
-          {/* Right Action: Phone + WhatsApp CTA */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Right Action: Phone + WhatsApp CTA + Tablet/Mobile Hamburger */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Direct Phone (Desktop xl only) */}
             <a
               href={`tel:${siteConfig.phone.number}`}
               className="hidden xl:flex items-center gap-2 text-xs font-mono text-white/80 hover:text-cta transition-colors px-2 py-1"
@@ -160,43 +161,38 @@ export const Navbar = () => {
               <span>{siteConfig.phone.display}</span>
             </a>
 
-            <Button
-              href={quickWhatsAppUrl}
-              variant="cta"
-              size="sm"
-              icon={FaWhatsapp}
-              iconPosition="left"
-              className="shadow-glow-cta font-bold"
-            >
-              WhatsApp Us
-            </Button>
-          </div>
+            {/* WhatsApp CTA (Visible on Tablet and Desktop, hidden on Mobile) */}
+            <div className="hidden sm:block">
+              <Button
+                href={quickWhatsAppUrl}
+                variant="cta"
+                size="sm"
+                icon={FaWhatsapp}
+                iconPosition="left"
+                className="shadow-glow-cta font-bold"
+              >
+                WhatsApp Us
+              </Button>
+            </div>
 
-          {/* Mobile Actions: WhatsApp Icon Button + Hamburger Menu */}
-          <div className="flex sm:hidden items-center gap-2">
-            <a
-              href={quickWhatsAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-9 h-9 rounded-lg bg-[#25D366] text-white flex items-center justify-center shadow-md hover:bg-[#20ba59] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
-              aria-label="Direct WhatsApp Contact"
-            >
-              <FaWhatsapp className="w-5 h-5" />
-            </a>
+            {/* Menu Button (Visible on Mobile AND Tablet: lg:hidden) */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 rounded-lg bg-primary-800 text-white hover:text-cta border border-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta"
-              aria-label="Open mobile navigation"
+              className="lg:hidden p-2 rounded-lg bg-primary-800 text-white hover:text-cta border border-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta flex items-center gap-1.5"
+              aria-label="Open navigation menu"
             >
               <FaBars className="w-5 h-5" />
+              <span className="hidden sm:inline text-xs font-mono font-bold uppercase tracking-wider text-white/80">
+                Menu
+              </span>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Natural document flow spacer for fixed header */}
-      <div className="h-[74px] sm:h-[76px] w-full shrink-0" aria-hidden="true" />
+      {/* Natural document flow spacer for fixed header (strictly constant 72px) */}
+      <div className="h-[72px] w-full shrink-0" aria-hidden="true" />
 
       {/* Mobile Menu Drawer (Sheet) */}
       <Sheet
