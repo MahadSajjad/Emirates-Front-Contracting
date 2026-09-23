@@ -102,15 +102,15 @@ export const ContactForm = ({ defaultService = "" }) => {
   };
 
   return (
-    <div className="bg-white border border-primary/10 rounded p-6 sm:p-8 lg:p-10 shadow-lg">
-      <div className="mb-8 pb-6 border-b border-primary/10">
-        <span className="font-mono text-xs font-bold text-cta uppercase tracking-widest block mb-1">
+    <div className="bg-white border border-slate-200 rounded p-6 sm:p-8 lg:p-10 shadow-lg">
+      <div className="mb-8 pb-6 border-b border-slate-200">
+        <span className="font-mono text-xs font-bold text-primary-600 uppercase tracking-widest block mb-1">
           Direct Lead Dispatch
         </span>
-        <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight text-primary">
+        <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight text-slate-900">
           Request Project Consultation
         </h3>
-        <p className="text-muted-dark text-sm sm:text-base mt-2">
+        <p className="text-slate-600 text-sm sm:text-base mt-2">
           Fill in your project specifications to initiate an immediate WhatsApp engineering consultation or email dispatch.
         </p>
       </div>
@@ -135,9 +135,9 @@ export const ContactForm = ({ defaultService = "" }) => {
           <div>
             <label
               htmlFor="name"
-              className="block font-mono text-xs font-bold uppercase tracking-wider text-primary mb-2"
+              className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-900 mb-2"
             >
-              Full Name / Company Name <span className="text-cta">*</span>
+              Full Name / Company Name <span className="text-primary-600">*</span>
             </label>
             <input
               id="name"
@@ -147,8 +147,8 @@ export const ContactForm = ({ defaultService = "" }) => {
               placeholder="e.g. Eng. Abdullah Al-Otaibi"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-alabaster/30 border rounded text-sm text-primary transition-colors focus:bg-white ${
-                errors.name ? "border-rose-500 ring-1 ring-rose-500" : "border-primary/20 focus:border-cta"
+              className={`w-full px-4 py-3 bg-slate-50 border rounded text-sm text-slate-900 transition-colors focus:bg-white focus:outline-none ${
+                errors.name ? "border-rose-500 ring-1 ring-rose-500" : "border-slate-300 focus:border-primary-400 focus:ring-1 focus:ring-primary-400"
               }`}
             />
             {errors.name && (
@@ -159,9 +159,9 @@ export const ContactForm = ({ defaultService = "" }) => {
           <div>
             <label
               htmlFor="phone"
-              className="block font-mono text-xs font-bold uppercase tracking-wider text-primary mb-2"
+              className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-900 mb-2"
             >
-              Phone / Mobile (WhatsApp) <span className="text-cta">*</span>
+              Phone / Mobile (WhatsApp) <span className="text-primary-600">*</span>
             </label>
             <input
               id="phone"
@@ -171,8 +171,8 @@ export const ContactForm = ({ defaultService = "" }) => {
               placeholder="e.g. 059 014 6337"
               value={formData.phone}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-alabaster/30 border rounded text-sm text-primary transition-colors focus:bg-white ${
-                errors.phone ? "border-rose-500 ring-1 ring-rose-500" : "border-primary/20 focus:border-cta"
+              className={`w-full px-4 py-3 bg-slate-50 border rounded text-sm text-slate-900 transition-colors focus:bg-white focus:outline-none ${
+                errors.phone ? "border-rose-500 ring-1 ring-rose-500" : "border-slate-300 focus:border-primary-400 focus:ring-1 focus:ring-primary-400"
               }`}
             />
             {errors.phone && (
@@ -186,9 +186,9 @@ export const ContactForm = ({ defaultService = "" }) => {
           <div>
             <label
               htmlFor="email"
-              className="block font-mono text-xs font-bold uppercase tracking-wider text-primary mb-2"
+              className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-900 mb-2"
             >
-              Email Address <span className="text-muted text-[10px] font-normal">(Optional)</span>
+              Email Address <span className="text-slate-400 text-[10px] font-normal">(Optional)</span>
             </label>
             <input
               id="email"
@@ -197,8 +197,8 @@ export const ContactForm = ({ defaultService = "" }) => {
               placeholder="e.g. procurement@company.com"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-alabaster/30 border rounded text-sm text-primary transition-colors focus:bg-white ${
-                errors.email ? "border-rose-500 ring-1 ring-rose-500" : "border-primary/20 focus:border-cta"
+              className={`w-full px-4 py-3 bg-slate-50 border rounded text-sm text-slate-900 transition-colors focus:bg-white focus:outline-none ${
+                errors.email ? "border-rose-500 ring-1 ring-rose-500" : "border-slate-300 focus:border-primary-400 focus:ring-1 focus:ring-primary-400"
               }`}
             />
             {errors.email && (
@@ -209,7 +209,7 @@ export const ContactForm = ({ defaultService = "" }) => {
           <div>
             <label
               htmlFor="sector"
-              className="block font-mono text-xs font-bold uppercase tracking-wider text-primary mb-2"
+              className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-900 mb-2"
             >
               Target Sector
             </label>
@@ -218,7 +218,7 @@ export const ContactForm = ({ defaultService = "" }) => {
               name="sector"
               value={formData.sector}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-alabaster/30 border border-primary/20 rounded text-sm text-primary transition-colors focus:bg-white focus:border-cta"
+              className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded text-sm text-slate-900 transition-colors focus:bg-white focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400"
             >
               {sectors.map((sec) => (
                 <option key={sec.id} value={sec.title}>
@@ -234,7 +234,7 @@ export const ContactForm = ({ defaultService = "" }) => {
         <div>
           <label
             htmlFor="service"
-            className="block font-mono text-xs font-bold uppercase tracking-wider text-primary mb-2"
+            className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-900 mb-2"
           >
             Primary Scope of Interest
           </label>
@@ -243,7 +243,7 @@ export const ContactForm = ({ defaultService = "" }) => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-alabaster/30 border border-primary/20 rounded text-sm text-primary transition-colors focus:bg-white focus:border-cta"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded text-sm text-slate-900 transition-colors focus:bg-white focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400"
           >
             <option value="General Contracting Inquiry">General Contracting Inquiry (Full Scope)</option>
             <optgroup label="Building Envelope & Façade">
@@ -298,9 +298,9 @@ export const ContactForm = ({ defaultService = "" }) => {
         <div>
           <label
             htmlFor="message"
-            className="block font-mono text-xs font-bold uppercase tracking-wider text-primary mb-2"
+            className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-900 mb-2"
           >
-            Project Summary / Scope Details <span className="text-cta">*</span>
+            Project Summary / Scope Details <span className="text-primary-600">*</span>
           </label>
           <textarea
             id="message"
@@ -310,8 +310,8 @@ export const ContactForm = ({ defaultService = "" }) => {
             placeholder="Please outline the project location, approximate area (m²), structural requirements, or target timeline..."
             value={formData.message}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-alabaster/30 border rounded text-sm text-primary transition-colors focus:bg-white resize-y ${
-              errors.message ? "border-rose-500 ring-1 ring-rose-500" : "border-primary/20 focus:border-cta"
+            className={`w-full px-4 py-3 bg-slate-50 border rounded text-sm text-slate-900 transition-colors focus:bg-white focus:outline-none resize-y ${
+              errors.message ? "border-rose-500 ring-1 ring-rose-500" : "border-slate-300 focus:border-primary-400 focus:ring-1 focus:ring-primary-400"
             }`}
           />
           {errors.message && (

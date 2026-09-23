@@ -21,7 +21,7 @@ export const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-display font-semibold transition-all duration-200 uppercase tracking-wider rounded disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta focus-visible:ring-offset-2 active:scale-[0.98] select-none";
+    "inline-flex items-center justify-center font-display font-semibold transition-all duration-200 uppercase tracking-wider rounded disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 active:scale-[0.98] select-none";
 
   const sizeStyles = {
     sm: "text-xs px-3.5 py-2 gap-1.5",
@@ -31,19 +31,19 @@ export const Button = ({
 
   const variantStyles = {
     primary:
-      "bg-primary text-white hover:bg-primary-800 active:bg-primary-900 border border-transparent shadow-sm",
+      "bg-slate-950 text-white hover:bg-slate-800 active:bg-black border border-transparent shadow-sm font-bold",
     cta:
-      "bg-cta text-black hover:bg-cta-hover active:bg-cta-dark border border-transparent shadow-md hover:shadow-lg font-bold",
+      "bg-primary-400 text-slate-950 hover:bg-primary-300 active:bg-primary-500 border border-transparent shadow-md hover:shadow-lg font-bold",
     secondary:
-      "bg-alabaster text-primary hover:bg-alabaster-dark active:bg-alabaster border border-alabaster-dark/40",
+      "bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-100 border border-slate-200",
     outline:
-      "bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white",
+      "bg-transparent text-slate-900 border-2 border-slate-800 hover:bg-slate-900 hover:text-white",
     "outline-light":
       "bg-transparent text-white border border-white/40 hover:border-white hover:bg-white/10 text-white",
     "outline-cta":
-      "bg-transparent text-cta border border-cta hover:bg-cta hover:text-black",
+      "bg-transparent text-primary-400 border border-primary-400 hover:bg-primary-400 hover:text-slate-950",
     ghost:
-      "bg-transparent text-primary hover:bg-primary/10 border border-transparent",
+      "bg-transparent text-slate-900 hover:bg-slate-100 border border-transparent",
     "ghost-light":
       "bg-transparent text-white hover:bg-white/15 border border-transparent",
   };

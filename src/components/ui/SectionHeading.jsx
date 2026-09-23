@@ -17,14 +17,14 @@ export const SectionHeading = ({
 }) => {
   const isDark = theme === "dark";
 
-  // Helper to highlight a specific word in Safety Orange
+  // Plain title rendering without aggressive highlight colors
   const renderTitle = () => {
     if (!highlightWord || !title) return title;
 
     const parts = title.split(new RegExp(`(${highlightWord})`, "gi"));
     return parts.map((part, index) =>
       part.toLowerCase() === highlightWord.toLowerCase() ? (
-        <span key={index} className="text-cta">
+        <span key={index} className={isDark ? "text-white" : "text-slate-900"}>
           {part}
         </span>
       ) : (
@@ -43,7 +43,7 @@ export const SectionHeading = ({
     <Reveal direction="up" className={twMerge(clsx("flex flex-col mb-12 md:mb-16", alignClasses[align], maxWidth, className))}>
       {eyebrow && (
         <Eyebrow
-          variant={isDark ? "cta" : "cta"}
+          variant={isDark ? "light" : "primary"}
           className="mb-3"
         >
           {eyebrow}
@@ -54,7 +54,7 @@ export const SectionHeading = ({
         <h2
           className={clsx(
             "font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight uppercase leading-[1.1]",
-            isDark ? "text-white" : "text-primary"
+            isDark ? "text-white" : "text-slate-900"
           )}
         >
           {renderTitle()}
@@ -64,8 +64,8 @@ export const SectionHeading = ({
       {subtitle && (
         <p
           className={clsx(
-            "font-display text-lg sm:text-xl font-medium mt-2 tracking-normal",
-            isDark ? "text-alabaster/70" : "text-muted"
+            "font-display text-base sm:text-lg font-medium mt-2 tracking-normal",
+            isDark ? "text-slate-300" : "text-slate-600"
           )}
         >
           {subtitle}
@@ -75,8 +75,8 @@ export const SectionHeading = ({
       {description && (
         <p
           className={clsx(
-            "text-base sm:text-lg leading-relaxed mt-4",
-            isDark ? "text-alabaster/80" : "text-muted-dark"
+            "text-base sm:text-lg leading-relaxed mt-4 font-normal",
+            isDark ? "text-slate-300" : "text-slate-600"
           )}
         >
           {description}

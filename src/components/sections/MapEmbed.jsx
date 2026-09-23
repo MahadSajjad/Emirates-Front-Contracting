@@ -9,7 +9,7 @@ export const MapEmbed = ({
   const primaryLocation = siteConfig.locations[0];
 
   return (
-    <div className={`relative w-full overflow-hidden rounded border border-primary/15 shadow-md bg-primary-950 ${className}`}>
+    <div className={`relative w-full overflow-hidden rounded border border-slate-800 shadow-md bg-slate-950 ${className}`}>
       <iframe
         title={title}
         src={primaryLocation.mapEmbedSrc}
@@ -21,8 +21,8 @@ export const MapEmbed = ({
         referrerPolicy="no-referrer-when-downgrade"
         className="w-full h-full min-h-[350px] grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
       />
-      <div className="absolute bottom-3 left-3 bg-primary-900/90 text-white text-xs font-mono px-3 py-1.5 rounded border border-white/10 backdrop-blur-sm pointer-events-none">
-        <span className="text-cta mr-1.5">●</span>
+      <div className="absolute bottom-3 left-3 bg-slate-900/90 text-white text-xs font-mono px-3 py-1.5 rounded border border-white/10 backdrop-blur-sm pointer-events-none">
+        <span className="text-primary-400 mr-1.5">●</span>
         <span>Riyadh Office Coordinates</span>
       </div>
     </div>

@@ -30,8 +30,8 @@ export const Toast = ({
       icon: <FaExclamationCircle className="w-5 h-5 text-rose-400 shrink-0" />,
     },
     info: {
-      bg: "bg-primary-900 border-cta/50 text-white",
-      icon: <FaInfoCircle className="w-5 h-5 text-cta shrink-0" />,
+      bg: "bg-slate-900 border-primary-500/50 text-white",
+      icon: <FaInfoCircle className="w-5 h-5 text-primary-400 shrink-0" />,
     },
   };
 

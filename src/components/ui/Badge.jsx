@@ -10,12 +10,12 @@ export const Badge = ({
   ...props
 }) => {
   const variantStyles = {
-    default: "bg-primary-100 text-primary border border-primary/20",
-    cta: "bg-cta/15 text-black font-semibold border border-cta/30",
-    outline: "bg-transparent text-primary border border-primary/30",
-    dark: "bg-primary-800 text-white border border-white/20",
-    success: "bg-emerald-50 text-emerald-800 border border-emerald-300",
-    placeholder: "bg-amber-50 text-amber-900 border border-amber-300/80 font-mono",
+    default: "bg-slate-100 text-slate-800 border border-slate-200",
+    cta: "bg-primary-500/15 text-primary-400 font-semibold border border-primary-400/30",
+    outline: "bg-transparent text-slate-700 border border-slate-300",
+    dark: "bg-slate-900 text-white border border-slate-700",
+    success: "bg-slate-100 text-slate-800 border border-slate-300",
+    placeholder: "bg-slate-100 text-slate-700 border border-slate-300 font-mono",
   };
 
   const sizeStyles = {

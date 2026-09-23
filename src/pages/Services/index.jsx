@@ -51,15 +51,15 @@ export const ServicesPage = () => {
               backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=80')`,
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-primary-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl">
             <Reveal direction="up">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-500/15 border border-primary-400/30 backdrop-blur-md mb-6">
-                <span className="w-2 h-2 rounded-full bg-cta" />
-                <span className="font-mono text-xs font-semibold tracking-wider uppercase text-primary-200">
+                <span className="w-2 h-2 rounded-full bg-primary-400" />
+                <span className="font-mono text-xs font-semibold tracking-wider uppercase text-slate-300">
                   Services Taxonomy · Riyadh
                 </span>
               </div>
@@ -67,7 +67,7 @@ export const ServicesPage = () => {
               <h1 className="font-display text-4xl sm:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight mb-4">
                 SPECIALIZED SCOPES. <span className="text-primary-400">UNIFIED DELIVERY.</span>
               </h1>
-              <p className="font-display text-base sm:text-lg text-cta font-medium mb-6">
+              <p className="font-display text-base sm:text-lg text-slate-300 font-medium mb-6">
                 دليل خدمات ومجالات المقاولات العامة والإنشائية وأنظمة الواجهات
               </p>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
@@ -87,7 +87,7 @@ export const ServicesPage = () => {
               onClick={() => setActiveCategory("all")}
               className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold transition-all shrink-0 ${
                 activeCategory === "all"
-                  ? "bg-primary text-white shadow-md"
+                  ? "bg-slate-900 text-white shadow-md font-bold"
                   : "bg-slate-100 text-slate-700 hover:bg-slate-200"
               }`}
             >
@@ -101,7 +101,7 @@ export const ServicesPage = () => {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold transition-all shrink-0 flex items-center gap-1.5 ${
                   activeCategory === cat.id
-                    ? "bg-cta text-black shadow-md font-bold"
+                    ? "bg-primary-400 text-slate-950 shadow-md font-bold"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -166,7 +166,7 @@ export const ServicesPage = () => {
                     <div className="space-y-2 mb-6 pt-4 border-t border-slate-100">
                       {service.bullets.slice(0, 3).map((bullet, idx) => (
                         <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                          <FaCheck className="w-3 h-3 text-cta shrink-0 mt-0.5" />
+                          <FaCheck className="w-3 h-3 text-primary-600 shrink-0 mt-0.5" />
                           <span className="line-clamp-1">{bullet}</span>
                         </div>
                       ))}
@@ -177,7 +177,7 @@ export const ServicesPage = () => {
                   <div className="p-6 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-4">
                     <Link
                       to={`/services/${service.slug}`}
-                      className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-primary hover:text-primary-700 transition-colors"
+                      className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-slate-900 hover:text-primary-600 transition-colors"
                     >
                       <span>Full Scope Specs</span>
                       <FaArrowRight className="w-3 h-3" />
@@ -187,11 +187,11 @@ export const ServicesPage = () => {
                       href={quickWhatsApp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-white hover:bg-cta text-slate-700 hover:text-black border border-slate-200 transition-colors shadow-sm"
+                      className="p-2 rounded-lg bg-white hover:bg-slate-900 hover:text-white text-slate-700 border border-slate-200 transition-colors shadow-sm"
                       title="Quick WhatsApp Inquiry"
                       aria-label="WhatsApp Inquiry"
                     >
-                      <FaWhatsapp className="w-4 h-4 text-[#25D366] group-hover:text-black" />
+                      <FaWhatsapp className="w-4 h-4 text-[#25D366] group-hover:text-white" />
                     </a>
                   </div>
                 </div>

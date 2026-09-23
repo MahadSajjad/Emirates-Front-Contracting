@@ -21,13 +21,13 @@ export const WhatsAppButton = ({
     >
       {/* Tooltip badge on hover/desktop */}
       <div
-        className={`hidden sm:flex items-center bg-primary-900/90 text-white text-xs font-mono font-medium px-3 py-1.5 rounded shadow-lg border border-white/15 backdrop-blur-sm transition-all duration-300 ${
+        className={`hidden sm:flex items-center bg-slate-950/95 text-white text-xs font-mono font-medium px-3 py-1.5 rounded shadow-lg border border-slate-800 backdrop-blur-sm transition-all duration-300 ${
           isHovered
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-2 pointer-events-none"
         }`}
       >
-        <span className="text-cta mr-1.5">●</span>
+        <span className="text-primary-400 mr-1.5">●</span>
         <span>Chat on WhatsApp</span>
       </div>
 

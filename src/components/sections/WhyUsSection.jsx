@@ -22,13 +22,13 @@ export const WhyUsSection = () => {
 
       <Container className="relative z-10">
         <div className="max-w-3xl mb-12 lg:mb-16">
-          <span className="font-mono text-xs font-bold text-cta uppercase tracking-widest block mb-2">
+          <span className="font-mono text-xs font-semibold text-slate-500 uppercase tracking-widest block mb-2">
             Execution Standards
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary leading-tight">
-            Why Contractors Choose <span className="text-cta">Emirates Front</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-900 leading-tight">
+            Why Contractors Choose Emirates Front
           </h2>
-          <p className="font-display text-sm sm:text-base text-muted font-medium mt-2">
+          <p className="font-display text-sm sm:text-base text-slate-600 font-medium mt-2">
             لماذا تختار شركة واجهة الامارات للمقاولات
           </p>
         </div>
@@ -42,22 +42,22 @@ export const WhyUsSection = () => {
 
             return (
               <StaggerItem key={feature.id}>
-                <div className="h-full p-5 sm:p-8 rounded-xl bg-white border border-slate-200/80 hover-lift hover:border-cta/50 transition-all duration-300 flex flex-col justify-between">
+                <div className="h-full p-5 sm:p-8 rounded-xl bg-white border border-slate-200/80 hover-lift hover:border-slate-300 transition-all duration-300 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <span className="font-mono text-xs font-bold text-cta">
+                      <span className="font-mono text-xs font-bold text-slate-400">
                         {feature.number}
                       </span>
-                      <div className="w-10 h-10 rounded-lg bg-primary-50 text-cta flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center">
                         <IconComponent className="w-4 h-4" />
                       </div>
                     </div>
 
-                    <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-primary mb-2">
+                    <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-slate-900 mb-2">
                       {feature.title}
                     </h3>
 
-                    <p className="text-muted text-sm leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

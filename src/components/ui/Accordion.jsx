@@ -15,23 +15,23 @@ export const AccordionItem = ({
       <button
         type="button"
         onClick={onToggle}
-        className="w-full py-4 sm:py-5 flex items-center justify-between text-left gap-4 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cta"
+        className="w-full py-4 sm:py-5 flex items-center justify-between text-left gap-4 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-400"
         aria-expanded={isOpen}
       >
         <div>
           {subtitle && (
-            <span className="block font-mono text-xs text-cta uppercase mb-0.5 tracking-wider">
+            <span className="block font-mono text-xs text-slate-500 uppercase mb-0.5 tracking-wider font-semibold">
               {subtitle}
             </span>
           )}
-          <span className="font-display font-bold text-base sm:text-lg uppercase tracking-tight text-primary group-hover:text-cta transition-colors">
+          <span className="font-display font-bold text-base sm:text-lg uppercase tracking-tight text-slate-900 group-hover:text-primary-600 transition-colors">
             {title}
           </span>
         </div>
         <div
           className={clsx(
-            "w-8 h-8 rounded shrink-0 flex items-center justify-center bg-primary-100 group-hover:bg-cta group-hover:text-black transition-all duration-200",
-            isOpen ? "rotate-180 bg-cta text-black" : "text-primary"
+            "w-8 h-8 rounded-lg shrink-0 flex items-center justify-center transition-all duration-200",
+            isOpen ? "rotate-180 bg-slate-900 text-white" : "bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white"
           )}
         >
           <FaChevronDown className="w-3.5 h-3.5" />

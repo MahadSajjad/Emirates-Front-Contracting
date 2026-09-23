@@ -13,16 +13,16 @@ export const Card = ({
   const Component = as;
 
   const variantStyles = {
-    default: "bg-white text-primary border border-primary/10 shadow-sm",
-    dark: "bg-primary-900 text-white border border-white/10 shadow-md",
-    outline: "bg-transparent border border-primary/20 text-primary",
+    default: "bg-white text-slate-900 border border-slate-200 shadow-sm",
+    dark: "bg-slate-900 text-white border border-slate-800 shadow-md",
+    outline: "bg-transparent border border-slate-200 text-slate-900",
     "outline-dark": "bg-transparent border border-white/20 text-white",
-    ghost: "bg-alabaster/30 text-primary border border-alabaster-dark/20",
-    elevated: "bg-white text-primary border border-primary/10 shadow-lg",
+    ghost: "bg-slate-50 text-slate-900 border border-slate-100",
+    elevated: "bg-white text-slate-900 border border-slate-200 shadow-lg",
   };
 
   const hoverStyles = hoverEffect
-    ? "transition-all duration-300 hover:border-cta/60 hover:shadow-xl hover:-translate-y-1"
+    ? "transition-all duration-300 hover:border-slate-400 hover:shadow-xl hover:-translate-y-1"
     : "";
 
   return (

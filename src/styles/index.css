@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --color-primary: #0d6efd;
-    --color-cta: #f59e0b;
+    --color-primary: #60a5fa;
+    --color-cta: #60a5fa;
     --color-alabaster: #f8fafc;
   }
 
@@ -27,7 +27,7 @@
 
   /* Accessible focus rings */
   *:focus-visible {
-    @apply outline-none ring-2 ring-cta ring-offset-2 ring-offset-white;
+    @apply outline-none ring-2 ring-primary-400 ring-offset-2 ring-offset-white;
   }
 }
 

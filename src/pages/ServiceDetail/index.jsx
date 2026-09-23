@@ -107,7 +107,7 @@ export const ServiceDetailPage = () => {
                   <Badge variant="cta" size="md">
                     {service.categoryName}
                   </Badge>
-                  <span className="font-display text-sm text-cta/90 font-medium">
+                  <span className="font-display text-sm text-slate-300 font-medium">
                     {service.titleAr}
                   </span>
                 </div>
@@ -116,7 +116,7 @@ export const ServiceDetailPage = () => {
                   {service.title}
                 </h1>
 
-                <p className="text-alabaster/85 text-base sm:text-xl leading-relaxed font-light mb-8 max-w-2xl">
+                <p className="text-slate-300 text-base sm:text-xl leading-relaxed font-light mb-8 max-w-2xl">
                   {service.excerpt}
                 </p>
 
@@ -127,7 +127,6 @@ export const ServiceDetailPage = () => {
                     size="lg"
                     icon={FaWhatsapp}
                     iconPosition="left"
-                    className="shadow-xl shadow-cta/20"
                   >
                     Enquire via WhatsApp
                   </Button>
@@ -144,8 +143,8 @@ export const ServiceDetailPage = () => {
 
             {/* Quick Spec Box */}
             <div className="lg:col-span-4">
-              <div className="bg-primary-900 border border-white/15 p-6 rounded shadow-xl">
-                <span className="font-mono text-xs text-cta uppercase tracking-widest block mb-4 pb-2 border-b border-white/10">
+              <div className="bg-slate-900 border border-white/15 p-6 rounded shadow-xl">
+                <span className="font-mono text-xs text-primary-400 uppercase tracking-widest block mb-4 pb-2 border-b border-white/10">
                   Quick Scope Summary
                 </span>
                 <div className="space-y-3 text-xs">
@@ -193,15 +192,15 @@ export const ServiceDetailPage = () => {
               </div>
 
               {/* Technical Deliverables Checklist */}
-              <div className="p-8 bg-alabaster/40 border border-primary/10 rounded">
-                <h3 className="font-display text-xl font-bold uppercase tracking-tight text-primary mb-6">
+              <div className="p-8 bg-slate-50 border border-slate-200 rounded">
+                <h3 className="font-display text-xl font-bold uppercase tracking-tight text-slate-900 mb-6">
                   Key Technical Inclusions & Deliverables
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {service.bullets.map((bullet, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <FaCheckCircle className="w-4 h-4 text-cta shrink-0 mt-1" />
-                      <span className="text-primary text-sm font-medium leading-snug">
+                      <FaCheckCircle className="w-4 h-4 text-primary-600 shrink-0 mt-1" />
+                      <span className="text-slate-800 text-sm font-medium leading-snug">
                         {bullet}
                       </span>
                     </div>
@@ -211,7 +210,7 @@ export const ServiceDetailPage = () => {
 
               {/* Technical Accordion */}
               <div>
-                <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-primary mb-4">
+                <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-slate-900 mb-4">
                   Methodology & Assurance
                 </h3>
                 <Accordion items={accordionItems} />
@@ -220,15 +219,15 @@ export const ServiceDetailPage = () => {
 
             {/* Right Sidebar: Sticky Action Card */}
             <div className="lg:col-span-4 space-y-6">
-              <div className="sticky top-28 bg-primary-950 text-white p-6 sm:p-8 rounded border border-white/10 shadow-xl space-y-6">
+              <div className="sticky top-28 bg-slate-950 text-white p-6 sm:p-8 rounded border border-slate-800 shadow-xl space-y-6">
                 <div>
-                  <span className="font-mono text-xs text-cta uppercase tracking-widest block mb-1">
+                  <span className="font-mono text-xs text-primary-400 uppercase tracking-widest block mb-1">
                     Direct Estimating Desk
                   </span>
                   <h4 className="font-display text-xl font-bold uppercase tracking-tight text-white">
                     Need a Quote for {service.title}?
                   </h4>
-                  <p className="text-alabaster/70 text-xs sm:text-sm mt-2 leading-relaxed">
+                  <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
                     Send your project scope or BOQ directly via WhatsApp for an expedited initial review.
                   </p>
                 </div>
@@ -256,9 +255,9 @@ export const ServiceDetailPage = () => {
                   </Button>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 text-xs space-y-2 text-white/60 font-mono">
+                <div className="pt-4 border-t border-slate-800 text-xs space-y-2 text-slate-400 font-mono">
                   <div className="flex items-center gap-2">
-                    <FaPhoneAlt className="text-cta w-3 h-3" />
+                    <FaPhoneAlt className="text-primary-400 w-3 h-3" />
                     <span>Direct: {siteConfig.phone.display}</span>
                   </div>
                   <div>Email: {siteConfig.email}</div>
@@ -275,10 +274,10 @@ export const ServiceDetailPage = () => {
         <Section variant="alabaster" padding="default" hairline="bottom">
           <Container>
             <div className="mb-8">
-              <Eyebrow variant="cta" className="mb-2">
+              <Eyebrow variant="primary" className="mb-2">
                 Related Capabilities
               </Eyebrow>
-              <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase text-primary">
+              <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase text-slate-900">
                 More in {service.categoryName}
               </h3>
             </div>
@@ -287,24 +286,24 @@ export const ServiceDetailPage = () => {
               {relatedServices.slice(0, 3).map((rel) => (
                 <div
                   key={rel.slug}
-                  className="bg-white border border-primary/10 rounded p-6 hover:border-cta hover:shadow-lg transition-all flex flex-col justify-between"
+                  className="bg-white border border-slate-200 rounded p-6 hover:border-slate-400 hover:shadow-lg transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <h4 className="font-display text-lg font-bold uppercase text-primary mb-2">
+                    <h4 className="font-display text-lg font-bold uppercase text-slate-900 mb-2">
                       <Link
                         to={`/services/${rel.slug}`}
-                        className="hover:text-cta transition-colors"
+                        className="hover:text-primary-600 transition-colors"
                       >
                         {rel.title}
                       </Link>
                     </h4>
-                    <p className="text-muted-dark text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
                       {rel.excerpt}
                     </p>
                   </div>
                   <Link
                     to={`/services/${rel.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-display font-bold uppercase text-primary hover:text-cta transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-display font-bold uppercase text-slate-900 hover:text-primary-600 transition-colors"
                   >
                     <span>View Scope Details</span>
                     <FaArrowRight className="w-3 h-3" />

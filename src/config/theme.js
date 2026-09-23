@@ -5,20 +5,20 @@
 
 export const theme = {
   colors: {
-    // Primary brand palette (Light Blue #0d6efd architectural tone)
+    // Primary brand palette (Light Blue #60a5fa architectural tone as requested)
     primary: {
-      DEFAULT: '#0d6efd', // Vibrant professional light blue
-      50: '#edf5ff',      // Soft ice blue tint
-      100: '#dbeafe',     // Crisp sky tint
-      200: '#bfdbfe',
+      DEFAULT: '#60a5fa', // Bright, precise architectural sky blue (#60a5fa)
+      50: '#f0f7ff',      // Soft ice blue tint
+      100: '#e0effe',     // Crisp sky tint
+      200: '#bae0fd',
       300: '#93c5fd',
-      400: '#60a5fa',     // Bright light blue
+      400: '#60a5fa',     // Primary accent color
       500: '#3b82f6',
-      600: '#0d6efd',     // Main Light Blue primary #0d6efd
-      700: '#0b5ed7',     // Deep sapphire blue
-      800: '#0a4ebd',     // Prestigious navy-blue
-      900: '#083b8e',     // Dark royal base
-      950: '#052559',     // Deepest corporate navy
+      600: '#2563eb',
+      700: '#1d4ed8',     // Deep sapphire blue
+      800: '#1e40af',     // Prestigious navy-blue
+      900: '#0f172a',     // Deep slate-black base
+      950: '#020617',     // Deepest obsidian black
     },
     // Slate text tones for crisp contrast on light backgrounds
     slate: {
@@ -35,21 +35,21 @@ export const theme = {
       900: '#0f172a',
       950: '#020617',
     },
-    // Primary CTA (Safety Amber-Orange)
+    // Primary CTA mapped to primary-400 (#60a5fa) — yellow completely removed
     cta: {
-      DEFAULT: '#f59e0b', // Vibrant Safety Amber
-      hover: '#d97706',   // Deepened amber for hover
-      light: '#fffbeb',   // Subdued background tint
-      dark: '#b45309',
-      glow: 'rgba(245, 158, 11, 0.45)',
+      DEFAULT: '#60a5fa', // Primary-400 accent
+      hover: '#3b82f6',   // Primary-500
+      light: '#eff6ff',   // Subdued background tint
+      dark: '#2563eb',
+      glow: 'rgba(96, 165, 250, 0.4)',
     },
-    // Neutrals & Surface tones
-    black: '#0b1329',
+    // Neutrals & Surface tones (black, white, and shades)
+    black: '#020617',
     white: '#ffffff',
     alabaster: {
-      DEFAULT: '#f0f4f8', // Clean light architectural background
-      light: '#f8fafc',
-      dark: '#e1e7ee',
+      DEFAULT: '#f8fafc', // Clean light architectural background
+      light: '#ffffff',
+      dark: '#f1f5f9',
     },
     muted: {
       DEFAULT: '#64748b',

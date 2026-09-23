@@ -40,16 +40,16 @@ export const SectorsPage = () => {
         <Container>
           <div className="max-w-3xl">
             <Reveal direction="up">
-              <Eyebrow variant="cta" className="mb-3">
+              <Eyebrow variant="primary" className="mb-3">
                 Sector-Specific Experience
               </Eyebrow>
               <h1 className="font-display text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight mb-4">
-                ENGINEERED FOR <span className="text-cta">DIVERSE ASSET CLASSES.</span>
+                ENGINEERED FOR DIVERSE ASSET CLASSES.
               </h1>
-              <p className="font-display text-lg text-cta font-medium mb-6">
+              <p className="font-display text-lg text-slate-300 font-medium mb-6">
                 القطاعات والأسواق المستهدفة — حلول تنفيذية متخصصة لكل قطاع
               </p>
-              <p className="text-alabaster/80 text-base sm:text-lg leading-relaxed font-light">
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
                 Tailoring our structural methodologies, safety standards, and finishing precision to meet the operational demands of corporate developers, private estate owners, and industrial operators.
               </p>
             </Reveal>
@@ -72,34 +72,34 @@ export const SectorsPage = () => {
                 <div
                   key={sector.id}
                   id={sector.id}
-                  className="p-8 sm:p-12 rounded border border-primary/10 bg-alabaster/30 hover:border-cta/40 hover:bg-white hover:shadow-xl transition-all duration-300"
+                  className="p-8 sm:p-12 rounded border border-slate-200 bg-white hover:border-slate-400 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     {/* Left: Sector Identity & Info (7 cols) */}
                     <div className="lg:col-span-7 space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded bg-primary text-cta flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 rounded bg-slate-900 text-white flex items-center justify-center shrink-0">
                           <IconComponent className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="font-mono text-xs text-cta uppercase font-bold tracking-widest block">
+                          <span className="font-mono text-xs text-primary-600 uppercase font-bold tracking-widest block">
                             Sector 0{index + 1}
                           </span>
-                          <span className="font-display text-xs text-muted">
+                          <span className="font-display text-xs text-slate-500">
                             {sector.titleAr}
                           </span>
                         </div>
                       </div>
 
-                      <h2 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight text-primary">
+                      <h2 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight text-slate-900">
                         {sector.title}
                       </h2>
 
-                      <span className="inline-block font-mono text-xs text-muted-dark font-semibold pb-2 border-b border-primary/10">
+                      <span className="inline-block font-mono text-xs text-slate-500 font-semibold pb-2 border-b border-slate-100">
                         {sector.subtitle}
                       </span>
 
-                      <p className="text-muted-dark text-sm sm:text-base leading-relaxed pt-2">
+                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed pt-2">
                         {sector.description}
                       </p>
 
@@ -124,15 +124,15 @@ export const SectorsPage = () => {
                     </div>
 
                     {/* Right: Technical Capabilities Checklist (5 cols) */}
-                    <div className="lg:col-span-5 bg-white border border-primary/10 rounded p-6 shadow-sm">
-                      <h4 className="font-display text-base font-bold uppercase tracking-tight text-primary mb-4 pb-2 border-b border-primary/10">
+                    <div className="lg:col-span-5 bg-slate-50 border border-slate-200 rounded p-6 shadow-sm">
+                      <h4 className="font-display text-base font-bold uppercase tracking-tight text-slate-900 mb-4 pb-2 border-b border-slate-200">
                         Core Sector Capabilities
                       </h4>
                       <div className="space-y-3">
                         {sector.capabilities.map((cap, idx) => (
                           <div key={idx} className="flex items-start gap-3">
-                            <FaCheckCircle className="w-4 h-4 text-cta shrink-0 mt-0.5" />
-                            <span className="text-primary text-xs sm:text-sm font-medium leading-snug">
+                            <FaCheckCircle className="w-4 h-4 text-primary-600 shrink-0 mt-0.5" />
+                            <span className="text-slate-800 text-xs sm:text-sm font-medium leading-snug">
                               {cap}
                             </span>
                           </div>

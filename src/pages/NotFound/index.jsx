@@ -24,7 +24,7 @@ export const NotFoundPage = () => {
       <Section variant="dark" padding="lg" className="min-h-[75vh] flex items-center">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <span className="font-mono text-5xl sm:text-7xl font-extrabold text-cta block tracking-widest">
+            <span className="font-mono text-5xl sm:text-7xl font-extrabold text-primary-400 block tracking-widest">
               404
             </span>
 
@@ -32,7 +32,7 @@ export const NotFoundPage = () => {
               Page Not Found / الصفحة غير موجودة
             </h1>
 
-            <p className="text-alabaster/80 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
               The contracting scope or page you are looking for might have been relocated or is temporarily unavailable. Use the links below to navigate back.
             </p>
 
@@ -63,7 +63,7 @@ export const NotFoundPage = () => {
                 href={quickWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase text-cta hover:underline"
+                className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase text-primary-400 hover:text-primary-300 hover:underline"
               >
                 <FaWhatsapp className="w-4 h-4" />
                 <span>Chat directly with Emirates Front on WhatsApp</span>

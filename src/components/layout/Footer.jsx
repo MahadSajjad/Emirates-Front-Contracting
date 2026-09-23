@@ -16,14 +16,14 @@ export const Footer = () => {
           {/* Col 1: Brand & Positioning (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-primary-600 border border-primary-500 rounded-lg flex items-center justify-center text-white font-mono font-bold text-base group-hover:bg-primary-700 transition-colors shadow-sm">
+              <div className="w-10 h-10 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center text-primary-400 font-mono font-bold text-base group-hover:bg-primary-400 group-hover:text-slate-950 transition-colors shadow-sm">
                 EF
               </div>
               <div>
                 <span className="font-display font-extrabold text-lg uppercase tracking-tight text-slate-900 block group-hover:text-primary-600 transition-colors">
                   Emirates Front
                 </span>
-                <span className="font-display text-xs font-semibold text-primary-700 tracking-wider block">
+                <span className="font-display text-xs font-semibold text-slate-500 tracking-wider block">
                   شركة واجهة الامارات للمقاولات
                 </span>
               </div>
@@ -38,7 +38,7 @@ export const Footer = () => {
                 href={footerWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-cta text-black font-display font-bold text-xs uppercase tracking-wider hover:bg-cta-hover transition-colors shadow-glow-cta"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-400 text-slate-950 font-display font-bold text-xs uppercase tracking-wider hover:bg-primary-300 transition-colors shadow-sm"
               >
                 <FaWhatsapp className="w-4 h-4" />
                 <span>WhatsApp Procurement</span>
@@ -48,7 +48,7 @@ export const Footer = () => {
 
           {/* Col 2: Navigation Links (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs font-bold text-primary-700 uppercase tracking-widest">
+            <h4 className="font-mono text-xs font-bold text-slate-900 uppercase tracking-widest">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -82,7 +82,7 @@ export const Footer = () => {
 
           {/* Col 3: Core Scopes (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-xs font-bold text-primary-700 uppercase tracking-widest">
+            <h4 className="font-mono text-xs font-bold text-slate-900 uppercase tracking-widest">
               Core Capabilities
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -92,7 +92,7 @@ export const Footer = () => {
                     to={`/services#${cat.id}`}
                     className="text-slate-600 hover:text-primary-600 transition-colors flex items-center gap-1.5"
                   >
-                    <span className="text-cta text-xs">›</span>
+                    <span className="text-primary-600 text-xs">›</span>
                     <span>{cat.name}</span>
                   </Link>
                 </li>
@@ -102,17 +102,17 @@ export const Footer = () => {
 
           {/* Col 4: Riyadh Contact & Direct Lines (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-xs font-bold text-primary-700 uppercase tracking-widest">
+            <h4 className="font-mono text-xs font-bold text-slate-900 uppercase tracking-widest">
               Riyadh Head Office
             </h4>
             <div className="space-y-3 text-sm text-slate-700">
               <div className="flex items-start gap-2.5">
-                <FaMapMarkerAlt className="w-4 h-4 text-cta shrink-0 mt-1" />
+                <FaMapMarkerAlt className="w-4 h-4 text-primary-600 shrink-0 mt-1" />
                 <span>Riyadh, Kingdom of Saudi Arabia</span>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <FaPhoneAlt className="w-4 h-4 text-cta shrink-0" />
+                <FaPhoneAlt className="w-4 h-4 text-primary-600 shrink-0" />
                 <a
                   href={`tel:${siteConfig.phone.number}`}
                   className="hover:text-primary-600 transition-colors font-mono"
@@ -122,7 +122,7 @@ export const Footer = () => {
               </div>
 
               <div className="flex items-center gap-2.5">
-                <FaEnvelope className="w-4 h-4 text-cta shrink-0" />
+                <FaEnvelope className="w-4 h-4 text-primary-600 shrink-0" />
                 <a
                   href={`mailto:${siteConfig.email}`}
                   className="hover:text-primary-600 transition-colors break-all"

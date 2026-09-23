@@ -14,7 +14,7 @@ export const CTASection = ({
   const ctaWhatsAppUrl = buildWhatsAppLink();
 
   return (
-    <section className="relative w-full bg-primary-950 text-white overflow-hidden py-20 md:py-28">
+    <section className="relative w-full bg-slate-950 text-white overflow-hidden py-20 md:py-28">
       {/* Background with lighter slate-blue gradient overlay & blueprint lines */}
       <div className="absolute inset-0 z-0">
         <div
@@ -23,16 +23,16 @@ export const CTASection = ({
             backgroundImage: `url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-900/95 to-primary-900/90" />
-        <div className="absolute inset-0 bg-steel-truss opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950" />
+        <div className="absolute inset-0 bg-steel-truss opacity-20" />
       </div>
 
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal direction="up" delay={0.1}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md mb-6">
-              <span className="w-2 h-2 rounded-full bg-cta" />
-              <span className="font-mono text-xs font-semibold tracking-wider uppercase text-white/90">
+              <span className="w-2 h-2 rounded-full bg-primary-400 animate-ping" />
+              <span className="font-mono text-xs font-semibold tracking-wider uppercase text-slate-300">
                 Direct Procurement Access
               </span>
             </div>
@@ -45,13 +45,13 @@ export const CTASection = ({
           </Reveal>
 
           <Reveal direction="up" delay={0.3}>
-            <p className="font-display text-base sm:text-lg text-cta font-medium mb-6">
+            <p className="font-display text-base sm:text-lg text-slate-300 font-medium mb-6">
               {subtitle}
             </p>
           </Reveal>
 
           <Reveal direction="up" delay={0.4}>
-            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-normal">
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-normal">
               {description}
             </p>
           </Reveal>
@@ -65,7 +65,7 @@ export const CTASection = ({
                 size="lg"
                 icon={FaWhatsapp}
                 iconPosition="left"
-                className="w-full sm:w-auto shadow-glow-cta hover:scale-105 transition-transform"
+                className="w-full sm:w-auto hover:scale-105 transition-transform"
               >
                 Inquire via WhatsApp
               </Button>
@@ -85,16 +85,16 @@ export const CTASection = ({
             <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-8 text-xs sm:text-sm text-white/70 font-mono">
               <a
                 href={`tel:${siteConfig.phone.number}`}
-                className="flex items-center gap-2 hover:text-cta transition-colors"
+                className="flex items-center gap-2 hover:text-primary-400 transition-colors"
               >
-                <FaPhoneAlt className="w-3.5 h-3.5 text-cta" />
+                <FaPhoneAlt className="w-3.5 h-3.5 text-primary-400" />
                 <span>{siteConfig.phone.display}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-2 hover:text-cta transition-colors"
+                className="flex items-center gap-2 hover:text-primary-400 transition-colors"
               >
-                <FaEnvelope className="w-3.5 h-3.5 text-cta" />
+                <FaEnvelope className="w-3.5 h-3.5 text-primary-400" />
                 <span>{siteConfig.email}</span>
               </a>
             </div>

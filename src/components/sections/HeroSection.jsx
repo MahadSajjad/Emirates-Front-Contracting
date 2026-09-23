@@ -30,8 +30,8 @@ export const HeroSection = () => {
           <div className="lg:col-span-7">
             <Reveal direction="up" delay={0.1}>
               <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-primary-500/15 border border-primary-400/30 backdrop-blur-md mb-4 sm:mb-6">
-                <span className="w-2 h-2 rounded-full bg-cta animate-ping" />
-                <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-primary-200">
+                <span className="w-2 h-2 rounded-full bg-primary-400 animate-ping" />
+                <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-slate-300">
                   Riyadh, Saudi Arabia · General Contracting
                 </span>
               </div>
@@ -44,7 +44,7 @@ export const HeroSection = () => {
             </Reveal>
 
             <Reveal direction="up" delay={0.3}>
-              <p className="font-display text-xs sm:text-base lg:text-lg font-semibold text-cta mb-3 sm:mb-6 tracking-wide leading-relaxed">
+              <p className="font-display text-xs sm:text-base lg:text-lg font-medium text-slate-300 mb-3 sm:mb-6 tracking-wide leading-relaxed">
                 شركة واجهة الامارات للمقاولات — حلول الواجهات، الأعمال الإنشائية والمدنية المتكاملة
               </p>
             </Reveal>
@@ -56,14 +56,14 @@ export const HeroSection = () => {
             </Reveal>
 
             <Reveal direction="up" delay={0.45}>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-4">
                 <Button
                   href={heroWhatsAppUrl}
                   variant="cta"
                   size="lg"
                   icon={FaWhatsapp}
                   iconPosition="right"
-                  className="shadow-glow-cta font-bold w-full sm:w-auto"
+                  className="font-bold w-full sm:w-auto"
                 >
                   WhatsApp Us
                 </Button>
@@ -73,7 +73,7 @@ export const HeroSection = () => {
                   size="lg"
                   icon={FaArrowRight}
                   iconPosition="right"
-                  className="border-primary-400/50 hover:bg-primary-500/20 text-white w-full sm:w-auto"
+                  className="border-white/30 hover:bg-white/10 text-white w-full sm:w-auto"
                 >
                   Explore Scopes
                 </Button>
@@ -85,7 +85,7 @@ export const HeroSection = () => {
           <div className="lg:col-span-5 relative mt-4 sm:mt-0">
             <Reveal direction="up" delay={0.4}>
               {/* Main Interactive Glass Card */}
-              <div className="relative rounded-2xl overflow-hidden glass-card-dark p-4 sm:p-6 shadow-2xl border border-primary-500/30 hover-lift bg-slate-900/85">
+              <div className="relative rounded-2xl overflow-hidden glass-card-dark p-4 sm:p-6 shadow-2xl border border-slate-700/60 hover-lift bg-slate-900/90">
                 <div className="relative h-48 sm:h-64 rounded-xl overflow-hidden mb-3.5 sm:mb-5">
                   <img
                     src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
@@ -94,15 +94,15 @@ export const HeroSection = () => {
                     loading="eager"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent" />
-                  <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 text-[10px] sm:text-xs font-mono text-white bg-primary-900/90 px-2.5 py-1 rounded-md backdrop-blur-sm border border-primary-400/30 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cta animate-ping" />
+                  <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 text-[10px] sm:text-xs font-mono text-white bg-slate-900/90 px-2.5 py-1 rounded-md backdrop-blur-sm border border-slate-700 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-400 animate-ping" />
                     <span>Site Operations · Heavy Logistics</span>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-slate-300">
                   <span className="text-slate-300 font-medium">Riyadh Fleet & Heavy Haulage</span>
-                  <span className="text-cta font-bold bg-cta/15 px-2 py-0.5 rounded border border-cta/30">
+                  <span className="text-primary-400 font-semibold bg-primary-500/10 px-2 py-0.5 rounded border border-primary-400/25">
                     SBC Standards
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export const HeroSection = () => {
                 {/* Mobile-Friendly Feature Highlights (Integrated cleanly inside card on mobile) */}
                 <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-white/10 sm:hidden">
                   <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/10">
-                    <div className="w-7 h-7 rounded bg-cta/20 text-cta flex items-center justify-center shrink-0">
+                    <div className="w-7 h-7 rounded bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/20">
                       <FaTruckMoving className="w-3.5 h-3.5" />
                     </div>
                     <div className="min-w-0">
@@ -124,7 +124,7 @@ export const HeroSection = () => {
                   </div>
 
                   <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/10">
-                    <div className="w-7 h-7 rounded bg-primary-600/30 text-primary-300 flex items-center justify-center shrink-0 border border-primary-400/40">
+                    <div className="w-7 h-7 rounded bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/20">
                       <FaDraftingCompass className="w-3.5 h-3.5" />
                     </div>
                     <div className="min-w-0">
@@ -140,8 +140,8 @@ export const HeroSection = () => {
               </div>
 
               {/* Floating Metric 1: Heavy Equipment / Earthworks pill (Desktop & Tablet) */}
-              <div className="hidden sm:flex absolute -bottom-3 left-0 sm:-left-3 z-20 glass-card-dark px-4 py-3 rounded-xl shadow-xl border border-primary-400/30 items-center gap-3 animate-float-slow hover:border-cta transition-colors bg-slate-900/95 max-w-[260px]">
-                <div className="w-10 h-10 rounded-lg bg-cta/20 text-cta flex items-center justify-center shrink-0">
+              <div className="hidden sm:flex absolute -bottom-3 left-0 sm:-left-3 z-20 glass-card-dark px-4 py-3 rounded-xl shadow-xl border border-slate-700/60 items-center gap-3 animate-float-slow hover:border-primary-400/60 transition-colors bg-slate-900/95 max-w-[260px]">
+                <div className="w-10 h-10 rounded-lg bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/25">
                   <FaTruckMoving className="w-5 h-5" />
                 </div>
                 <div>
@@ -155,8 +155,8 @@ export const HeroSection = () => {
               </div>
 
               {/* Floating Metric 2: Envelope Engineering (Desktop & Tablet) */}
-              <div className="hidden sm:flex absolute -top-3 right-0 sm:right-1 z-20 glass-card-dark px-4 py-3 rounded-xl shadow-xl border border-primary-400/30 items-center gap-3 animate-float-reverse hover:border-cta transition-colors bg-slate-900/95 max-w-[260px]">
-                <div className="w-10 h-10 rounded-lg bg-primary-600/30 text-primary-300 flex items-center justify-center shrink-0 border border-primary-400/40">
+              <div className="hidden sm:flex absolute -top-3 right-0 sm:right-1 z-20 glass-card-dark px-4 py-3 rounded-xl shadow-xl border border-slate-700/60 items-center gap-3 animate-float-reverse hover:border-primary-400/60 transition-colors bg-slate-900/95 max-w-[260px]">
+                <div className="w-10 h-10 rounded-lg bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/25">
                   <FaDraftingCompass className="w-5 h-5" />
                 </div>
                 <div>

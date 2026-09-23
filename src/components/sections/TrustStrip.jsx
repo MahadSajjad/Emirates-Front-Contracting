@@ -6,7 +6,7 @@ import Reveal from "../motion/Reveal.jsx";
 
 export const TrustStrip = () => {
   return (
-    <Section variant="dark" padding="sm" className="bg-primary-900 border-t border-b border-white/10 relative">
+    <Section variant="dark" padding="sm" className="bg-slate-950 border-t border-b border-slate-800 relative">
       <Container>
         <Reveal direction="up">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
@@ -15,7 +15,7 @@ export const TrustStrip = () => {
                 key={index}
                 className="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 flex flex-col justify-center"
               >
-                <span className="font-mono text-[10px] sm:text-xs text-cta uppercase tracking-widest block mb-1 font-semibold">
+                <span className="font-mono text-[10px] sm:text-xs text-primary-400 uppercase tracking-widest block mb-1 font-semibold">
                   {fact.label}
                 </span>
                 <span className="font-display text-base sm:text-2xl font-extrabold uppercase text-white tracking-tight block mb-1">

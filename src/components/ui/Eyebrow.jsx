@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 export const Eyebrow = ({
   children,
   className = "",
-  variant = "cta", // 'cta' | 'primary' | 'muted' | 'light'
+  variant = "primary", // 'cta' | 'primary' | 'muted' | 'light'
   hasDot = true,
   as = "div",
   ...props
@@ -13,17 +13,17 @@ export const Eyebrow = ({
   const Component = as;
 
   const variantStyles = {
-    cta: "text-cta",
-    primary: "text-primary",
-    muted: "text-muted",
-    light: "text-white/80",
+    cta: "text-primary-400",
+    primary: "text-slate-400",
+    muted: "text-slate-500",
+    light: "text-slate-300",
   };
 
   const dotStyles = {
-    cta: "bg-cta",
-    primary: "bg-primary",
-    muted: "bg-muted",
-    light: "bg-cta",
+    cta: "bg-primary-400",
+    primary: "bg-primary-400",
+    muted: "bg-slate-400",
+    light: "bg-primary-400",
   };
 
   return (
