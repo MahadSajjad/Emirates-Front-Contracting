@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0e72ff;
+    --color-cta: #fca311;
+    --color-alabaster: #f1f4f8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-[#f8fafc] text-primary font-body overflow-x-hidden;
+  }
+
+  /* Accessible focus rings */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-cta ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+
+  /* Hairline precision dividers */
+  .hairline-b {
+    border-bottom: 1px solid rgba(30, 45, 66, 0.08);
+  }
+
+  .hairline-t {
+    border-top: 1px solid rgba(30, 45, 66, 0.08);
+  }
+
+  .hairline-dark-b {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hairline-dark-t {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Architectural & Construction creative motifs (diagonal engineering trusses & drafting lines) */
+  .bg-blueprint-lines {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(30, 45, 66, 0.07) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .bg-steel-truss {
+    background-image: repeating-linear-gradient(-45deg,
+        transparent,
+        transparent 28px,
+        rgba(30, 45, 66, 0.02) 28px,
+        rgba(30, 45, 66, 0.02) 30px);
+  }
+
+  /* High-end glassmorphism card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 45, 66, 0.08);
+  }
+
+  .glass-card-dark {
+    background: rgba(24, 48, 84, 0.75);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* Hover micro-interactions */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px -10px rgba(30, 45, 66, 0.12);
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #183054;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #335384;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fca311;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
