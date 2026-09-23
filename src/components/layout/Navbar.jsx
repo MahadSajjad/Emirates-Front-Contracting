@@ -172,17 +172,17 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Actions: WhatsApp Icon Button + Hamburger Menu */}
           <div className="flex sm:hidden items-center gap-2">
-            <Button
+            <a
               href={quickWhatsAppUrl}
-              variant="cta"
-              size="sm"
-              icon={FaWhatsapp}
-              className="px-2.5 py-1.5 text-xs shadow-md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-lg bg-[#25D366] text-white flex items-center justify-center shadow-md hover:bg-[#20ba59] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+              aria-label="Direct WhatsApp Contact"
             >
-              WhatsApp
-            </Button>
+              <FaWhatsapp className="w-5 h-5" />
+            </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}

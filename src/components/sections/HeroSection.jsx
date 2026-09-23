@@ -51,7 +51,7 @@ export const HeroSection = () => {
 
             <Reveal direction="up" delay={0.35}>
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-xl font-normal">
-                Delivering high-specification building envelopes, civil superstructures, and turnkey commercial solutions tailored for institutional developers across the Kingdom.
+                Specialized building façades, civil construction, and complete contracting solutions across Saudi Arabia.
               </p>
             </Reveal>
 
