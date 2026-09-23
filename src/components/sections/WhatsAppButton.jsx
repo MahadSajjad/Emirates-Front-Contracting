@@ -16,7 +16,7 @@ export const WhatsAppButton = ({
   return (
     <aside
       aria-label="Contact via WhatsApp"
-      className="fixed bottom-6 right-6 z-40 flex items-center gap-3 select-none pointer-events-auto"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-3 select-none pointer-events-auto"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
       {/* Tooltip badge on hover/desktop */}
@@ -38,7 +38,7 @@ export const WhatsAppButton = ({
         rel="noopener noreferrer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
+        className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
         aria-label="Direct WhatsApp Chat with Emirates Front Contracting"
       >
         {/* Subtle radar ripple effect */}
@@ -47,7 +47,7 @@ export const WhatsAppButton = ({
           style={{ animationDuration: "3s" }}
         />
 
-        <FaWhatsapp className="w-7 h-7 relative z-10 transition-transform duration-200 group-hover:scale-110" />
+        <FaWhatsapp className="w-6 h-6 sm:w-7 sm:h-7 relative z-10 transition-transform duration-200 group-hover:scale-110" />
       </a>
     </aside>
   );

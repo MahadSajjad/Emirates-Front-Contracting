@@ -36,17 +36,17 @@ export const ArchitecturalFeatureSection = ({
           </div>
 
           {/* Main Alabaster Architectural Card */}
-          <div className="relative bg-alabaster text-primary px-8 sm:px-14 lg:px-20 py-16 sm:py-20 lg:py-24 shadow-2xl border-t border-b border-slate-300/60">
+          <div className="relative bg-alabaster text-primary px-5 sm:px-14 lg:px-20 py-10 sm:py-20 lg:py-24 shadow-2xl border-t border-b border-slate-300/60 rounded-xl sm:rounded-none">
             {/* Top Brand Tag / Logo Icon in Top-Left */}
-            <div className="absolute top-6 left-8 sm:left-14 flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg bg-primary text-cta font-mono font-bold text-xs flex items-center justify-center border border-cta/40 shadow-md">
+            <div className="absolute top-5 left-5 sm:top-6 sm:left-14 flex items-center gap-2">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary text-cta font-mono font-bold text-xs flex items-center justify-center border border-cta/40 shadow-md">
                 EF
               </div>
             </div>
 
             {/* Stepped Technical Schematic Line */}
             <Reveal direction="left" delay={0.1}>
-              <div className="w-full max-w-4xl mb-10 pt-6 sm:pt-2">
+              <div className="w-full max-w-4xl mb-6 sm:mb-10 pt-8 sm:pt-2">
                 <svg
                   className="w-full h-6 text-primary/30"
                   viewBox="0 0 800 24"
@@ -64,11 +64,11 @@ export const ArchitecturalFeatureSection = ({
             </Reveal>
 
             {/* Content Layout Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end">
               {/* Left Col: Prominent Editorial Headline (8 cols) */}
-              <div className="lg:col-span-8 space-y-4">
+              <div className="lg:col-span-8 space-y-3 sm:space-y-4">
                 <Reveal direction="up" delay={0.2}>
-                  <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-primary leading-[1.08]">
+                  <h2 className="font-display text-2xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-primary leading-[1.08]">
                     {headline}{" "}
                     <span className="text-cta block sm:inline font-black">
                       {highlightedText}

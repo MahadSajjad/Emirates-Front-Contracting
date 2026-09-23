@@ -42,7 +42,7 @@ export const WhyUsSection = () => {
 
             return (
               <StaggerItem key={feature.id}>
-                <div className="h-full p-8 rounded-xl bg-white border border-slate-200/80 hover-lift hover:border-cta/50 transition-all duration-300 flex flex-col justify-between">
+                <div className="h-full p-5 sm:p-8 rounded-xl bg-white border border-slate-200/80 hover-lift hover:border-cta/50 transition-all duration-300 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-5">
                       <span className="font-mono text-xs font-bold text-cta">

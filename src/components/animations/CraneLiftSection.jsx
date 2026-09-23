@@ -39,10 +39,10 @@ export const CraneLiftSection = ({
 
         {/* ========================================================================= */}
         {/* 1. HEAVY VERTICAL TOWER CRANE MAST (POLE)                                 */}
-        {/* Positioned FLUSH on the starting left (left-0) without any padding/space   */}
+        {/* Hidden on mobile (hidden md:flex), flush left on desktop (left-0)         */}
         {/* ========================================================================= */}
         <div
-          className="absolute left-0 top-0 bottom-0 w-16 sm:w-20 lg:w-24 z-20 pointer-events-none flex flex-col justify-between"
+          className="hidden md:flex absolute left-0 top-0 bottom-0 w-16 sm:w-20 lg:w-24 z-20 pointer-events-none flex-col justify-between"
           aria-hidden="true"
         >
           {/* Continuous Heavy Steel Lattice Mast Column */}
@@ -213,12 +213,12 @@ export const CraneLiftSection = ({
         {/* The Trolley, Ropes, Hook, Slings, and Card share the EXACT SAME centerline!*/}
         {/* The ropes are 100% DEAD-STRAIGHT vertical lines, dropping from the trolley */}
         {/* ========================================================================= */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-16 sm:pl-22 lg:pl-26">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pl-20 lg:pl-26">
           {/* Telemetry Status Bar */}
           <div className="w-full max-w-5xl mx-auto flex items-center justify-between text-xs font-mono text-slate-700 pb-2 mb-3 border-b border-slate-300">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-cta animate-ping" />
-              <span className="font-extrabold text-slate-900 uppercase tracking-wider">
+              <span className="font-extrabold text-[10px] sm:text-xs text-slate-900 uppercase tracking-wider">
                 LIEBHERR_280_EC // SITE_OPERATION_RIYADH
               </span>
             </div>
@@ -333,52 +333,52 @@ export const CraneLiftSection = ({
             </div>
 
             {/* Symmetrical Structural Rigging Mounts on Top Edge of Card */}
-            <div className="flex justify-between px-6 sm:px-14 -mb-2 relative z-20 pointer-events-none">
-              <div className="px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1.5">
+            <div className="flex justify-between px-3 sm:px-14 -mb-2 relative z-20 pointer-events-none">
+              <div className="px-2 sm:px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1 sm:gap-1.5">
                 <span>⚓</span>
-                <span>LUG_LEFT // RIG_LOCKED</span>
+                <span>LUG_L<span className="hidden sm:inline">EFT // RIG_LOCKED</span></span>
               </div>
-              <div className="px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1.5">
+              <div className="px-2 sm:px-3.5 py-1 bg-cta text-black font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-black/20 flex items-center gap-1 sm:gap-1.5">
                 <span>⚓</span>
-                <span>LUG_RIGHT // RIG_LOCKED</span>
+                <span>LUG_R<span className="hidden sm:inline">IGHT // RIG_LOCKED</span></span>
               </div>
             </div>
 
             {/* Main Section Card: Crisp White Structural Card */}
-            <div className="relative rounded-2xl bg-white border-2 border-slate-200/90 p-8 sm:p-12 lg:p-14 shadow-2xl backdrop-blur-xl">
+            <div className="relative rounded-2xl bg-white border-2 border-slate-200/90 p-5 sm:p-10 lg:p-14 shadow-2xl backdrop-blur-xl">
               {/* Technical Watermark */}
-              <div className="absolute top-4 right-6 font-mono text-xs text-primary-600/40 uppercase tracking-widest pointer-events-none">
+              <div className="hidden md:block absolute top-4 right-6 font-mono text-xs text-primary-600/40 uppercase tracking-widest pointer-events-none">
                 [SECTION_MODULE_01 // ACTIVE_LIFT]
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
                 {/* Left Column: Scope & Headline (7 cols) */}
-                <div className="lg:col-span-7 space-y-5">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-50 border border-primary-200 text-primary-700 text-xs font-mono font-semibold">
+                <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 border border-primary-200 text-primary-700 text-xs font-mono font-semibold">
                     <FaHardHat className="text-cta" />
                     <span>Heavy Crane & Structural Assembly</span>
                   </div>
 
-                  <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-900 leading-tight">
+                  <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-slate-900 leading-tight">
                     Engineered from Ground to <span className="text-primary-600">Pinnacle.</span>
                   </h2>
 
-                  <p className="font-display text-sm sm:text-base text-amber-600 font-semibold tracking-wide">
+                  <p className="font-display text-xs sm:text-base text-amber-600 font-semibold tracking-wide">
                     {subtitle}
                   </p>
 
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  <p className="text-slate-600 text-xs sm:text-base leading-relaxed">
                     We mobilize specialized heavy plant, crane rigging teams, and precision alignment lasers to erect high-tolerance curtain wall cassettes, structural steel trusses, and pre-cast concrete modules across Riyadh.
                   </p>
 
-                  <div className="pt-2 flex flex-wrap items-center gap-4">
+                  <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                     <Button
                       href={whatsappUrl}
                       variant="cta"
                       size="md"
                       icon={FaWhatsapp}
                       iconPosition="left"
-                      className="shadow-glow-cta font-bold"
+                      className="shadow-glow-cta font-bold w-full sm:w-auto"
                     >
                       Inquire via WhatsApp
                     </Button>
@@ -388,6 +388,7 @@ export const CraneLiftSection = ({
                       size="md"
                       icon={FaArrowRight}
                       iconPosition="right"
+                      className="w-full sm:w-auto"
                     >
                       View All Scopes
                     </Button>
@@ -395,12 +396,12 @@ export const CraneLiftSection = ({
                 </div>
 
                 {/* Right Column: Key Technical Specs Box (5 cols) */}
-                <div className="lg:col-span-5 bg-slate-50 border border-slate-200/90 rounded-xl p-6 space-y-4 shadow-sm">
+                <div className="lg:col-span-5 bg-slate-50 border border-slate-200/90 rounded-xl p-4 sm:p-6 space-y-3 sm:space-y-4 shadow-sm">
                   <span className="font-mono text-xs text-primary-700 uppercase tracking-widest block pb-2 border-b border-slate-200 font-bold">
                     Rigging & Lifting Tolerances
                   </span>
 
-                  <div className="space-y-3 text-xs font-mono">
+                  <div className="space-y-2.5 sm:space-y-3 text-xs font-mono">
                     <div className="flex items-center justify-between pb-2 border-b border-slate-200/80">
                       <span className="text-slate-500">Façade Alignment:</span>
                       <span className="text-slate-900 font-bold">± 1.5mm Precision</span>

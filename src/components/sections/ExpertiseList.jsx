@@ -64,7 +64,7 @@ export const ExpertiseList = () => {
             return (
               <StaggerItem key={category.id}>
                 <div
-                  className={`group relative h-full bg-white rounded-xl border p-8 flex flex-col justify-between hover-lift transition-all duration-300 ${
+                  className={`group relative h-full bg-white rounded-xl border p-5 sm:p-8 flex flex-col justify-between hover-lift transition-all duration-300 ${
                     isHighlighted
                       ? "border-cta/40 shadow-elevated bg-gradient-to-b from-white to-primary-50/40"
                       : "border-slate-200/80 hover:border-cta/50 shadow-sm"
