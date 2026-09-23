@@ -38,7 +38,7 @@ export const SectorsPreview = () => {
         >
           {sectors.map((sector, index) => (
             <StaggerItem key={sector.id}>
-              <div className="group h-full bg-white border border-slate-200/80 rounded-xl p-8 hover-lift hover:border-cta/50 shadow-sm flex flex-col justify-between transition-all duration-300">
+              <div className="group h-full bg-white border border-slate-200/80 rounded-xl p-5 sm:p-8 hover-lift hover:border-cta/50 shadow-sm flex flex-col justify-between transition-all duration-300">
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4 pb-3 border-b border-slate-100">
                     <span className="font-mono text-xs text-cta uppercase tracking-widest font-bold">
