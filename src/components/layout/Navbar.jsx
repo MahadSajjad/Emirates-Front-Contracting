@@ -42,9 +42,9 @@ export const Navbar = () => {
     <>
       <header
         className={clsx(
-          "sticky top-0 z-40 w-full transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
           isScrolled
-            ? "bg-primary-900/95 backdrop-blur-md shadow-lg py-3.5 border-b border-white/10"
+            ? "bg-primary-900/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
             : "bg-primary py-4 border-b border-white/10"
         )}
       >
@@ -194,6 +194,9 @@ export const Navbar = () => {
           </div>
         </div>
       </header>
+
+      {/* Natural document flow spacer for fixed header */}
+      <div className="h-[74px] sm:h-[76px] w-full shrink-0" aria-hidden="true" />
 
       {/* Mobile Menu Drawer (Sheet) */}
       <Sheet

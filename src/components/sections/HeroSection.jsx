@@ -51,12 +51,12 @@ export const HeroSection = () => {
 
             <Reveal direction="up" delay={0.35}>
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-xl font-normal">
-                Specialized building façades, civil construction, and complete contracting solutions across Saudi Arabia.
+                Specialized building equipments, civil construction, and complete contracting solutions across Saudi Arabia.
               </p>
             </Reveal>
 
             <Reveal direction="up" delay={0.45}>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Button
                   href={heroWhatsAppUrl}
                   variant="cta"

@@ -17,7 +17,7 @@ export const Sheet = ({ isOpen, onClose, title, children, side = "right" }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex">
+    <div className="fixed inset-0 z-[60] flex">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity animate-fade-in"

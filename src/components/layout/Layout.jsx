@@ -6,10 +6,10 @@ import WhatsAppButton from "../sections/WhatsAppButton.jsx";
 
 export const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-800 selection:bg-cta selection:text-black w-full max-w-full overflow-x-hidden relative">
+    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-800 selection:bg-cta selection:text-black w-full max-w-full relative">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-1 w-full max-w-full flex flex-col overflow-x-hidden">{children}</main>
+      <main className="flex-1 w-full max-w-full flex flex-col">{children}</main>
       <Footer />
       <WhatsAppButton />
     </div>
