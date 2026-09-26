@@ -12,12 +12,12 @@ export const HeroSection = () => {
       {/* Vivid Background Construction Photography + Architectural Gradient Overlay */}
 
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left: Concise Editorial Headline & Action (7 cols) */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             <Reveal direction="up" delay={0.2}>
-              <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase tracking-tight text-white leading-[1.08] sm:leading-[1.04]">
+              <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold uppercase tracking-tight text-white leading-[1.08] sm:leading-[1.04]">
                 BUILDING EXCELLENCE. <span className="text-[#f59e0b]">SHAPING THE FUTURE.</span>
               </h1>
             </Reveal>
@@ -66,19 +66,6 @@ export const HeroSection = () => {
               {/* Main Interactive Glass Card */}
               <div className="relative rounded-2xl overflow-hidden p-4 sm:p-5 shadow-2xl border border-slate-700/80 bg-slate-900/90 backdrop-blur-md">
 
-                <div className="flex px-3.5 py-2 rounded-xl shadow-xl border border-slate-700/80 items-center gap-2.5 bg-slate-900/95 max-w-full mb-3">
-                  <span className="w-8 h-8 rounded-lg bg-[#f59e0b]/20 text-[#f59e0b] flex items-center justify-center shrink-0 font-bold">
-                    ✓
-                  </span>
-                  <div className="flex flex-col">
-                    <span className="font-bold text-xs text-white uppercase">
-                      Saudi Building Code (SBC)
-                    </span>
-                    <span className="font-mono text-[10px] text-slate-400">
-                      Certified Fleet & Execution
-                    </span>
-                  </div>
-                </div>
                 <div className="relative h-56 sm:h-72 rounded-xl overflow-hidden mb-4">
 
                   <img
@@ -104,7 +91,7 @@ export const HeroSection = () => {
                 </div>
 
                 {/* 4-Item Visual Priority Snapshot */}
-                <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
                   <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold text-sm">
                       ⛽

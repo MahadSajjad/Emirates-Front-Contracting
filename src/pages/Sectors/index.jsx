@@ -41,16 +41,13 @@ export const SectorsPage = () => {
         <Container>
           <div className="max-w-3xl">
             <Reveal direction="up">
-              <Eyebrow variant="primary" className="mb-3">
-                Sector-Specific Experience
-              </Eyebrow>
               <h1 className="font-display text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight mb-4">
                 ENGINEERED FOR DIVERSE ASSET CLASSES.
               </h1>
-              <p className="font-display text-lg text-slate-300 font-medium mb-6">
+              <p className="font-display text-lg text-white/80 font-medium mb-6">
                 القطاعات والأسواق المستهدفة — حلول تنفيذية متخصصة لكل قطاع
               </p>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+              <p className="text-white/80 text-base sm:text-lg leading-relaxed font-light">
                 Tailoring our structural methodologies, safety standards, and finishing precision to meet the operational demands of corporate developers, private estate owners, and industrial operators.
               </p>
             </Reveal>

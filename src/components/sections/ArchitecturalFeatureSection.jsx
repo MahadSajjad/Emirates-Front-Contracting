@@ -105,10 +105,6 @@ export const ArchitecturalFeatureSection = ({
               </div>
             </div>
 
-            {/* Subtle asterisk architectural motif */}
-            <div className="absolute bottom-8 left-8 sm:left-14 text-primary/20 font-mono text-2xl select-none pointer-events-none">
-              ✦
-            </div>
           </div>
 
           {/* Bottom Decorative Stepped Mosaic Blocks */}
