@@ -3,10 +3,12 @@ import Section from "../ui/Section.jsx";
 import Container from "../ui/Container.jsx";
 import { StaggerContainer, StaggerItem } from "../motion/Reveal.jsx";
 import { features } from "../../data/features.js";
-import { FaBuilding, FaLayerGroup, FaAward, FaShieldAlt, FaCheckDouble, FaComments } from "react-icons/fa";
+import { FaBuilding, FaLayerGroup, FaAward, FaShieldAlt, FaCheckDouble, FaComments, FaGasPump, FaTruck } from "react-icons/fa";
 
 export const WhyUsSection = () => {
   const iconMap = {
+    FaGasPump: FaGasPump,
+    FaTruck: FaTruck,
     FaBuilding: FaBuilding,
     FaLayerGroup: FaLayerGroup,
     FaAward: FaAward,

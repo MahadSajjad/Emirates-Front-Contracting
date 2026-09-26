@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCheckCircle, FaArrowRight, FaWhatsapp, FaBuilding, FaHome, FaIndustry, FaLandmark } from "react-icons/fa";
+import { FaCheckCircle, FaArrowRight, FaWhatsapp, FaBuilding, FaHome, FaIndustry, FaLandmark, FaTruck } from "react-icons/fa";
 import SEO from "../../components/seo/SEO.jsx";
 import StructuredData from "../../components/seo/StructuredData.jsx";
 import Section from "../../components/ui/Section.jsx";
@@ -18,6 +18,7 @@ export const SectorsPage = () => {
   const breadcrumbs = [{ name: "Sectors & Markets", url: "/sectors" }];
 
   const iconMap = {
+    "fleet-fuel-logistics": FaTruck,
     commercial: FaBuilding,
     residential: FaHome,
     industrial: FaIndustry,
@@ -27,8 +28,8 @@ export const SectorsPage = () => {
   return (
     <>
       <SEO
-        title="Contracting Sectors & Capabilities | Riyadh"
-        description="Emirates Front contracting capabilities across Commercial, Luxury Residential, Industrial, and Institutional sectors in Riyadh, Saudi Arabia."
+        title="Fleet Rental, Fuel Logistics & Contracting Sectors | Riyadh"
+        description="Emirates Front contracting capabilities: Heavy Fleet Rental, 24/7 On-Site Fuel Supply, Commercial, Luxury Residential Villas, and Industrial projects in Riyadh, Saudi Arabia."
         canonical="/sectors"
       />
       <StructuredData type="all" breadcrumbs={breadcrumbs} />

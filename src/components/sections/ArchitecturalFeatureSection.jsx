@@ -12,17 +12,7 @@ export const ArchitecturalFeatureSection = ({
   linkText = "About Our Firm",
 }) => {
   return (
-    <section className="relative w-full bg-slate-950 overflow-hidden py-0 my-0">
-      {/* Background B&W / Grayscale Construction & Transport Machinery Photography */}
-      <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center grayscale contrast-125 opacity-20"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950" />
-      </div>
+    <section className="relative w-full bg-[#225F98] overflow-hidden py-0 my-0">
 
       {/* Outer wrapper with staggered decorative architectural blocks */}
       <div className="relative z-10 w-full pt-16 pb-20">
@@ -39,15 +29,13 @@ export const ArchitecturalFeatureSection = ({
           <div className="relative bg-white text-slate-900 px-5 sm:px-14 lg:px-20 py-10 sm:py-20 lg:py-24 shadow-2xl border-t border-b border-slate-200 rounded-xl sm:rounded-none">
             {/* Top Brand Tag / Logo Icon in Top-Left */}
             <div className="absolute top-5 left-5 sm:top-6 sm:left-14 flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-700/80 p-1 flex items-center justify-center shadow-md">
-                <img
-                  src="/logo.png"
-                  alt="Emirates Front Emblem"
-                  className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(59,130,246,0.3)]"
-                  width="40"
-                  height="40"
-                />
-              </div>
+              <img
+                src="/logo.png"
+                alt="Emirates Front Emblem"
+                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-sm"
+                width="56"
+                height="56"
+              />
             </div>
 
             {/* Stepped Technical Schematic Line */}

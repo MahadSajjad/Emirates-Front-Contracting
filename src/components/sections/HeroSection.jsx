@@ -8,21 +8,9 @@ export const HeroSection = () => {
   const heroWhatsAppUrl = buildWhatsAppLink();
 
   return (
-    <section className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center bg-[#091e36] text-white overflow-hidden w-full max-w-full">
+    <section className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center bg-[#225F98] text-white overflow-hidden w-full max-w-full">
       {/* Vivid Background Construction Photography + Architectural Gradient Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2400&q=85"
-          alt="Heavy Construction and Tower Cranes - Emirates Front Contracting"
-          className="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000"
-          loading="eager"
-        />
-        {/* Directional Corporate Blue & Slate Gradient: Ensures total text readability while keeping image vivid */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#091e36]/95 via-[#091e36]/85 to-[#005596]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#091e36] via-transparent to-[#091e36]/70" />
-        {/* Diagonal architectural pattern */}
-        <div className="absolute inset-0 bg-steel-truss opacity-20 pointer-events-none" />
-      </div>
+
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -42,7 +30,7 @@ export const HeroSection = () => {
 
             <Reveal direction="up" delay={0.3}>
               <p className="text-xs sm:text-sm lg:text-base text-slate-300 leading-relaxed max-w-xl font-normal">
-                Comprehensive contracting services across Saudi Arabia: Road Building, Luxury Villas, Street Lighting, Civil Superstructures, and Full Fleet Rentals (Excavators, Dumpers, 3-Ton Pickups, Trailers & Cranes).
+                Specialized in 24/7 On-Site Fuel Supply & Diesel Logistics, Full Fleet Vehicle Rental & Machinery Hiring (Excavators, Dumpers, 3-Ton Pickups, Trailers, Cranes), and Comprehensive Contracting Services across Riyadh & Saudi Arabia.
               </p>
             </Reveal>
 
@@ -110,66 +98,65 @@ export const HeroSection = () => {
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] sm:text-xs font-mono text-white bg-slate-900/90 px-3 py-1.5 rounded-md backdrop-blur-sm border border-slate-700">
                     <span className="flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-ping" />
-                      <span>Heavy Excavators · Dumpers</span>
+                      <span>Heavy Excavators · Dumpers & Rental Fleet</span>
                     </span>
-                    <span className="text-[#f59e0b] font-bold">Exit 18</span>
                   </div>
                 </div>
 
-                {/* 4-Item Visual Fleet Snapshot */}
+                {/* 4-Item Visual Priority Snapshot */}
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold">
+                    <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold text-sm">
+                      ⛽
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
+                        Fuel Supply & Diesel
+                      </span>
+                      <span className="block font-mono text-[10px] text-slate-400 truncate">
+                        24/7 On-Site Tankers
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold text-sm">
                       🚜
                     </div>
                     <div className="min-w-0">
                       <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
-                        Excavators & Dumpers
+                        Full Fleet Rental
                       </span>
                       <span className="block font-mono text-[10px] text-slate-400 truncate">
-                        Daily & Monthly Rental
+                        Excavators & Dumpers
                       </span>
                     </div>
                   </div>
 
                   <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold">
+                    <div className="w-8 h-8 rounded bg-[#0284c7]/20 text-[#38bdf8] flex items-center justify-center shrink-0 font-mono font-bold text-sm">
                       🚛
                     </div>
                     <div className="min-w-0">
                       <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
-                        3-Ton Pickups & Dyna
+                        Dynas, Trailers & Cranes
                       </span>
                       <span className="block font-mono text-[10px] text-slate-400 truncate">
-                        Rapid Riyadh Haulage
+                        3-Ton Pickups & Lowbed
                       </span>
                     </div>
                   </div>
 
                   <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded bg-[#0284c7]/20 text-[#38bdf8] flex items-center justify-center shrink-0 font-mono font-bold">
-                      🛣️
+                    <div className="w-8 h-8 rounded bg-[#0284c7]/20 text-[#38bdf8] flex items-center justify-center shrink-0 font-mono font-bold text-sm">
+                      🏗️
                     </div>
                     <div className="min-w-0">
                       <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
-                        Roads & Asphalting
+                        General Contracting
                       </span>
                       <span className="block font-mono text-[10px] text-slate-400 truncate">
-                        Grading & Street Light
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded bg-[#0284c7]/20 text-[#38bdf8] flex items-center justify-center shrink-0 font-mono font-bold">
-                      🏡
-                    </div>
-                    <div className="min-w-0">
-                      <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
-                        Villa Construction
-                      </span>
-                      <span className="block font-mono text-[10px] text-slate-400 truncate">
-                        Turnkey Contracting
+                        Roads, Villas & Concrete
                       </span>
                     </div>
                   </div>

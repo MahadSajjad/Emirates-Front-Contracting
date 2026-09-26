@@ -17,13 +17,13 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
     email: siteConfig.email,
     priceRange: "$$$",
     description:
-      "General Contracting Company in Riyadh providing Building Envelope & Façade, Civil & Structural, MEP, and Commercial Fit-out works.",
+      "Specialized on-site fuel supply & diesel logistics, full fleet vehicle and machinery rental (excavators, dumpers, 3-ton dynas, trailers, cranes), and comprehensive general contracting services across Riyadh and Saudi Arabia.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Riyadh",
       addressRegion: "Riyadh Province",
       addressCountry: "SA",
-      streetAddress: "Riyadh, Saudi Arabia",
+      streetAddress: "Haroon Rashid Road, As Sulay, Near Exit 18, Riyadh, Saudi Arabia",
     },
     geo: {
       "@type": "GeoCoordinates",

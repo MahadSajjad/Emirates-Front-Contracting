@@ -7,6 +7,20 @@
 
 export const sectors = [
   {
+    id: "fleet-fuel-logistics",
+    title: "Heavy Fleet Rental & On-Site Fuel Supply",
+    titleAr: "تأجير أساطيل المعدات والشاحنات وتوريد الوقود",
+    subtitle: "Excavators, Dumpers, 3-Ton Pickups, Trailers, Cranes & Jobsite Diesel",
+    description: "Powering major civil, industrial, and infrastructure project sites across Saudi Arabia with complete vehicle and machinery fleet rentals alongside 24/7 scheduled diesel delivery. We keep heavy equipment running at 100% capacity.",
+    capabilities: [
+      "Rapid dispatch of excavators, tipper dumpers, 3-ton dynas & cranes",
+      "Direct on-site diesel delivery and scheduled mobile fuel bowser service",
+      "Comprehensive maintenance, emergency replacement & certified operators",
+      "Customized daily, monthly, and multi-year project fleet hiring agreements",
+    ],
+    image: "/images/sectors/fleet-fuel.jpg",
+  },
+  {
     id: "commercial",
     title: "Commercial & Corporate",
     titleAr: "القطاع التجاري والشركات",
@@ -50,21 +64,6 @@ export const sectors = [
       "Large-scale site grading, drainage, and yard paving",
     ],
     image: "/images/sectors/industrial.jpg",
-  },
-  {
-    id: "government",
-    title: "Government & Institutional",
-    titleAr: "القطاع الحكومي والمؤسسي",
-    subtitle: "Municipal Facilities, Institutional Complexes & Public Infrastructure",
-    // DRAFT — confirm with client
-    description: "Executing public sector and institutional contracting works aligned with the Saudi Building Code, civil defense guidelines, and municipal procurement standards. Focused on safety, transparency, compliance, and methodical quality assurance.",
-    capabilities: [
-      "Strict compliance with Saudi Building Codes and safety mandates",
-      "Systematic QA/QC documentation and stage-gate inspection readiness",
-      "Durable architectural materials suited for heavy public footfall",
-      "Dedicated HSE supervision across all project phases",
-    ],
-    image: "/images/sectors/government.jpg",
   },
 ];
 

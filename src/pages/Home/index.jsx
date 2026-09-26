@@ -14,8 +14,8 @@ export const HomePage = () => {
   return (
     <>
       <SEO
-        title="General Contracting & Façade Specialists in Riyadh"
-        description="Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — Building Envelope & Façade, Civil Superstructures, MEP, and Turnkey Commercial Fit-outs in Riyadh, Saudi Arabia."
+        title="Fuel Supply, Full Fleet Vehicle Rental & General Contracting | Riyadh"
+        description="Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — 24/7 On-Site Fuel Supply & Diesel Delivery, Full Fleet Vehicle Rental & Machinery Hiring (Excavators, Dumpers, 3-Ton Pickups, Trailers, Cranes) & Civil Contracting in Riyadh."
         canonical="/"
       />
       <StructuredData type="business" />

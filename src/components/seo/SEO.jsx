@@ -13,11 +13,11 @@ export const SEO = ({
   const siteTitle = siteConfig.name;
   const fullTitle = title
     ? `${title} | ${siteTitle}`
-    : `${siteTitle} | شركة واجهة الامارات للمقاولات | Riyadh Contracting`;
+    : `${siteTitle} | Fuel Supply, Fleet Vehicle Rental & Contracting | Riyadh`;
 
   const metaDescription =
     description ||
-    "Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — Building Envelope & Façade, Civil, Structural, and MEP Contracting Services in Riyadh, Saudi Arabia.";
+    "Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — 24/7 On-Site Fuel Supply, Full Fleet Vehicle Rental & Machinery Hiring (Excavators, Dumpers, 3-Ton Pickups, Trailers, Cranes) and Comprehensive Contracting in Riyadh, Saudi Arabia.";
 
   const canonicalUrl = canonical
     ? `${siteConfig.url}${canonical.startsWith("/") ? canonical : `/${canonical}`}`

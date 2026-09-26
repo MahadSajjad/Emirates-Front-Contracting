@@ -14,18 +14,8 @@ export const CTASection = ({
   const ctaWhatsAppUrl = buildWhatsAppLink();
 
   return (
-    <section className="relative w-full bg-slate-950 text-white overflow-hidden py-20 md:py-28">
+    <section className="relative w-full bg-[#225F98] text-white overflow-hidden py-20 md:py-28">
       {/* Background with lighter slate-blue gradient overlay & blueprint lines */}
-      <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20 scale-105"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950" />
-        <div className="absolute inset-0 bg-steel-truss opacity-20" />
-      </div>
 
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -85,16 +75,16 @@ export const CTASection = ({
             <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-8 text-xs sm:text-sm text-white/70 font-mono">
               <a
                 href={`tel:${siteConfig.phone.number}`}
-                className="flex items-center gap-2 hover:text-primary-400 transition-colors"
+                className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <FaPhoneAlt className="w-3.5 h-3.5 text-primary-400" />
+                <FaPhoneAlt className="w-3.5 h-3.5 text-white" />
                 <span>{siteConfig.phone.display}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-2 hover:text-primary-400 transition-colors"
+                className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <FaEnvelope className="w-3.5 h-3.5 text-primary-400" />
+                <FaEnvelope className="w-3.5 h-3.5 text-white" />
                 <span>{siteConfig.email}</span>
               </a>
             </div>

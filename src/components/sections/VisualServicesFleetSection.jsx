@@ -9,6 +9,36 @@ export const VisualServicesFleetSection = () => {
 
   const servicesData = [
     // -------------------------------------------------------------
+    // PRIORITY 1: ON-SITE FUEL SUPPLY & DIESEL LOGISTICS
+    // -------------------------------------------------------------
+    {
+      id: "fuel-supply",
+      category: "rental",
+      categoryName: "Fuel Logistics · توريد المحروقات والديزل",
+      title: "On-Site Fuel Supply & Diesel Logistics",
+      titleAr: "توريد الديزل والوقود للمواقع الإنشائية والمشاريع",
+      image: "https://images.unsplash.com/photo-1528457616777-84ce44cc3699?w=800&auto=format&fit=crop&q=80",
+      alt: "On-Site Fuel Supply and Diesel Logistics Riyadh - Emirates Front Contracting",
+      badge: "Primary Service · توريد محروقات",
+      specs: ["Bulk Diesel & Fuel Tankers", "Direct Machine & Generator Delivery", "24/7 Rapid Riyadh Mobilization"],
+      description: "Direct jobsite diesel delivery, mobile fuel bowsers, and dedicated tankers fueling excavators, dumpers, generators, and vehicle fleets without project downtime.",
+    },
+    // -------------------------------------------------------------
+    // PRIORITY 2: FULL FLEET VEHICLE RENTAL & HIRING
+    // -------------------------------------------------------------
+    {
+      id: "full-fleet",
+      category: "rental",
+      categoryName: "Rental Fleet · تأجير أسطول متكامل",
+      title: "Full Fleet Vehicle Rental & Equipment Hiring",
+      titleAr: "تأجير أسطول المعدات والآليات والشاحنات الكامل",
+      image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+      alt: "Full Fleet Vehicle Rental and Equipment Hiring Riyadh - Emirates Front Contracting",
+      badge: "Top-Tier Fleet · أسطول متكامل",
+      specs: ["Excavators, Dumpers & Pickups", "3-Ton Dynas, Trailers & Cranes", "Daily, Monthly & Annual Contracts"],
+      description: "Comprehensive vehicle and heavy plant equipment rental fleet across Riyadh and KSA. Certified machinery supplied with or without expert operators on flexible commercial terms.",
+    },
+    // -------------------------------------------------------------
     // RENTAL FLEET (CAR & TRUCK RENTALS)
     // -------------------------------------------------------------
     {
@@ -135,30 +165,7 @@ export const VisualServicesFleetSection = () => {
       specs: ["Reinforced Footings & Slabs", "Retaining Walls & Basements", "SASO Certified Ready-Mix"],
       description: "Engineered reinforced concrete casting, post-tensioned slabs, structural shear walls, and commercial foundations with certified testing.",
     },
-    {
-      id: "facades",
-      category: "contracting",
-      categoryName: "Contracting Scope · مقاولات عامة",
-      title: "Curtain Walls & Modern Façades",
-      titleAr: "واجهات المباني والكلادينج والزجاج",
-      image: "https://images.unsplash.com/photo-1619218070141-bcfeb8b93074?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TW9kZXJuJTIwRmElQzMlQTdhZGVzfGVufDB8fDB8fHww",
-      alt: "Curtain Wall and Glass Facades Riyadh - Emirates Front Contracting",
-      badge: "Building Envelope",
-      specs: ["Unitized & Stick Systems", "Fire-Rated ACP Panels", "Thermal & Acoustic Barrier"],
-      description: "Signature architectural façades, structural glazing, spider fittings, and aluminum composite cladding reflecting our core specialization.",
-    },
-    {
-      id: "materials",
-      category: "contracting",
-      categoryName: "Contracting Scope · مقاولات عامة",
-      title: "Material & Fuel Supply Logistics",
-      titleAr: "توريد مواد البناء والديزل والمحروقات",
-      image: "https://images.unsplash.com/photo-1528457616777-84ce44cc3699?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RnVlbCUyMHRydWNrfGVufDB8fDB8fHww",
-      alt: "Construction Material and Fuel Supply Riyadh - Emirates Front Contracting",
-      badge: "Site Logistics",
-      specs: ["Aggregates, Sand & Cement", "Direct Jobsite Diesel Supply", "Laboratory Quality Checks"],
-      description: "Reliable bulk delivery of certified construction raw materials, scrap management, and mobile on-site fuel tankers for heavy equipment.",
-    },
+
   ];
 
   const filteredItems = activeTab === "all"
@@ -209,7 +216,7 @@ export const VisualServicesFleetSection = () => {
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   }`}
               >
-                <span>Equipment & Trucks</span>
+                <span>Fleet Rentals & Fuel Supply</span>
               </button>
               <button
                 type="button"
@@ -320,7 +327,7 @@ export const VisualServicesFleetSection = () => {
         </div>
 
         {/* Bottom Fast Contact Strip */}
-        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-[#091e36] text-white border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-[#225F98] text-white border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
             <span className="font-mono text-xs text-[#f59e0b] uppercase tracking-widest font-bold">
               Haroon Rashid Road · Sulay Near Exit 18, Riyadh

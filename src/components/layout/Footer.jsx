@@ -15,21 +15,19 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Col 1: Brand & Positioning (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <Link to="/" className="inline-flex items-center gap-3 group">
-              <div className="w-11 h-11 bg-white border border-slate-200 rounded-xl p-1 flex items-center justify-center shadow-sm group-hover:border-primary-500 transition-all shrink-0">
-                <img
-                  src="/logo.png"
-                  alt="Emirates Front Contracting Company Logo"
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform"
-                  width="44"
-                  height="44"
-                />
-              </div>
+            <Link to="/" className="inline-flex items-center gap-3.5 group">
+              <img
+                src="/logo.png"
+                alt="Emirates Front Contracting Company Logo"
+                className="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform shrink-0 filter drop-shadow-sm"
+                width="64"
+                height="64"
+              />
               <div>
-                <span className="font-display font-extrabold text-lg uppercase tracking-tight text-slate-900 block group-hover:text-primary-600 transition-colors">
+                <span className="font-display font-extrabold text-lg sm:text-xl uppercase tracking-tight text-slate-900 block group-hover:text-[#0066b2] transition-colors leading-tight">
                   Emirates Front
                 </span>
-                <span className="font-display text-xs font-semibold text-slate-500 tracking-wider block">
+                <span className="font-display text-xs font-semibold text-slate-500 tracking-wider block mt-0.5">
                   شركة واجهة الامارات للمقاولات
                 </span>
               </div>

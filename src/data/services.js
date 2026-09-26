@@ -8,6 +8,13 @@
 
 export const serviceCategories = [
   {
+    id: "fleet-fuel",
+    name: "Fleet Rental & Fuel Supply",
+    shortName: "Fleet & Fuel Supply",
+    description: "24/7 on-site diesel logistics and full fleet rental (excavators, dumpers, pickups, 3-ton dynas, trailers & cranes).",
+    highlight: true,
+  },
+  {
     id: "facade",
     name: "Building Envelope & Façade",
     shortName: "Façade & Cladding",
@@ -47,6 +54,64 @@ export const serviceCategories = [
 ];
 
 export const services = [
+  // ==========================================
+  // Primary Focus: Fuel Supply & Full Fleet Rental
+  // ==========================================
+  {
+    slug: "fuel-supply-diesel-logistics",
+    title: "On-Site Fuel Supply & Diesel Logistics",
+    titleAr: "توريد الديزل والوقود للمواقع الإنشائية والمشاريع",
+    category: "fleet-fuel",
+    categoryName: "Fleet Rental & Fuel Supply",
+    icon: "FaTruck",
+    excerpt: "Direct jobsite diesel delivery, mobile fuel bowsers, and dedicated fuel tankers fueling heavy equipment without project downtime.",
+    description: "Emirates Front delivers uninterrupted on-site fuel supply and certified diesel logistics across Riyadh and Saudi Arabia. Our dedicated fuel bowsers and high-capacity tankers supply heavy plant machinery, power generators, tippers, and vehicle fleets directly at the project site.",
+    bullets: [
+      "24/7 direct jobsite bulk diesel delivery and fueling",
+      "High-capacity mobile fuel bowsers and certified road tankers",
+      "Direct generator and plant machinery top-ups with zero downtime",
+      "SASO-compliant fuel quality verification and certified metered pumps",
+      "Scheduled daily/weekly fuel delivery routes across Riyadh projects",
+      "Emergency fuel dispatch from our central yard near Exit 18, As Sulay",
+    ],
+    specifications: [
+      { label: "Delivery Fleet", value: "Mobile Fuel Bowsers, 10,000L - 32,000L Road Tankers" },
+      { label: "Fuel Grade", value: "SASO Certified High-Grade Saudi Aramco Spec Diesel" },
+      { label: "Coverage", value: "Greater Riyadh, Industrial Cities & Remote KSA Corridors" },
+      { label: "Availability", value: "24/7 Rapid Mobilization & Scheduled Contract Routes" },
+    ],
+    image: "https://images.unsplash.com/photo-1528457616777-84ce44cc3699?w=800&auto=format&fit=crop&q=80",
+    metaTitle: "On-Site Fuel Supply & Diesel Delivery Riyadh | Emirates Front",
+    metaDescription: "24/7 direct jobsite fuel supply, bulk diesel delivery, and mobile tanker fueling for heavy equipment in Riyadh by Emirates Front.",
+  },
+  {
+    slug: "fleet-vehicle-rental-hiring",
+    title: "Full Fleet Vehicle Rental & Equipment Hiring",
+    titleAr: "تأجير أسطول المعدات والآليات والشاحنات الكامل",
+    category: "fleet-fuel",
+    categoryName: "Fleet Rental & Fuel Supply",
+    icon: "FaTruck",
+    excerpt: "Comprehensive vehicle and heavy plant equipment rental: Excavators, Dumpers, 3-Ton Pickups, Trailers, and Cranes.",
+    description: "Emirates Front operates an extensive, modern vehicle and heavy machinery rental fleet based at our yard on Haroon Rashid Road, Exit 18, Riyadh. We offer hydraulic excavators, heavy tipper dumpers, 3-ton pickups and Dyna box trucks, lowbed trailers, and 25T-100T mobile cranes on daily, monthly, or annual operational contracts.",
+    bullets: [
+      "Crawler & wheel hydraulic excavators (20T to 45T) with rock breakers",
+      "Heavy tipper dump trucks (16m³ to 32m³) for earth clearance & backfill",
+      "Commercial 3-ton Dyna trucks and flatbeds for fast materials distribution",
+      "Field utility pickups (4x4 single/double cab) for site engineers and crews",
+      "Heavy lowbed transporters and flatbed trailers for oversized machinery",
+      "Certified 25T to 100T mobile hydraulic cranes with certified riggers",
+    ],
+    specifications: [
+      { label: "Fleet Lineup", value: "Excavators, Dumpers, 3T Dynas, Pickups, Lowbeds, Cranes" },
+      { label: "Rental Terms", value: "Daily, Weekly, Monthly & Annual Project Leases" },
+      { label: "Crew Option", value: "Bare Equipment or With Certified Experienced Operators" },
+      { label: "Mobilization", value: "Immediate Dispatch from Haroon Rashid Road, Exit 18 Yard" },
+    ],
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+    metaTitle: "Equipment & Vehicle Rental Fleet Riyadh | Emirates Front Contracting",
+    metaDescription: "Heavy equipment and vehicle rental in Riyadh: Excavators, Dumpers, 3-Ton Dynas, Pickups, Trailers, and Cranes by Emirates Front.",
+  },
+
   // ==========================================
   // Category 1: Building Envelope & Façade
   // ==========================================

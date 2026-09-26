@@ -34,8 +34,8 @@ export const ServicesPage = () => {
   return (
     <>
       <SEO
-        title="Contracting Services & Capabilities | Riyadh"
-        description="Comprehensive contracting services: Building Envelope & Façade Cladding, Reinforced Concrete, Civil Works, MEP Solutions, and Commercial Fit-outs in Riyadh."
+        title="Fuel Supply, Fleet Vehicle Rental & Contracting Services | Riyadh"
+        description="Comprehensive services: 24/7 On-Site Fuel Supply & Diesel Logistics, Full Fleet Vehicle Rental (Excavators, Dumpers, Pickups, Dynas, Trailers, Cranes), and General Contracting in Riyadh, Saudi Arabia."
         canonical="/services"
       />
       <StructuredData type="all" breadcrumbs={breadcrumbs} />

@@ -7,81 +7,75 @@
 
 export const features = [
   {
-    id: "facade-specialization",
+    id: "fuel-supply-logistics",
     number: "01",
-    title: "Building Envelope Specialization",
+    title: "On-Site Fuel Supply & 24/7 Diesel Logistics",
+    titleAr: "توريد الديزل والوقود الميداني على مدار الساعة",
+    description: "Zero downtime for your heavy machinery and project fleets. We deliver certified bulk diesel, mobile fuel bowsers, and scheduled tanker fueling for excavators, dumpers, generators, and site vehicles across Riyadh.",
+    icon: "FaGasPump",
+  },
+  {
+    id: "fleet-rental-hiring",
+    number: "02",
+    title: "Full Fleet Vehicle Rental & Heavy Equipment Hiring",
+    titleAr: "تأجير أسطول متكامل من المعدات والشاحنات والآليات",
+    description: "Immediate mobilization of high-spec excavators, tipper dumpers, 3-ton pickups/Dynas, heavy lowbed trailers, and certified cranes. Available on daily, monthly, or annual lease with or without certified operators.",
+    icon: "FaTruck",
+  },
+  {
+    id: "comprehensive-contracting",
+    number: "03",
+    title: "Comprehensive Contracting & Turnkey Civil Scopes",
+    titleAr: "مشاريع المقاولات العامة وتطوير البنية التحتية",
+    description: "End-to-end execution across road building, luxury villas, street lighting, reinforced concrete structures, and MEP networks coordinated under one unified, accountable engineering management team.",
+    icon: "FaLayerGroup",
+  },
+  {
+    id: "facade-specialization",
+    number: "04",
+    title: "Building Envelope & Façade Specialization",
     titleAr: "تخصص متميز في الواجهات والتشطيب الخارجي",
-    // DRAFT — confirm with client
     description: "Reflected directly in our name (واجهة), we bring dedicated focus to building envelopes, curtain walls, and architectural cladding that define the aesthetic and energy profile of your project.",
     icon: "FaBuilding",
   },
   {
-    id: "comprehensive-scope",
-    number: "02",
-    title: "Civil, Structural & MEP Under One Roof",
-    titleAr: "تكامل الأعمال المدنية والإلكتروميكانيكية",
-    // DRAFT — confirm with client
-    description: "Eliminate contractor friction. We coordinate foundations, structural concrete, interior fit-outs, and MEP systems seamlessly under one unified management structure.",
-    icon: "FaLayerGroup",
-  },
-  {
     id: "craftsmanship-standards",
-    number: "03",
-    title: "Rigorous Craftsmanship & Material Standards",
+    number: "05",
+    title: "Rigorous Craftsmanship & SASO / SBC Standards",
     titleAr: "معايير جودة دقيقة واختبارات معتمدة",
-    // DRAFT — confirm with client
     description: "We enforce strict stage-gate quality inspections, SASO/SBC compliance checks, and certified material approvals before any work is poured, sealed, or handed over.",
     icon: "FaAward",
   },
   {
-    id: "safety-compliance",
-    number: "04",
-    title: "Safety Compliance & Site Discipline",
-    titleAr: "التزام صارم بالسلامة المهنية والموقع",
-    // DRAFT — confirm with client
-    description: "Proactive HSE culture on every job site with continuous risk assessments, full PPE enforcement, and regular safety toolbox briefings protecting manpower and assets.",
-    icon: "FaShieldAlt",
-  },
-  {
-    id: "cost-control",
-    number: "05",
-    title: "Value Engineering & Clear Cost Control",
-    titleAr: "هندسة القيمة والشفافية المالية",
-    // DRAFT — confirm with client
-    description: "Practical advice on material alternatives and construction methodologies that protect design intent and longevity while eliminating unnecessary budget overruns.",
-    icon: "FaCheckDouble",
-  },
-  {
     id: "direct-communication",
     number: "06",
-    title: "Direct & Responsive Communication",
-    titleAr: "تواصل مباشر واستجابة سريعة للمشروع",
-    // DRAFT — confirm with client
-    description: "Instant WhatsApp accessibility and transparent project reporting. You have direct communication channels with key project leadership from mobilization to handover.",
+    title: "Rapid Dispatch & Direct Communication",
+    titleAr: "استجابة سريعة وتواصل مباشر عبر الواتساب",
+    description: "Instant WhatsApp accessibility and transparent project reporting. Direct communication channels with equipment dispatchers and project leadership from mobilization to handover.",
     icon: "FaComments",
   },
 ];
 
 export const trustFacts = [
   {
+    label: "Primary Services",
+    value: "Fuel Supply & Fleet Rentals",
+    caption: "24/7 on-site diesel delivery & complete plant fleet",
+  },
+  {
+    label: "Equipment Lineup",
+    value: "Excavators · Dumpers · Cranes",
+    caption: "3-ton dynas, trailers & field utility pickups",
+  },
+  {
+    label: "General Contracting",
+    value: "Roads · Villas · Concrete",
+    caption: "Full turnkey civil, infrastructure & MEP execution",
+  },
+  {
     label: "Strategic Hub",
     value: "Riyadh, KSA",
-    caption: "Centrally positioned to mobilize across the Kingdom",
-  },
-  {
-    label: "Multidisciplinary",
-    value: "Civil · MEP · Façade",
-    caption: "Unified general contracting capability",
-  },
-  {
-    label: "Standards Aligned",
-    value: "SBC & SASO",
-    caption: "Adherence to Saudi Building Codes",
-  },
-  {
-    label: "Lead Response",
-    value: "Direct WhatsApp",
-    caption: "Fast, zero-friction engineering consultation",
+    caption: "Haroon Rashid Rd, Exit 18 yard & dispatch",
   },
 ];
 

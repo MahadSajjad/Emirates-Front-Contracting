@@ -38,16 +38,16 @@ export const WhatsAppButton = ({
         rel="noopener noreferrer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
+        className="group relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
         aria-label="Direct WhatsApp Chat with Emirates Front Contracting"
       >
         {/* Subtle radar ripple effect */}
         <span
-          className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none"
+          className="absolute inset-0 rounded-full bg-[#25D366] opacity-35 animate-ping pointer-events-none"
           style={{ animationDuration: "3s" }}
         />
 
-        <FaWhatsapp className="w-6 h-6 sm:w-7 sm:h-7 relative z-10 transition-transform duration-200 group-hover:scale-110" />
+        <FaWhatsapp className="w-5 h-5 sm:w-5.5 sm:h-5.5 relative z-10 transition-transform duration-200 group-hover:scale-110" />
       </a>
     </aside>
   );

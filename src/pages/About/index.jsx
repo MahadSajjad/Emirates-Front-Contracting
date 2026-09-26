@@ -108,17 +108,15 @@ export const AboutPage = () => {
             {/* Right Col: Corporate Emblem, Mission & Objective */}
             <div className="lg:col-span-5 space-y-6">
               <div className="p-6 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white rounded-xl shadow-xl border border-slate-800 flex items-center gap-4 hover-lift">
-                <div className="w-16 h-16 rounded-xl bg-slate-950 border border-slate-700/80 p-2 shrink-0 flex items-center justify-center shadow-inner">
-                  <img
-                    src="/logo.png"
-                    alt="Emirates Front Corporate Seal"
-                    className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(59,130,246,0.35)]"
-                    width="64"
-                    height="64"
-                  />
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Emirates Front Corporate Seal"
+                  className="h-16 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(0,102,178,0.45)] shrink-0"
+                  width="64"
+                  height="64"
+                />
                 <div className="min-w-0">
-                  <span className="font-mono text-[10px] text-primary-400 uppercase tracking-widest block font-bold mb-0.5">
+                  <span className="font-mono text-[10px] text-[#f59e0b] uppercase tracking-widest block font-bold mb-0.5">
                     Official Identity
                   </span>
                   <span className="font-display font-extrabold text-base text-white block uppercase tracking-tight truncate">
