@@ -2,134 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Routes -->
   <url>
-    <loc>https://emiratesfront.com/</loc>
+    <loc>https://emiratesfront.site/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/about</loc>
+    <loc>https://emiratesfront.site/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services</loc>
+    <loc>https://emiratesfront.site/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/sectors</loc>
+    <loc>https://emiratesfront.site/sectors</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/contact</loc>
+    <loc>https://emiratesfront.site/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Service Detail Pages -->
   <url>
-    <loc>https://emiratesfront.com/services/curtain-wall-cladding</loc>
+    <loc>https://emiratesfront.site/services/curtain-wall-cladding</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/glass-facade-systems</loc>
+    <loc>https://emiratesfront.site/services/glass-facade-systems</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/aluminum-composite-panels</loc>
+    <loc>https://emiratesfront.site/services/aluminum-composite-panels</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/waterproofing-systems</loc>
+    <loc>https://emiratesfront.site/services/waterproofing-systems</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/civil-construction</loc>
+    <loc>https://emiratesfront.site/services/civil-construction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/concrete-structural-work</loc>
+    <loc>https://emiratesfront.site/services/concrete-structural-work</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/block-work-masonry</loc>
+    <loc>https://emiratesfront.site/services/block-work-masonry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/renovations-extensions</loc>
+    <loc>https://emiratesfront.site/services/renovations-extensions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/mechanical-hvac-services</loc>
+    <loc>https://emiratesfront.site/services/mechanical-hvac-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/electrical-solutions</loc>
+    <loc>https://emiratesfront.site/services/electrical-solutions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/plumbing-sanitary-work</loc>
+    <loc>https://emiratesfront.site/services/plumbing-sanitary-work</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/ducting-cable-trays</loc>
+    <loc>https://emiratesfront.site/services/ducting-cable-trays</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/gypsum-board-partitions</loc>
+    <loc>https://emiratesfront.site/services/gypsum-board-partitions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/painting-coatings</loc>
+    <loc>https://emiratesfront.site/services/painting-coatings</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/marble-tiles-flooring</loc>
+    <loc>https://emiratesfront.site/services/marble-tiles-flooring</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/interior-fitout</loc>
+    <loc>https://emiratesfront.site/services/interior-fitout</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/excavation-demolition</loc>
+    <loc>https://emiratesfront.site/services/excavation-demolition</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/grading-backfilling</loc>
+    <loc>https://emiratesfront.site/services/grading-backfilling</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/site-preparation</loc>
+    <loc>https://emiratesfront.site/services/site-preparation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/industrial-construction</loc>
+    <loc>https://emiratesfront.site/services/industrial-construction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.com/services/facility-maintenance-operations</loc>
+    <loc>https://emiratesfront.site/services/facility-maintenance-operations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -9,8 +9,10 @@ export const siteConfig = {
   nameAr: "شركة واجهة الامارات للمقاولات",
   // DRAFT — confirm with client: deliberate play on واجهة (façade / front)
   tagline: "Your Trusted Front in Construction",
-  // CONFIRM — no domain supplied yet; using placeholder for canonical and structured data
-  url: "https://emiratesfront.com",
+  // Production domain for SEO and structured data
+  url: "https://emiratesfront.site",
+  logo: "/logo.png",
+  ogImage: "/images/og-cover.png",
   phone: {
     number: "+966590146337",
     rawWhatsApp: "966590146337",

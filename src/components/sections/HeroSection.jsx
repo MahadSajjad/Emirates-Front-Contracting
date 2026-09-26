@@ -28,14 +28,6 @@ export const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left: Concise Editorial Headline & Action (7 cols) */}
           <div className="lg:col-span-7">
-            <Reveal direction="up" delay={0.1}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-primary-500/15 border border-primary-400/30 backdrop-blur-md mb-4 sm:mb-6">
-                <span className="w-2 h-2 rounded-full bg-primary-400 animate-ping" />
-                <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-slate-300">
-                  Riyadh, Saudi Arabia · General Contracting
-                </span>
-              </div>
-            </Reveal>
 
             <Reveal direction="up" delay={0.2}>
               <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight text-white leading-[1.08] sm:leading-[1.04] mb-3 sm:mb-6">
