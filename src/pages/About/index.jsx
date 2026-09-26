@@ -105,8 +105,31 @@ export const AboutPage = () => {
               </div>
             </div>
 
-            {/* Right Col: Mission & Objective */}
+            {/* Right Col: Corporate Emblem, Mission & Objective */}
             <div className="lg:col-span-5 space-y-6">
+              <div className="p-6 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white rounded-xl shadow-xl border border-slate-800 flex items-center gap-4 hover-lift">
+                <div className="w-16 h-16 rounded-xl bg-slate-950 border border-slate-700/80 p-2 shrink-0 flex items-center justify-center shadow-inner">
+                  <img
+                    src="/logo.png"
+                    alt="Emirates Front Corporate Seal"
+                    className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(59,130,246,0.35)]"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <span className="font-mono text-[10px] text-primary-400 uppercase tracking-widest block font-bold mb-0.5">
+                    Official Identity
+                  </span>
+                  <span className="font-display font-extrabold text-base text-white block uppercase tracking-tight truncate">
+                    Emirates Front Contracting
+                  </span>
+                  <span className="font-display text-xs text-slate-300 block truncate">
+                    شركة واجهة الامارات للمقاولات
+                  </span>
+                </div>
+              </div>
+
               <div className="p-8 bg-slate-950 text-white rounded-xl shadow-xl border border-slate-800 hover-lift">
                 <div className="w-10 h-10 rounded-lg bg-primary-500/15 text-primary-400 flex items-center justify-center mb-4 border border-primary-400/20">
                   <FaBullseye className="w-5 h-5" />

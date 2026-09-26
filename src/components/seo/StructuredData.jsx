@@ -11,6 +11,8 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
     name: siteConfig.name,
     alternateName: siteConfig.nameAr,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/logo.png`,
+    image: `${siteConfig.url}/images/og-cover.png`,
     telephone: siteConfig.phone.number,
     email: siteConfig.email,
     priceRange: "$$$",
@@ -80,6 +82,7 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
         "@type": "GeneralContractor",
         name: siteConfig.name,
         url: siteConfig.url,
+        logo: `${siteConfig.url}/logo.png`,
       },
       areaServed: {
         "@type": "City",

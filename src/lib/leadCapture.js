@@ -24,23 +24,60 @@ export const contactFormSchema = z.object({
 });
 
 /**
- * Generates a pre-filled WhatsApp click-to-chat URL
- * @param {Object} params
+ * Generates a pre-filled WhatsApp click-to-chat URL with all lead details
+ * @param {Object} [params]
  * @param {string} [params.name]
  * @param {string} [params.phone]
+ * @param {string} [params.email]
  * @param {string} [params.service]
  * @param {string} [params.sector]
  * @param {string} [params.message]
  * @returns {string} URL encoded wa.me link
  */
-export const buildWhatsAppLink = () => {
+export const buildWhatsAppLink = ({
+  name = "",
+  phone = "",
+  email = "",
+  service = "",
+  sector = "",
+  message = "",
+} = {}) => {
   const whatsappNumber = siteConfig.phone.rawWhatsApp;
+  const lines = [];
 
-  const lines = [
-    "Hello Emirates Front, I would like to inquire about your contracting services.",
-    "----------------------------------------",
-    "Sent via Emirates Front Website",
-  ];
+  // When form data (name / phone / email) is submitted
+  if (name || phone || email) {
+    lines.push("🏗️ *NEW INQUIRY | واجهة الإمارات للمقاولات*");
+    lines.push("━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    if (name) lines.push(`👤 *Name / Company:* ${name.trim()}`);
+    if (phone) lines.push(`📞 *Phone:* ${phone.trim()}`);
+    if (email && email.trim()) lines.push(`✉️ *Email:* ${email.trim()}`);
+    if (service) lines.push(`🏢 *Service:* ${service.trim()}`);
+    if (sector) lines.push(`📐 *Sector:* ${sector.trim()}`);
+    if (message && message.trim()) {
+      lines.push("");
+      lines.push("📝 *Project Details / Scope:*");
+      lines.push(message.trim());
+    }
+    lines.push("━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    lines.push(`🌐 Sent via ${siteConfig.url}/contact`);
+  } else if (message) {
+    // Contextual message (e.g. from service pages, sectors, floating action button)
+    lines.push(message.trim());
+    if (service && !message.includes(service)) {
+      lines.push(`🏢 *Service:* ${service.trim()}`);
+    }
+    if (sector && !message.includes(sector)) {
+      lines.push(`📐 *Sector:* ${sector.trim()}`);
+    }
+    lines.push("----------------------------------------");
+    lines.push(`Sent via ${siteConfig.url}`);
+  } else {
+    // Default greeting
+    lines.push("Hello Emirates Front Contracting, I would like to inquire about your contracting services in Riyadh.");
+    lines.push("----------------------------------------");
+    lines.push(`Sent via ${siteConfig.url}`);
+  }
 
   const formattedText = lines.join("\n");
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedText)}`;
@@ -54,6 +91,7 @@ export const buildWhatsAppLink = () => {
 export const buildMailtoLink = ({
   name = "",
   phone = "",
+  email = "",
   service = "General Contracting Inquiry",
   sector = "",
   message = "",
@@ -67,6 +105,7 @@ export const buildMailtoLink = ({
     ``,
     `Name: ${name || "Not provided"}`,
     `Phone: ${phone || "Not provided"}`,
+    `Email: ${email || "Not provided"}`,
     `Service of Interest: ${service || "General"}`,
     `Sector: ${sector || "Not specified"}`,
     ``,
@@ -74,7 +113,7 @@ export const buildMailtoLink = ({
     `${message || "No additional message provided."}`,
     ``,
     `---------------------------------`,
-    `Sent from https://emiratesfront.com`,
+    `Sent from ${siteConfig.url}`,
   ];
 
   const body = bodyLines.join("\n");

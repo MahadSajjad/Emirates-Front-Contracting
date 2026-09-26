@@ -24,6 +24,18 @@ export const NotFoundPage = () => {
       <Section variant="dark" padding="lg" className="min-h-[75vh] flex items-center">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
+            <Link to="/" className="inline-block group focus-visible:outline-none">
+              <div className="w-20 h-20 mx-auto rounded-2xl bg-slate-900 border border-slate-700/80 p-2.5 flex items-center justify-center shadow-xl group-hover:border-primary-400 group-hover:scale-105 transition-all">
+                <img
+                  src="/logo.png"
+                  alt="Emirates Front Contracting"
+                  className="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"
+                  width="80"
+                  height="80"
+                />
+              </div>
+            </Link>
+
             <span className="font-mono text-5xl sm:text-7xl font-extrabold text-primary-400 block tracking-widest">
               404
             </span>

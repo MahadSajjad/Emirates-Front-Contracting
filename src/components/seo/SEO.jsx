@@ -6,7 +6,7 @@ export const SEO = ({
   title,
   description,
   canonical,
-  ogImage = "/images/og-cover.jpg",
+  ogImage = siteConfig.ogImage || "/images/og-cover.png",
   ogType = "website",
   noIndex = false,
 }) => {
@@ -37,6 +37,13 @@ export const SEO = ({
       <meta name="description" content={metaDescription} />
       <link rel="canonical" href={canonicalUrl} />
 
+      {/* Favicon & App Icons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+
       {/* Robots */}
       {noIndex ? (
         <meta name="robots" content="noindex, nofollow" />
@@ -51,6 +58,9 @@ export const SEO = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content={siteTitle} />
       <meta property="og:image" content={fullOgImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Emirates Front Contracting Company Logo & Portfolio" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}

@@ -59,15 +59,22 @@ export const ContactForm = ({ defaultService = "" }) => {
       return;
     }
 
-    // Build URL-encoded WhatsApp deep link
-    const whatsappUrl = buildWhatsAppLink();
+    // Build URL-encoded WhatsApp deep link with all entered form data
+    const whatsappUrl = buildWhatsAppLink({
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      service: formData.service,
+      sector: formData.sector,
+      message: formData.message,
+    });
 
     // Open WhatsApp in new window/tab
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     setToast({
       isOpen: true,
-      message: "Opening WhatsApp with your pre-filled inquiry. Our team will respond promptly!",
+      message: "Opening WhatsApp with your complete project details. Our estimating team will respond promptly!",
       type: "success",
     });
 
@@ -93,6 +100,7 @@ export const ContactForm = ({ defaultService = "" }) => {
     const mailtoUrl = buildMailtoLink({
       name: formData.name,
       phone: formData.phone,
+      email: formData.email,
       service: formData.service,
       sector: formData.sector,
       message: formData.message,

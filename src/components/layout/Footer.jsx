@@ -16,8 +16,14 @@ export const Footer = () => {
           {/* Col 1: Brand & Positioning (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center text-primary-400 font-mono font-bold text-base group-hover:bg-primary-400 group-hover:text-slate-950 transition-colors shadow-sm">
-                EF
+              <div className="w-11 h-11 bg-white border border-slate-200 rounded-xl p-1 flex items-center justify-center shadow-sm group-hover:border-primary-500 transition-all shrink-0">
+                <img
+                  src="/logo.png"
+                  alt="Emirates Front Contracting Company Logo"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                  width="44"
+                  height="44"
+                />
               </div>
               <div>
                 <span className="font-display font-extrabold text-lg uppercase tracking-tight text-slate-900 block group-hover:text-primary-600 transition-colors">

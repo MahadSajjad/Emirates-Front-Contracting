@@ -34,13 +34,24 @@ export const Sheet = ({ isOpen, onClose, title, children, side = "right" }) => {
       >
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-slate-800/80 bg-slate-900/40">
-          <div>
-            <span className="font-mono text-xs text-primary-400 tracking-widest uppercase block font-semibold">
-              Menu Navigation
-            </span>
-            <span className="font-display text-lg font-bold uppercase tracking-tight text-white">
-              {title || "Emirates Front"}
-            </span>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700/80 p-1 flex items-center justify-center shadow-sm shrink-0">
+              <img
+                src="/logo.png"
+                alt="Emirates Front Contracting"
+                className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(59,130,246,0.3)]"
+                width="40"
+                height="40"
+              />
+            </div>
+            <div>
+              <span className="font-mono text-[10px] text-primary-400 tracking-widest uppercase block font-semibold">
+                Menu Navigation
+              </span>
+              <span className="font-display text-base font-bold uppercase tracking-tight text-white block">
+                {title || "Emirates Front"}
+              </span>
+            </div>
           </div>
           <button
             type="button"

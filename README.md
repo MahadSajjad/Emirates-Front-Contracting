@@ -95,12 +95,12 @@ Because this is a static front-end SPA with no database, leads route with zero f
 Per the brief, no facts, years in business, project counts, certifications, or revenue figures were fabricated. All items below are marked with `// DRAFT — confirm with client` or `// PLACEHOLDER` in the codebase:
 
 1. **Street Address for Riyadh Office:** Only the Google Maps pin was supplied. The site embeds the exact pin, but the street address text is a placeholder pending client input.
-2. **Company Domain & Website URL:** Defaulted to `https://emiratesfront.com` for sitemap, canonicals, and JSON-LD schema. Update in `src/config/siteConfig.js` once the production domain is live.
-3. **Email Address Domain:** `emiratesfront@gmail.com` is active; a custom domain email (e.g. `info@emiratesfront.com` or `procurement@emiratesfront.com`) is recommended before enterprise procurement campaigns.
+2. **Company Domain & Website URL:** Configured to `https://emiratesfront.site` across canonical links, robots.txt, sitemap.xml, Open Graph tags, and JSON-LD structured data.
+3. **Email Address Domain:** `emiratesfront@gmail.com` is active; a custom domain email (e.g. `info@emiratesfront.site` or `procurement@emiratesfront.site`) can be added if desired.
 4. **Tagline Sign-off:** *"Your Trusted Front in Construction"* is a deliberate draft play on واجهة (façade / front). Client should confirm or replace.
 5. **Services Scope Confirmation:** Façade and building envelope work was given prominence reflecting the Arabic name (واجهة). Client should verify their exact operational split across civil, MEP, and envelope scopes.
 6. **Verifiable Numbers:** Years in business, completed project totals, and workforce count are currently non-numeric to maintain honesty. Add real statistics once officially verified.
-7. **Official Logo:** The website currently uses an engineered geometric wordmark placeholder (`EF / Emirates Front / شركة واجهة الامارات للمقاولات`). Replace with vector SVG upon delivery.
+7. **Official Logo:** The official Emirates Front architectural emblem is integrated across the navbar, footer, mobile navigation sheet, 404 page, about page, favicons (SVG, ICO, PNG 16/32/180/192/512), and custom OpenGraph 1200x630 social share card.
 8. **Social Media Links:** Footer and navigation social handles are currently empty/hidden pending active URLs.
 9. **Arabic (RTL) Version:** The codebase is structured with bilingual metadata (`nameAr`, `titleAr`). An `i18next` or dual-route Arabic version can be enabled without rebuilding the architecture.
 10. **Project Photography:** High-resolution copyright-free construction assets are slotted in. Replace with actual completed project photos as they become available.

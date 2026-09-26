@@ -54,8 +54,14 @@ export const Navbar = () => {
             to="/"
             className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded p-1 shrink-0"
           >
-            <div className="w-10 h-10 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center text-primary-400 font-mono font-bold text-base group-hover:bg-primary-400 group-hover:text-slate-950 transition-all shadow-md group-hover:rotate-3">
-              EF
+            <div className="w-11 h-11 rounded-xl bg-slate-900/90 border border-slate-700/80 p-1 flex items-center justify-center shadow-md group-hover:border-primary-400/80 group-hover:bg-slate-800 transition-all shrink-0">
+              <img
+                src="/logo.png"
+                alt="Emirates Front Contracting Company Logo"
+                className="w-full h-full object-contain filter drop-shadow-[0_2px_6px_rgba(59,130,246,0.35)] group-hover:scale-105 transition-transform"
+                width="44"
+                height="44"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-base sm:text-lg uppercase tracking-tight text-white group-hover:text-primary-400 transition-colors leading-tight">
