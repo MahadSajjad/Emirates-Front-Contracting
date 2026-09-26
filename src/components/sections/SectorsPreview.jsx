@@ -36,53 +36,79 @@ export const SectorsPreview = () => {
           staggerDelay={0.08}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {sectors.map((sector, index) => (
-            <StaggerItem key={sector.id}>
-              <div className="group h-full bg-white border border-slate-200/80 rounded-xl p-5 sm:p-8 hover-lift hover:border-slate-300 shadow-sm flex flex-col justify-between transition-all duration-300">
-                <div>
-                  <div className="flex items-center justify-between gap-4 mb-4 pb-3 border-b border-slate-100">
-                    <span className="font-mono text-xs text-slate-400 uppercase tracking-widest font-bold">
+          {sectors.map((sector, index) => {
+            const sectorImages = {
+              commercial: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+              residential: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+              industrial: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+              government: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80",
+            };
+            const imageSrc = sectorImages[sector.id] || "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80";
+
+            return (
+              <StaggerItem key={sector.id}>
+                <div className="group h-full bg-white border border-slate-200/80 rounded-xl overflow-hidden hover-lift hover:border-[#0066b2]/40 shadow-sm flex flex-col justify-between transition-all duration-300">
+                  {/* Sector Image Header */}
+                  <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={imageSrc}
+                      alt={sector.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                    
+                    {/* Floating Top Badge */}
+                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-900/90 border border-slate-700 font-mono text-[10px] text-white font-bold tracking-wider uppercase backdrop-blur-sm">
                       Sector 0{index + 1}
-                    </span>
-                    <span className="font-display text-xs text-slate-500 font-medium">
-                      {sector.titleAr}
-                    </span>
+                    </div>
+
+                    {/* Bottom Title Overlay */}
+                    <div className="absolute bottom-3 left-3 right-3 text-white">
+                      <span className="font-display text-xs text-[#f59e0b] font-bold block mb-0.5">
+                        {sector.titleAr}
+                      </span>
+                      <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-white leading-tight">
+                        {sector.title}
+                      </h3>
+                    </div>
                   </div>
 
-                  <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-slate-900 group-hover:text-primary-600 transition-colors mb-2">
-                    {sector.title}
-                  </h3>
+                  {/* Card Body */}
+                  <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span className="font-mono text-xs text-[#0066b2] font-semibold block mb-2">
+                        {sector.subtitle}
+                      </span>
 
-                  <span className="font-mono text-xs text-slate-500 block mb-4">
-                    {sector.subtitle}
-                  </span>
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+                        {sector.description}
+                      </p>
 
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    {sector.description}
-                  </p>
-
-                  <div className="space-y-2.5 mb-6">
-                    {sector.capabilities.slice(0, 3).map((cap, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-800">
-                        <FaCheck className="w-3.5 h-3.5 text-primary-600 shrink-0 mt-0.5" />
-                        <span>{cap}</span>
+                      <div className="space-y-2 mb-4">
+                        {sector.capabilities.slice(0, 3).map((cap, idx) => (
+                          <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                            <FaCheck className="w-3 h-3 text-[#0066b2] shrink-0 mt-0.5" />
+                            <span className="line-clamp-1">{cap}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
+
+                    <div className="pt-4 border-t border-slate-100 group-hover:border-slate-200 transition-colors">
+                      <Link
+                        to="/sectors"
+                        className="inline-flex items-center gap-2 font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 group-hover:text-[#0066b2] transition-colors"
+                      >
+                        <span>View Sector Scope</span>
+                        <FaArrowRight className="w-3 h-3 transform group-hover:translate-x-1.5 transition-transform" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                <div className="pt-4 border-t border-slate-100 group-hover:border-slate-300 transition-colors">
-                  <Link
-                    to="/sectors"
-                    className="inline-flex items-center gap-2 font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 group-hover:text-primary-600 transition-colors"
-                  >
-                    <span>Sector Specifications</span>
-                    <FaArrowRight className="w-3 h-3 transform group-hover:translate-x-1.5 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
+              </StaggerItem>
+            );
+          })}
         </StaggerContainer>
       </Container>
     </Section>

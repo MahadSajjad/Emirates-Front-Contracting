@@ -4,10 +4,10 @@ import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/
 import siteConfig from "../../config/siteConfig.js";
 import { buildWhatsAppLink } from "../../lib/leadCapture.js";
 import { serviceCategories } from "../../data/services.js";
+import Button from "../ui/Button.jsx";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const footerWhatsAppUrl = buildWhatsAppLink();
 
   return (
     <footer className="bg-[#f8fafc] text-slate-800 border-t border-slate-200/90 pt-16 pb-12 w-full max-w-full overflow-hidden">
@@ -36,19 +36,20 @@ export const Footer = () => {
             </Link>
 
             <p className="text-slate-600 text-sm leading-relaxed max-w-sm">
-              Riyadh-based general contracting delivering building envelopes, civil engineering superstructures, electromechanical systems, and commercial fit-outs across Saudi Arabia.
+              Comprehensive general contracting & heavy plant rentals in Riyadh: Road building, luxury villas, street lighting, civil concrete, and full fleet rentals (excavators, dumpers, 3-ton pickups, trailers & cranes).
             </p>
 
             <div className="pt-2">
-              <a
-                href={footerWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-400 text-slate-950 font-display font-bold text-xs uppercase tracking-wider hover:bg-primary-300 transition-colors shadow-sm"
+              <Button
+                href={buildWhatsAppLink()}
+                variant="cta"
+                size="lg"
+                icon={FaWhatsapp}
+                iconPosition="left"
+                className="shrink-0 font-extrabold shadow-lg rounded-xl"
               >
-                <FaWhatsapp className="w-4 h-4" />
-                <span>WhatsApp Procurement</span>
-              </a>
+                Direct WhatsApp
+              </Button>
             </div>
           </div>
 
@@ -113,8 +114,12 @@ export const Footer = () => {
             </h4>
             <div className="space-y-3 text-sm text-slate-700">
               <div className="flex items-start gap-2.5">
-                <FaMapMarkerAlt className="w-4 h-4 text-primary-600 shrink-0 mt-1" />
-                <span>Riyadh, Kingdom of Saudi Arabia</span>
+                <FaMapMarkerAlt className="w-4 h-4 text-[#0066b2] shrink-0 mt-1" />
+                <div>
+                  <span className="block font-medium text-slate-900">Haroon Rashid Rd, As Sulay (Exit 18)</span>
+                  <span className="block text-xs text-slate-500 font-display">طريق هارون الرشيد، حي السلي، مخرج 18</span>
+                  <span className="block text-xs text-slate-500">Riyadh, Kingdom of Saudi Arabia</span>
+                </div>
               </div>
 
               <div className="flex items-center gap-2.5">

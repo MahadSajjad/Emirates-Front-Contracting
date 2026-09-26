@@ -8,54 +8,53 @@ export const HeroSection = () => {
   const heroWhatsAppUrl = buildWhatsAppLink();
 
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[94vh] flex items-center bg-primary-900/90 text-white overflow-hidden w-full max-w-full">
-      {/* Background with construction photography + Light Blue Ambient Lighting */}
+    <section className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center bg-[#091e36] text-white overflow-hidden w-full max-w-full">
+      {/* Vivid Background Construction Photography + Architectural Gradient Overlay */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-1000 opacity-20 grayscale contrast-125"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=80')`,
-          }}
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2400&q=85"
+          alt="Heavy Construction and Tower Cranes - Emirates Front Contracting"
+          className="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000"
+          loading="eager"
         />
-        {/* Modern Light Blue & Slate radial glow */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/90 to-primary-950/95" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/25 via-transparent to-transparent" />
-        {/* Diagonal steel truss architectural pattern */}
-        <div className="absolute inset-0 bg-steel-truss opacity-30 pointer-events-none" />
+        {/* Directional Corporate Blue & Slate Gradient: Ensures total text readability while keeping image vivid */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#091e36]/95 via-[#091e36]/85 to-[#005596]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#091e36] via-transparent to-[#091e36]/70" />
+        {/* Diagonal architectural pattern */}
+        <div className="absolute inset-0 bg-steel-truss opacity-20 pointer-events-none" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left: Concise Editorial Headline & Action (7 cols) */}
-          <div className="lg:col-span-7">
-
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             <Reveal direction="up" delay={0.2}>
-              <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight text-white leading-[1.08] sm:leading-[1.04] mb-3 sm:mb-6">
-                BUILT WITH <span className="text-primary-400">PRECISION.</span> ENGINEERED TO LEAD.
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase tracking-tight text-white leading-[1.08] sm:leading-[1.04]">
+                BUILDING EXCELLENCE. <span className="text-[#f59e0b]">SHAPING THE FUTURE.</span>
               </h1>
             </Reveal>
 
+            <Reveal direction="up" delay={0.25}>
+              <p className="font-display text-sm sm:text-base lg:text-lg font-bold text-slate-200 tracking-wide leading-relaxed">
+                شركة واجهة الامارات للمقاولات — حلول المقاولات العامة وتأجير المعدات والشاحنات الإنشائية
+              </p>
+            </Reveal>
+
             <Reveal direction="up" delay={0.3}>
-              <p className="font-display text-xs sm:text-base lg:text-lg font-medium text-slate-300 mb-3 sm:mb-6 tracking-wide leading-relaxed">
-                شركة واجهة الامارات للمقاولات — حلول الواجهات، الأعمال الإنشائية والمدنية المتكاملة
+              <p className="text-xs sm:text-sm lg:text-base text-slate-300 leading-relaxed max-w-xl font-normal">
+                Comprehensive contracting services across Saudi Arabia: Road Building, Luxury Villas, Street Lighting, Civil Superstructures, and Full Fleet Rentals (Excavators, Dumpers, 3-Ton Pickups, Trailers & Cranes).
               </p>
             </Reveal>
 
-            <Reveal direction="up" delay={0.35}>
-              <p className="text-xs sm:text-base lg:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 max-w-xl font-normal">
-                Specialized building equipments, civil construction, and complete contracting solutions across Saudi Arabia.
-              </p>
-            </Reveal>
-
-            <Reveal direction="up" delay={0.45}>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-4">
+            <Reveal direction="up" delay={0.4}>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
                 <Button
                   href={heroWhatsAppUrl}
                   variant="cta"
                   size="lg"
                   icon={FaWhatsapp}
                   iconPosition="right"
-                  className="font-bold w-full sm:w-auto"
+                  className="font-bold w-full sm:w-auto shadow-lg"
                 >
                   WhatsApp Us
                 </Button>
@@ -65,106 +64,122 @@ export const HeroSection = () => {
                   size="lg"
                   icon={FaArrowRight}
                   iconPosition="right"
-                  className="border-white/30 hover:bg-white/10 text-white w-full sm:w-auto"
+                  className="border-white/30 hover:bg-white/10 text-white w-full sm:w-auto font-semibold"
                 >
-                  Explore Scopes
+                  Explore Services
                 </Button>
               </div>
             </Reveal>
           </div>
 
-          {/* Right: Responsive Visual Showcase Card (5 cols) */}
-          <div className="lg:col-span-5 relative mt-4 sm:mt-0">
+          {/* Right: Responsive Visual Showcase Card with Real Construction Photography (5 cols) */}
+          <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             <Reveal direction="up" delay={0.4}>
               {/* Main Interactive Glass Card */}
-              <div className="relative rounded-2xl overflow-hidden glass-card-dark p-4 sm:p-6 shadow-2xl border border-slate-700/60 hover-lift bg-slate-900/90">
-                <div className="relative h-48 sm:h-64 rounded-xl overflow-hidden mb-3.5 sm:mb-5">
+              <div className="relative rounded-2xl overflow-hidden p-4 sm:p-5 shadow-2xl border border-slate-700/80 bg-slate-900/90 backdrop-blur-md">
+
+                <div className="flex px-3.5 py-2 rounded-xl shadow-xl border border-slate-700/80 items-center gap-2.5 bg-slate-900/95 max-w-full mb-3">
+                  <span className="w-8 h-8 rounded-lg bg-[#f59e0b]/20 text-[#f59e0b] flex items-center justify-center shrink-0 font-bold">
+                    ✓
+                  </span>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-xs text-white uppercase">
+                      Saudi Building Code (SBC)
+                    </span>
+                    <span className="font-mono text-[10px] text-slate-400">
+                      Certified Fleet & Execution
+                    </span>
+                  </div>
+                </div>
+                <div className="relative h-56 sm:h-72 rounded-xl overflow-hidden mb-4">
+
                   <img
-                    src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
-                    alt="Heavy Transport and Construction Fleet - Emirates Front Contracting"
+                    src="https://images.unsplash.com/photo-1685708716815-94c588417c27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Active Construction Site with Excavators and Heavy Logistics - Emirates Front Contracting"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent" />
-                  <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 text-[10px] sm:text-xs font-mono text-white bg-slate-900/90 px-2.5 py-1 rounded-md backdrop-blur-sm border border-slate-700 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-400 animate-ping" />
-                    <span>Site Operations · Heavy Logistics</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+
+                  {/* Floating Top Badge */}
+                  <div className="absolute top-3 left-3 text-[10px] sm:text-xs font-mono font-bold text-slate-950 bg-[#f59e0b] px-2.5 py-1 rounded shadow-md flex items-center gap-1.5">
+                    <span>★</span>
+                    <span>ACTIVE RIYADH FLEET</span>
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] sm:text-xs font-mono text-white bg-slate-900/90 px-3 py-1.5 rounded-md backdrop-blur-sm border border-slate-700">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-ping" />
+                      <span>Heavy Excavators · Dumpers</span>
+                    </span>
+                    <span className="text-[#f59e0b] font-bold">Exit 18</span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-slate-300">
-                  <span className="text-slate-300 font-medium">Riyadh Fleet & Heavy Haulage</span>
-                  <span className="text-primary-400 font-semibold bg-primary-500/10 px-2 py-0.5 rounded border border-primary-400/25">
-                    SBC Standards
-                  </span>
-                </div>
-
-                {/* Mobile-Friendly Feature Highlights (Integrated cleanly inside card on mobile) */}
-                <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-white/10 sm:hidden">
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/10">
-                    <div className="w-7 h-7 rounded bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/20">
-                      <FaTruckMoving className="w-3.5 h-3.5" />
+                {/* 4-Item Visual Fleet Snapshot */}
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold">
+                      🚜
                     </div>
                     <div className="min-w-0">
-                      <span className="block font-display font-bold text-xs text-white uppercase truncate">
-                        Earthworks
+                      <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
+                        Excavators & Dumpers
                       </span>
-                      <span className="block font-mono text-[9px] text-slate-400 truncate">
-                        Heavy Haulage
+                      <span className="block font-mono text-[10px] text-slate-400 truncate">
+                        Daily & Monthly Rental
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/10">
-                    <div className="w-7 h-7 rounded bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/20">
-                      <FaDraftingCompass className="w-3.5 h-3.5" />
+                  <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0 font-mono font-bold">
+                      🚛
                     </div>
                     <div className="min-w-0">
-                      <span className="block font-display font-bold text-xs text-white uppercase truncate">
-                        Façades
+                      <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
+                        3-Ton Pickups & Dyna
                       </span>
-                      <span className="block font-mono text-[9px] text-slate-400 truncate">
-                        Curtain Wall
+                      <span className="block font-mono text-[10px] text-slate-400 truncate">
+                        Rapid Riyadh Haulage
                       </span>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Floating Metric 1: Heavy Equipment / Earthworks pill (Desktop & Tablet) */}
-              <div className="hidden sm:flex absolute -bottom-3 left-0 sm:-left-3 z-20 glass-card-dark px-4 py-3 rounded-xl shadow-xl border border-slate-700/60 items-center gap-3 animate-float-slow hover:border-primary-400/60 transition-colors bg-slate-900/95 max-w-[260px]">
-                <div className="w-10 h-10 rounded-lg bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/25">
-                  <FaTruckMoving className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block font-display font-bold text-sm text-white uppercase">
-                    Earthworks & Logistics
-                  </span>
-                  <span className="block font-mono text-[11px] text-slate-400">
-                    Fleet Haulage & Excavation
-                  </span>
-                </div>
-              </div>
+                  <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded bg-[#0284c7]/20 text-[#38bdf8] flex items-center justify-center shrink-0 font-mono font-bold">
+                      🛣️
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
+                        Roads & Asphalting
+                      </span>
+                      <span className="block font-mono text-[10px] text-slate-400 truncate">
+                        Grading & Street Light
+                      </span>
+                    </div>
+                  </div>
 
-              {/* Floating Metric 2: Envelope Engineering (Desktop & Tablet) */}
-              <div className="hidden sm:flex absolute -top-3 right-0 sm:right-1 z-20 glass-card-dark px-4 py-3 rounded-xl shadow-xl border border-slate-700/60 items-center gap-3 animate-float-reverse hover:border-primary-400/60 transition-colors bg-slate-900/95 max-w-[260px]">
-                <div className="w-10 h-10 rounded-lg bg-primary-500/15 text-primary-400 flex items-center justify-center shrink-0 border border-primary-400/25">
-                  <FaDraftingCompass className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block font-display font-bold text-sm text-white uppercase">
-                    Façade Architecture
-                  </span>
-                  <span className="block font-mono text-[11px] text-slate-400">
-                    Curtain Wall & Cladding
-                  </span>
+                  <div className="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded bg-[#0284c7]/20 text-[#38bdf8] flex items-center justify-center shrink-0 font-mono font-bold">
+                      🏡
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block font-display font-bold text-white text-[11px] sm:text-xs uppercase truncate">
+                        Villa Construction
+                      </span>
+                      <span className="block font-mono text-[10px] text-slate-400 truncate">
+                        Turnkey Contracting
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 

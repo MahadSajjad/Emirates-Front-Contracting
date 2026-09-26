@@ -4,7 +4,7 @@ import StructuredData from "../../components/seo/StructuredData.jsx";
 import HeroSection from "../../components/sections/HeroSection.jsx";
 import CraneLiftSection from "../../components/animations/CraneLiftSection.jsx";
 import ArchitecturalFeatureSection from "../../components/sections/ArchitecturalFeatureSection.jsx";
-import ExpertiseList from "../../components/sections/ExpertiseList.jsx";
+import VisualServicesFleetSection from "../../components/sections/VisualServicesFleetSection.jsx";
 import WhyUsSection from "../../components/sections/WhyUsSection.jsx";
 import TrustStrip from "../../components/sections/TrustStrip.jsx";
 import SectorsPreview from "../../components/sections/SectorsPreview.jsx";
@@ -36,8 +36,8 @@ export const HomePage = () => {
         linkText="About Our Firm"
       />
 
-      {/* 4. Numbered Expertise List (01 / 02 / 03 / 04 / 05 / 06) */}
-      <ExpertiseList />
+      {/* 4. Visual Fleet & Contracting Services Showcase (Images First) */}
+      <VisualServicesFleetSection />
 
       {/* 5. Honest Non-Numeric Trust Strip */}
       <TrustStrip />

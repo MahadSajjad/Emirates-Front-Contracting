@@ -54,16 +54,16 @@ export const CraneLiftSection = ({
               preserveAspectRatio="none"
               fill="none"
             >
-              {/* Outer vertical tubular steel chords (Heavy Dark Steel) */}
-              <line x1="14" y1="0" x2="14" y2="800" stroke="#1e293b" strokeWidth="6" />
-              <line x1="66" y1="0" x2="66" y2="800" stroke="#1e293b" strokeWidth="6" />
+              {/* Outer vertical tubular steel chords (Heavy Construction Crane Yellow) */}
+              <line x1="14" y1="0" x2="14" y2="800" stroke="#f59e0b" strokeWidth="6" />
+              <line x1="66" y1="0" x2="66" y2="800" stroke="#f59e0b" strokeWidth="6" />
 
               {/* Structural inner shadow flanges */}
-              <line x1="11" y1="0" x2="11" y2="800" stroke="#0f172a" strokeWidth="1.5" />
-              <line x1="63" y1="0" x2="63" y2="800" stroke="#0f172a" strokeWidth="1.5" />
+              <line x1="11" y1="0" x2="11" y2="800" stroke="#d97706" strokeWidth="1.5" />
+              <line x1="63" y1="0" x2="63" y2="800" stroke="#d97706" strokeWidth="1.5" />
 
               {/* Center safety ladder column */}
-              <line x1="40" y1="0" x2="40" y2="800" stroke="#475569" strokeWidth="2" strokeDasharray="4 4" />
+              <line x1="40" y1="0" x2="40" y2="800" stroke="#b45309" strokeWidth="2" strokeDasharray="4 4" />
 
               {/* Repeating K-Truss & Double X-Lattice Steel Sections */}
               {Array.from({ length: 25 }, (_, i) => {
@@ -73,50 +73,50 @@ export const CraneLiftSection = ({
                 return (
                   <g key={i}>
                     {/* Horizontal strut tie */}
-                    <line x1="14" y1={yTop} x2="66" y2={yTop} stroke="#0f172a" strokeWidth="3" />
-                    {/* Diagonal X-cross lattice members */}
-                    <line x1="14" y1={yTop} x2="66" y2={yBottom} stroke="#334155" strokeWidth="2.5" />
-                    <line x1="66" y1={yTop} x2="14" y2={yBottom} stroke="#334155" strokeWidth="2.5" />
+                    <line x1="14" y1={yTop} x2="66" y2={yTop} stroke="#d97706" strokeWidth="3" />
+                    {/* Diagonal X-cross lattice members in Crane Yellow */}
+                    <line x1="14" y1={yTop} x2="66" y2={yBottom} stroke="#fbbf24" strokeWidth="2.5" />
+                    <line x1="66" y1={yTop} x2="14" y2={yBottom} stroke="#fbbf24" strokeWidth="2.5" />
                     {/* Mid-lattice tie */}
-                    <line x1="14" y1={yMid} x2="66" y2={yMid} stroke="#475569" strokeWidth="1.5" strokeOpacity="0.7" />
+                    <line x1="14" y1={yMid} x2="66" y2={yMid} stroke="#f59e0b" strokeWidth="1.5" strokeOpacity="0.8" />
                     {/* Joint gusset plates & bolts */}
-                    <circle cx="14" cy={yTop} r="3.5" fill="#0f172a" />
-                    <circle cx="66" cy={yTop} r="3.5" fill="#0f172a" />
-                    <circle cx="14" cy={yTop} r="1.5" fill="#64748b" />
-                    <circle cx="66" cy={yTop} r="1.5" fill="#64748b" />
+                    <circle cx="14" cy={yTop} r="3.5" fill="#b45309" />
+                    <circle cx="66" cy={yTop} r="3.5" fill="#b45309" />
+                    <circle cx="14" cy={yTop} r="1.5" fill="#fef08a" />
+                    <circle cx="66" cy={yTop} r="1.5" fill="#fef08a" />
                   </g>
                 );
               })}
 
               {/* Telescopic Hydraulic Climbing Cage Unit */}
               <g transform="translate(0, 160)">
-                <rect x="4" y="0" width="72" height="64" fill="#0f172a" stroke="#334155" strokeWidth="2.5" rx="2" />
-                <rect x="8" y="6" width="64" height="12" fill="#1e293b" fillOpacity="0.5" stroke="#475569" strokeWidth="1" />
-                <text x="12" y="15" fill="#60a5fa" fontSize="8" fontFamily="monospace" fontWeight="bold">
+                <rect x="4" y="0" width="72" height="64" fill="#f59e0b" stroke="#b45309" strokeWidth="2.5" rx="2" />
+                <rect x="8" y="6" width="64" height="12" fill="#0f172a" fillOpacity="0.8" stroke="#fbbf24" strokeWidth="1" />
+                <text x="12" y="15" fill="#fbbf24" fontSize="8" fontFamily="monospace" fontWeight="bold">
                   CLIMB_UNIT
                 </text>
-                <line x1="16" y1="20" x2="16" y2="56" stroke="#60a5fa" strokeWidth="3.5" />
-                <line x1="64" y1="20" x2="64" y2="56" stroke="#60a5fa" strokeWidth="3.5" />
-                <circle cx="40" cy="38" r="7" fill="#1e293b" stroke="#475569" strokeWidth="1.5" />
-                <circle cx="40" cy="38" r="3" fill="#60a5fa" />
+                <line x1="16" y1="20" x2="16" y2="56" stroke="#fbbf24" strokeWidth="3.5" />
+                <line x1="64" y1="20" x2="64" y2="56" stroke="#fbbf24" strokeWidth="3.5" />
+                <circle cx="40" cy="38" r="7" fill="#d97706" stroke="#78350f" strokeWidth="1.5" />
+                <circle cx="40" cy="38" r="3" fill="#fef08a" />
               </g>
             </svg>
           </div>
 
           {/* Heavy Concrete Ballast Foundation at Base */}
           <div className="w-full bg-slate-900 border-r-2 border-t-2 border-slate-950 p-2 shadow-2xl flex flex-col items-center">
-            <div className="w-full h-5 bg-slate-800 border border-slate-700 rounded flex items-center justify-center font-mono text-[9px] font-bold text-slate-200 uppercase tracking-wider mb-1">
+            <div className="w-full h-5 bg-[#f59e0b] border border-[#d97706] rounded flex items-center justify-center font-mono text-[9px] font-bold text-slate-950 uppercase tracking-wider mb-1 shadow-sm">
               BASE_36T
             </div>
             <div className="w-full grid grid-cols-2 gap-1 text-[8px] font-mono text-slate-400 text-center">
               <span className="bg-slate-800 rounded px-0.5">SBC-OK</span>
-              <span className="bg-slate-800 rounded px-0.5 text-primary-400 font-bold">LOCKED</span>
+              <span className="bg-slate-800 rounded px-0.5 text-[#fbbf24] font-bold">LOCKED</span>
             </div>
           </div>
         </div>
 
         {/* ========================================================================= */}
-        {/* 2. HEAVY INDUSTRIAL WORKING BOOM (MASSIVE LATTICE TRUSS WITH HEAVY CHORDS)*/}
+        {/* 2. HEAVY INDUSTRIAL WORKING BOOM (MASSIVE LATTICE TRUSS IN CRANE YELLOW)   */}
         {/* Physically connected at left-0 to the vertical mast, shooting dead-straight */}
         {/* ========================================================================= */}
         <div className="hidden md:block relative w-full z-20 pointer-events-none">
@@ -125,10 +125,10 @@ export const CraneLiftSection = ({
             viewBox="0 0 1400 92"
             fill="none"
           >
-            {/* Pattern: Safety Technical Warning Stripes */}
+            {/* Pattern: Safety Technical Warning Stripes in Yellow & Black */}
             <defs>
               <pattern id="crane-hazard" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <rect width="6" height="12" fill="#334155" />
+                <rect width="6" height="12" fill="#f59e0b" />
                 <rect x="6" width="6" height="12" fill="#0f172a" />
               </pattern>
               <linearGradient id="cab-glass" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -143,81 +143,82 @@ export const CraneLiftSection = ({
             {/* Center at x=40 (the exact coordinates of the left mast!)      */}
             {/* ------------------------------------------------------------- */}
             {/* Turntable Bearing Ring */}
-            <rect x="10" y="74" width="60" height="16" fill="#0f172a" stroke="#334155" strokeWidth="3" rx="2" />
+            <rect x="10" y="74" width="60" height="16" fill="#f59e0b" stroke="#b45309" strokeWidth="3" rx="2" />
             <rect x="14" y="78" width="52" height="8" fill="url(#crane-hazard)" />
 
-            {/* Heavy A-Frame Tower Apex directly above mast */}
-            <polygon points="10,74 40,6 70,74" fill="#0f172a" stroke="#334155" strokeWidth="4.5" />
-            <line x1="40" y1="6" x2="40" y2="74" stroke="#475569" strokeWidth="3" strokeDasharray="4 4" />
+            {/* Heavy A-Frame Tower Apex directly above mast in Yellow & Charcoal */}
+            <polygon points="10,74 40,6 70,74" fill="#f59e0b" stroke="#d97706" strokeWidth="4.5" />
+            <line x1="40" y1="6" x2="40" y2="74" stroke="#b45309" strokeWidth="3" strokeDasharray="4 4" />
             <circle cx="40" cy="6" r="5" fill="#ef4444" className="animate-ping" />
 
             {/* Heavy Counter-Jib projecting left with 32.5T Ballast Blocks */}
-            <line x1="0" y1="24" x2="40" y2="24" stroke="#0f172a" strokeWidth="10" />
-            <line x1="0" y1="84" x2="40" y2="84" stroke="#0f172a" strokeWidth="12" />
+            <line x1="0" y1="24" x2="40" y2="24" stroke="#d97706" strokeWidth="10" />
+            <line x1="0" y1="84" x2="40" y2="84" stroke="#d97706" strokeWidth="12" />
             <rect x="0" y="16" width="38" height="68" fill="#1e293b" stroke="#0f172a" strokeWidth="3" rx="2" />
             <rect x="2" y="20" width="34" height="12" fill="url(#crane-hazard)" />
-            <text x="3" y="56" fill="#94a3b8" fontSize="9" fontFamily="monospace" fontWeight="bold">
+            <text x="3" y="56" fill="#f59e0b" fontSize="9" fontFamily="monospace" fontWeight="bold">
               32.5T
             </text>
-            <line x1="40" y1="6" x2="4" y2="16" stroke="#475569" strokeWidth="4" />
+            <line x1="40" y1="6" x2="4" y2="16" stroke="#f59e0b" strokeWidth="4" />
 
             {/* Modern Liebherr Operator Cabin directly next to slewing ring */}
-            <rect x="70" y="20" width="42" height="42" fill="#0f172a" stroke="#334155" strokeWidth="3" rx="4" />
-            <path d="M 86 22 L 110 22 Q 111 40 110 60 L 86 60 Z" fill="url(#cab-glass)" stroke="#38bdf8" strokeWidth="2" />
+            <rect x="70" y="20" width="42" height="42" fill="#ffffff" stroke="#f59e0b" strokeWidth="3" rx="4" />
+            <path d="M 86 22 L 110 22 Q 111 40 110 60 L 86 60 Z" fill="url(#cab-glass)" stroke="#f59e0b" strokeWidth="2" />
             <circle cx="96" cy="36" r="3.5" fill="#0f172a" />
-            <rect x="94" y="44" width="7" height="10" fill="#0f172a" rx="1" />
-            <line x1="68" y1="70" x2="114" y2="70" stroke="#334155" strokeWidth="4" />
+            <rect x="94" y="44" width="7" height="10" fill="#f59e0b" rx="1" />
+            <line x1="68" y1="70" x2="114" y2="70" stroke="#f59e0b" strokeWidth="4" />
 
             {/* ------------------------------------------------------------- */}
-            {/* B. ULTRA-HEAVY WORKING BOOM (DEEP 60PX HEAVY TRUSS CHORDS)    */}
+            {/* B. ULTRA-HEAVY WORKING BOOM IN AUTHENTIC CRANE YELLOW         */}
             {/* ------------------------------------------------------------- */}
-            {/* Top Main Chord (Heavy Steel Pipe with dual wall visual) */}
-            <line x1="40" y1="24" x2="1390" y2="24" stroke="#0f172a" strokeWidth="12" strokeLinecap="round" />
-            <line x1="40" y1="24" x2="1390" y2="24" stroke="#475569" strokeWidth="4" strokeLinecap="round" />
+            {/* Top Main Chord (Heavy Steel Pipe in Safety Yellow) */}
+            <line x1="40" y1="24" x2="1390" y2="24" stroke="#d97706" strokeWidth="12" strokeLinecap="round" />
+            <line x1="40" y1="24" x2="1390" y2="24" stroke="#f59e0b" strokeWidth="6" strokeLinecap="round" />
+            <line x1="40" y1="22" x2="1390" y2="22" stroke="#fef08a" strokeWidth="1.5" strokeLinecap="round" />
 
             {/* Internal Mid-Height Reinforcing Chord */}
-            <line x1="40" y1="54" x2="1390" y2="54" stroke="#334155" strokeWidth="3.5" strokeDasharray="12 4" />
+            <line x1="40" y1="54" x2="1390" y2="54" stroke="#fbbf24" strokeWidth="3.5" strokeDasharray="12 4" />
 
             {/* Bottom Main Chord / Heavy Flanged Trolley Runway Track */}
-            <line x1="40" y1="84" x2="1390" y2="84" stroke="#0f172a" strokeWidth="14" strokeLinecap="round" />
-            <line x1="40" y1="84" x2="1390" y2="84" stroke="#334155" strokeWidth="6" strokeLinecap="round" />
+            <line x1="40" y1="84" x2="1390" y2="84" stroke="#b45309" strokeWidth="14" strokeLinecap="round" />
+            <line x1="40" y1="84" x2="1390" y2="84" stroke="#f59e0b" strokeWidth="6" strokeLinecap="round" />
             {/* Lower Runway Lip */}
-            <line x1="40" y1="90" x2="1390" y2="90" stroke="#1e293b" strokeWidth="3" strokeLinecap="round" />
+            <line x1="40" y1="90" x2="1390" y2="90" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" />
 
-            {/* Heavy Lattice Webbing (Diagonal Warren Struts + Vertical Compression Posts) */}
+            {/* Heavy Lattice Webbing (Diagonal Warren Struts in Bright Yellow) */}
             {Array.from({ length: 42 }, (_, i) => {
               const x1 = 44 + i * 32;
               const x2 = x1 + 32;
               return (
                 <g key={i}>
-                  {/* Heavy Diagonal Struts */}
+                  {/* Heavy Diagonal Struts in Bright Yellow */}
                   <line
                     x1={x1}
                     y1={i % 2 === 0 ? 24 : 84}
                     x2={x2}
                     y2={i % 2 === 0 ? 84 : 24}
-                    stroke="#334155"
-                    strokeWidth="5.5"
+                    stroke="#fbbf24"
+                    strokeWidth="5"
                   />
                   {/* Vertical Heavy Compression Post */}
-                  <line x1={x1} y1="24" x2={x1} y2="84" stroke="#0f172a" strokeWidth="4" />
-                  <line x1={x1} y1="24" x2={x1} y2="84" stroke="#475569" strokeWidth="2" />
+                  <line x1={x1} y1="24" x2={x1} y2="84" stroke="#f59e0b" strokeWidth="4" />
+                  <line x1={x1} y1="24" x2={x1} y2="84" stroke="#fef08a" strokeWidth="1.5" />
 
                   {/* Industrial Heavy Connection Gusset Plates */}
-                  <circle cx={x1} cy="24" r="5.5" fill="#0f172a" />
-                  <circle cx={x1} cy="24" r="2.5" fill="#64748b" />
-                  <circle cx={x1} cy="84" r="5.5" fill="#0f172a" />
-                  <circle cx={x1} cy="84" r="2.5" fill="#64748b" />
+                  <circle cx={x1} cy="24" r="5.5" fill="#d97706" />
+                  <circle cx={x1} cy="24" r="2.5" fill="#fef08a" />
+                  <circle cx={x1} cy="84" r="5.5" fill="#d97706" />
+                  <circle cx={x1} cy="84" r="2.5" fill="#fef08a" />
                 </g>
               );
             })}
 
             {/* Heavy High-Tensile Steel Guy-Wires from Apex to Boom */}
-            <line x1="40" y1="6" x2="450" y2="24" stroke="#334155" strokeWidth="4" />
-            <line x1="40" y1="6" x2="900" y2="24" stroke="#475569" strokeWidth="3.5" />
+            <line x1="40" y1="6" x2="450" y2="24" stroke="#f59e0b" strokeWidth="4" />
+            <line x1="40" y1="6" x2="900" y2="24" stroke="#fbbf24" strokeWidth="3.5" />
 
             {/* Boom Tip with Aviation Warning Flasher */}
-            <polygon points="1388,24 1400,54 1388,84" fill="#334155" stroke="#0f172a" strokeWidth="4" />
+            <polygon points="1388,24 1400,54 1388,84" fill="#f59e0b" stroke="#d97706" strokeWidth="4" />
             <circle cx="1400" cy="54" r="5" fill="#ef4444" className="animate-ping" />
           </svg>
         </div>
@@ -230,28 +231,27 @@ export const CraneLiftSection = ({
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pl-20 lg:pl-26 md:-mt-2.5">
           {/* Centralized Hoisting Column: Trolley -> Cables -> Hook Block -> Slings -> Card */}
           <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
-            {/* 1. Heavy Motorized Trolley on Boom Bottom Rail */}
-            {/* Clamped directly to the horizontal pole runway rail with 0px space */}
-            <div className="w-20 bg-slate-900 border-2 border-slate-950 rounded flex flex-col items-center justify-between shadow-xl relative z-30 pointer-events-none">
+            {/* 1. Heavy Motorized Trolley on Boom Bottom Rail in Crane Yellow */}
+            <div className="w-20 bg-[#f59e0b] border-2 border-[#b45309] rounded flex flex-col items-center justify-between shadow-xl relative z-30 pointer-events-none">
               {/* Boom Runway Clamping Rollers (Top of Trolley) */}
               <div className="hidden md:flex justify-between w-14 px-1 -mt-1.5 mb-0.5">
-                <div className="w-3.5 h-2 rounded-t-sm bg-slate-700 border border-slate-950 shadow-sm" />
-                <div className="w-3.5 h-2 rounded-t-sm bg-slate-700 border border-slate-950 shadow-sm" />
+                <div className="w-3.5 h-2 rounded-t-sm bg-slate-900 border border-slate-950 shadow-sm" />
+                <div className="w-3.5 h-2 rounded-t-sm bg-slate-900 border border-slate-950 shadow-sm" />
               </div>
-              {/* Technical Stripes Band on Trolley */}
+              {/* Technical Stripes Band on Trolley (Yellow/Black Hazard) */}
               <div
                 className="w-full h-2 rounded-sm"
                 style={{
                   backgroundImage:
-                    "repeating-linear-gradient(45deg, #334155, #334155 5px, #0f172a 5px, #0f172a 10px)",
+                    "repeating-linear-gradient(45deg, #fbbf24, #fbbf24 5px, #0f172a 5px, #0f172a 10px)",
                 }}
               />
               {/* Cable Sheaves Outlets at bottom of Trolley */}
               <div className="w-10 flex justify-between px-1 -mb-1.5 mt-0.5">
-                <div className="w-3 h-3 rounded-full bg-slate-400 border border-slate-900 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-slate-300 border border-slate-900 flex items-center justify-center">
                   <div className="w-1 h-1 rounded-full bg-slate-950" />
                 </div>
-                <div className="w-3 h-3 rounded-full bg-slate-400 border border-slate-900 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-slate-300 border border-slate-900 flex items-center justify-center">
                   <div className="w-1 h-1 rounded-full bg-slate-950" />
                 </div>
               </div>
@@ -263,12 +263,11 @@ export const CraneLiftSection = ({
               style={{ height: cableHeight }}
               className="w-10 flex justify-between px-1.5 items-stretch pointer-events-none relative z-20"
             >
-              <div className="w-[3.5px] bg-slate-900 shadow-sm" />
-              <div className="w-[3.5px] bg-slate-900 shadow-sm" />
+              <div className="w-[3.5px] bg-slate-700 shadow-sm" />
+              <div className="w-[3.5px] bg-slate-700 shadow-sm" />
             </m.div>
 
-            {/* 3. HEAVY-DUTY LIEBHERR HOOK BLOCK (DIRECTLY CONNECTED TO CABLES) */}
-            {/* Overlaps cable ends by 1px so cables physically enter the sheaves with 0 gap */}
+            {/* 3. HEAVY-DUTY LIEBHERR HOOK BLOCK IN ICONIC CRANE YELLOW */}
             <div className="flex flex-col items-center pointer-events-none relative z-20 -mt-1 mb-1">
               {/* Top Cable Entry Pulleys directly receiving the cables */}
               <div className="w-10 flex justify-between px-1.5 -mb-1 relative z-30">
@@ -280,21 +279,21 @@ export const CraneLiftSection = ({
                 </div>
               </div>
 
-              {/* Main Dual-Sheave Hook Block Body with Technical Stripes */}
-              <div className="w-18 h-12 rounded-lg bg-slate-900 border-2 border-slate-950 flex flex-col items-center justify-between p-1.5 shadow-2xl relative">
+              {/* Main Dual-Sheave Hook Block Body in Yellow with Safety Stripes */}
+              <div className="w-18 h-12 rounded-lg bg-[#f59e0b] border-2 border-[#b45309] flex flex-col items-center justify-between p-1.5 shadow-2xl relative">
                 <div
                   className="w-full h-4 rounded shadow-inner"
                   style={{
                     backgroundImage:
-                      "repeating-linear-gradient(45deg, #334155, #334155 6px, #0f172a 6px, #0f172a 12px)",
+                      "repeating-linear-gradient(45deg, #facc15, #facc15 6px, #0f172a 6px, #0f172a 12px)",
                   }}
                 />
                 <div className="flex items-center gap-3">
-                  <div className="w-3.5 h-3.5 rounded-full bg-slate-400 border border-slate-800 flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-900" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-slate-300 border border-slate-900 flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-950" />
                   </div>
-                  <div className="w-3.5 h-3.5 rounded-full bg-slate-400 border border-slate-800 flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-900" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-slate-300 border border-slate-900 flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-950" />
                   </div>
                 </div>
               </div>
@@ -316,40 +315,39 @@ export const CraneLiftSection = ({
                     strokeWidth="1.8"
                     strokeLinecap="round"
                   />
-                  <line x1="17" y1="16" x2="24" y2="20" stroke="#cbd5e1" strokeWidth="2.5" />
+                  <line x1="17" y1="16" x2="24" y2="20" stroke="#f59e0b" strokeWidth="2.5" />
                 </svg>
               </div>
 
-              {/* Perfectly Straight, Symmetrical Rigging Wire Slings */}
-              {/* Overlaps hook by -mt-[28px] so the master rigging link loops directly inside the hook throat */}
+              {/* High-Tensile Rigging Slings in Safety Yellow */}
               <div className="w-full max-w-3xl h-10 relative -mt-[28px] z-10">
                 <svg viewBox="0 0 700 40" className="w-full h-full overflow-visible" fill="none">
                   {/* Heavy Steel Master Rigging O-Ring looped in hook bowl */}
-                  <circle cx="350" cy="8" r="8" fill="none" stroke="#0f172a" strokeWidth="4.5" />
-                  <circle cx="350" cy="8" r="8" fill="none" stroke="#64748b" strokeWidth="2" />
+                  <circle cx="350" cy="8" r="8" fill="none" stroke="#d97706" strokeWidth="4.5" />
+                  <circle cx="350" cy="8" r="8" fill="none" stroke="#fef08a" strokeWidth="2" />
 
-                  {/* Left rigging wire */}
-                  <line x1="344" y1="12" x2="60" y2="38" stroke="#0f172a" strokeWidth="3.5" strokeLinecap="round" />
-                  <line x1="344" y1="12" x2="60" y2="38" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="6 3" />
-                  {/* Right rigging wire */}
-                  <line x1="356" y1="12" x2="640" y2="38" stroke="#0f172a" strokeWidth="3.5" strokeLinecap="round" />
-                  <line x1="356" y1="12" x2="640" y2="38" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="6 3" />
+                  {/* Left rigging wire in Safety Yellow */}
+                  <line x1="344" y1="12" x2="60" y2="38" stroke="#d97706" strokeWidth="4" strokeLinecap="round" />
+                  <line x1="344" y1="12" x2="60" y2="38" stroke="#f59e0b" strokeWidth="2" strokeDasharray="6 3" />
+                  {/* Right rigging wire in Safety Yellow */}
+                  <line x1="356" y1="12" x2="640" y2="38" stroke="#d97706" strokeWidth="4" strokeLinecap="round" />
+                  <line x1="356" y1="12" x2="640" y2="38" stroke="#f59e0b" strokeWidth="2" strokeDasharray="6 3" />
                   {/* High-Tensile Certified Shackles at attachment points */}
-                  <circle cx="60" cy="38" r="5" fill="#334155" stroke="#0f172a" strokeWidth="2" />
-                  <circle cx="640" cy="38" r="5" fill="#334155" stroke="#0f172a" strokeWidth="2" />
+                  <circle cx="60" cy="38" r="5" fill="#f59e0b" stroke="#b45309" strokeWidth="2" />
+                  <circle cx="640" cy="38" r="5" fill="#f59e0b" stroke="#b45309" strokeWidth="2" />
                 </svg>
               </div>
             </div>
 
             {/* 4. Symmetrical Structural Rigging Mounts & Main Section Card */}
             <div className="w-full relative z-10 transition-shadow duration-300">
-              {/* Symmetrical Structural Rigging Mounts on Top Edge of Card */}
+              {/* Symmetrical Structural Rigging Mounts on Top Edge of Card in Safety Yellow */}
               <div className="flex justify-between px-3 sm:px-14 -mb-2 relative z-20 pointer-events-none">
-                <div className="px-2 sm:px-3.5 py-1 bg-slate-900 text-slate-200 font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-slate-700 flex items-center gap-1 sm:gap-1.5">
+                <div className="px-2.5 sm:px-4 py-1 bg-[#f59e0b] text-slate-950 font-mono font-black text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t-2 border-x-2 border-[#b45309] flex items-center gap-1 sm:gap-1.5">
                   <span>⚓</span>
                   <span>LUG_L<span className="hidden sm:inline">EFT // RIG_LOCKED</span></span>
                 </div>
-                <div className="px-2 sm:px-3.5 py-1 bg-slate-900 text-slate-200 font-mono font-extrabold text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t border-x border-slate-700 flex items-center gap-1 sm:gap-1.5">
+                <div className="px-2.5 sm:px-4 py-1 bg-[#f59e0b] text-slate-950 font-mono font-black text-[9px] sm:text-[10px] rounded-t uppercase shadow-lg border-t-2 border-x-2 border-[#b45309] flex items-center gap-1 sm:gap-1.5">
                   <span>⚓</span>
                   <span>LUG_R<span className="hidden sm:inline">IGHT // RIG_LOCKED</span></span>
                 </div>
@@ -365,8 +363,8 @@ export const CraneLiftSection = ({
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
                   {/* Left Column: Scope & Headline (7 cols) */}
                   <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono font-semibold">
-                      <FaHardHat className="text-slate-600" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-300 text-amber-900 text-xs font-mono font-bold shadow-sm">
+                      <FaHardHat className="text-[#f59e0b] w-3.5 h-3.5" />
                       <span>Heavy Crane & Structural Assembly</span>
                     </div>
 

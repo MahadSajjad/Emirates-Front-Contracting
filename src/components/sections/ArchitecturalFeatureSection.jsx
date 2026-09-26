@@ -39,8 +39,14 @@ export const ArchitecturalFeatureSection = ({
           <div className="relative bg-white text-slate-900 px-5 sm:px-14 lg:px-20 py-10 sm:py-20 lg:py-24 shadow-2xl border-t border-b border-slate-200 rounded-xl sm:rounded-none">
             {/* Top Brand Tag / Logo Icon in Top-Left */}
             <div className="absolute top-5 left-5 sm:top-6 sm:left-14 flex items-center gap-2">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-slate-900 text-white font-mono font-bold text-xs flex items-center justify-center border border-slate-700 shadow-md">
-                EF
+              <div className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-700/80 p-1 flex items-center justify-center shadow-md">
+                <img
+                  src="/logo.png"
+                  alt="Emirates Front Emblem"
+                  className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(59,130,246,0.3)]"
+                  width="40"
+                  height="40"
+                />
               </div>
             </div>
 

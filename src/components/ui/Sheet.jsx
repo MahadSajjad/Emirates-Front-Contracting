@@ -28,35 +28,36 @@ export const Sheet = ({ isOpen, onClose, title, children, side = "right" }) => {
       {/* Sheet Content Panel (Dark Sidebar) */}
       <div
         className={clsx(
-          "relative ml-auto w-full max-w-sm bg-slate-950 text-white shadow-2xl z-10 flex flex-col h-full border-l border-slate-800 transform transition-transform duration-300 ease-in-out",
+          "relative ml-auto w-full max-w-sm bg-black text-white shadow-2xl z-10 flex flex-col h-full border-l border-neutral-800 transform transition-transform duration-300 ease-in-out",
           side === "right" ? "animate-fade-in" : ""
         )}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-slate-800/80 bg-slate-900/40">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700/80 p-1 flex items-center justify-center shadow-sm shrink-0">
-              <img
-                src="/logo.png"
-                alt="Emirates Front Contracting"
-                className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(59,130,246,0.3)]"
-                width="40"
-                height="40"
-              />
-            </div>
+        <div className="flex items-center justify-between p-6 border-b border-neutral-800 bg-neutral-950">
+          <div className="flex items-center gap-3.5">
+            <img
+              src="/logo.png"
+              alt="Emirates Front Contracting Logo"
+              className="h-16 w-auto object-contain shrink-0 filter drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]"
+              width="64"
+              height="64"
+            />
             <div>
-              <span className="font-mono text-[10px] text-primary-400 tracking-widest uppercase block font-semibold">
+              <span className="font-mono text-[10px] text-[#f59e0b] tracking-widest uppercase block font-bold">
                 Menu Navigation
               </span>
-              <span className="font-display text-base font-bold uppercase tracking-tight text-white block">
+              <span className="font-display text-base font-extrabold uppercase tracking-tight text-white block">
                 {title || "Emirates Front"}
+              </span>
+              <span className="font-display text-[11px] font-medium text-slate-400 block leading-tight">
+                شركة واجهة الامارات للمقاولات
               </span>
             </div>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="w-10 h-10 rounded-lg flex items-center justify-center bg-slate-900 border border-slate-700/60 hover:bg-primary-400 hover:text-slate-950 hover:border-primary-400 text-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+            className="w-10 h-10 rounded-lg flex items-center justify-center bg-neutral-900 border border-neutral-700 hover:bg-[#f59e0b] hover:text-slate-950 hover:border-[#f59e0b] text-slate-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f59e0b]"
             aria-label="Close menu"
           >
             <FaTimes className="w-5 h-5" />

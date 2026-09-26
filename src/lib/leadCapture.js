@@ -47,28 +47,28 @@ export const buildWhatsAppLink = ({
 
   // When form data (name / phone / email) is submitted
   if (name || phone || email) {
-    lines.push("🏗️ *NEW INQUIRY | واجهة الإمارات للمقاولات*");
+    lines.push("NEW INQUIRY | واجهة الإمارات للمقاولات");
     lines.push("━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    if (name) lines.push(`👤 *Name / Company:* ${name.trim()}`);
-    if (phone) lines.push(`📞 *Phone:* ${phone.trim()}`);
-    if (email && email.trim()) lines.push(`✉️ *Email:* ${email.trim()}`);
-    if (service) lines.push(`🏢 *Service:* ${service.trim()}`);
-    if (sector) lines.push(`📐 *Sector:* ${sector.trim()}`);
+    if (name) lines.push(`Name / Company: ${name.trim()}`);
+    if (phone) lines.push(`Phone: ${phone.trim()}`);
+    if (email && email.trim()) lines.push(`Email: ${email.trim()}`);
+    if (service) lines.push(`Service: ${service.trim()}`);
+    if (sector) lines.push(`Sector: ${sector.trim()}`);
     if (message && message.trim()) {
       lines.push("");
-      lines.push("📝 *Project Details / Scope:*");
+      lines.push("Project Details / Scope:");
       lines.push(message.trim());
     }
     lines.push("━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    lines.push(`🌐 Sent via ${siteConfig.url}/contact`);
+    lines.push(`Sent via ${siteConfig.url}/contact`);
   } else if (message) {
     // Contextual message (e.g. from service pages, sectors, floating action button)
     lines.push(message.trim());
     if (service && !message.includes(service)) {
-      lines.push(`🏢 *Service:* ${service.trim()}`);
+      lines.push(`Service: ${service.trim()}`);
     }
     if (sector && !message.includes(sector)) {
-      lines.push(`📐 *Sector:* ${sector.trim()}`);
+      lines.push(`Sector: ${sector.trim()}`);
     }
     lines.push("----------------------------------------");
     lines.push(`Sent via ${siteConfig.url}`);
@@ -98,7 +98,7 @@ export const buildMailtoLink = ({
 } = {}) => {
   const recipient = siteConfig.email;
   const subject = `[Website Lead] ${service}${name ? ` - ${name}` : ""}`;
-  
+
   const bodyLines = [
     `Emirates Front Contracting Inquiry`,
     `=================================`,

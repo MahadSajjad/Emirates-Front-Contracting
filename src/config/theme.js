@@ -5,20 +5,33 @@
 
 export const theme = {
   colors: {
-    // Primary brand palette (Light Blue #60a5fa architectural tone as requested)
+    // Primary brand palette (Matching official flyer corporate cerulean blue & blueprint)
     primary: {
-      DEFAULT: '#60a5fa', // Bright, precise architectural sky blue (#60a5fa)
+      DEFAULT: '#0066b2', // Core corporate blue from official flyer
       50: '#f0f7ff',      // Soft ice blue tint
-      100: '#e0effe',     // Crisp sky tint
-      200: '#bae0fd',
-      300: '#93c5fd',
-      400: '#60a5fa',     // Primary accent color
-      500: '#3b82f6',
-      600: '#2563eb',
-      700: '#1d4ed8',     // Deep sapphire blue
-      800: '#1e40af',     // Prestigious navy-blue
-      900: '#0f172a',     // Deep slate-black base
-      950: '#020617',     // Deepest obsidian black
+      100: '#e0f2fe',     // Crisp sky blueprint tint
+      200: '#bae6fd',
+      300: '#7dd3fc',
+      400: '#38bdf8',     // Electric blueprint cyan accent
+      500: '#0284c7',     // Vibrant cerulean
+      600: '#0066b2',     // Primary flyer blue
+      700: '#005596',     // Deep corporate blue
+      800: '#004377',     // Dark navy blue
+      900: '#1e293b',     // Deep slate-navy base
+      950: '#091e36',     // Deepest navy-slate
+    },
+    // Industrial Charcoal & Steel Slate from flyer
+    charcoal: {
+      DEFAULT: '#262d35',
+      light: '#3a434c',
+      dark: '#1c2228',
+    },
+    // Crane & Construction Safety Yellow (original color of cranes and safety helmets)
+    crane: {
+      DEFAULT: '#f59e0b', // Iconic Liebherr/CAT yellow
+      light: '#fbbf24',
+      dark: '#d97706',
+      accent: '#eab308',
     },
     // Slate text tones for crisp contrast on light backgrounds
     slate: {
@@ -35,13 +48,13 @@ export const theme = {
       900: '#0f172a',
       950: '#020617',
     },
-    // Primary CTA mapped to primary-400 (#60a5fa) — yellow completely removed
+    // Primary Call-To-Action: Construction Safety Yellow with dark typography
     cta: {
-      DEFAULT: '#60a5fa', // Primary-400 accent
-      hover: '#3b82f6',   // Primary-500
-      light: '#eff6ff',   // Subdued background tint
-      dark: '#2563eb',
-      glow: 'rgba(96, 165, 250, 0.4)',
+      DEFAULT: '#f59e0b', // Safety yellow from flyer helmet & crane
+      hover: '#d97706',   // Rich industrial amber on hover
+      light: '#fef3c7',   // Amber tint
+      dark: '#b45309',
+      glow: 'rgba(245, 158, 11, 0.45)',
     },
     // Neutrals & Surface tones (black, white, and shades)
     black: '#020617',

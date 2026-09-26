@@ -11,6 +11,8 @@ export default {
       colors: {
         primary: theme.colors.primary,
         cta: theme.colors.cta,
+        charcoal: theme.colors.charcoal,
+        crane: theme.colors.crane,
         alabaster: theme.colors.alabaster,
         black: theme.colors.black,
         white: theme.colors.white,

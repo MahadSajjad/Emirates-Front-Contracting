@@ -41,33 +41,27 @@ export const Navbar = () => {
   return (
     <>
       <header
-        className={clsx(
-          "fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-200 border-b border-white/10",
-          isScrolled
-            ? "bg-slate-950/95 backdrop-blur-md shadow-lg"
-            : "bg-slate-950"
-        )}
+        className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-200 border-b border-neutral-800 shadow-2xl"
+        style={{ backgroundColor: "#000000" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
-          {/* Brand Logo */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-4">
+          {/* Brand Logo - Direct Enlarged Image without Box Borders */}
           <Link
             to="/"
-            className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded p-1 shrink-0"
+            className="flex items-center gap-3.5 sm:gap-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f59e0b] rounded-lg p-1 shrink-0"
           >
-            <div className="w-11 h-11 rounded-xl bg-slate-900/90 border border-slate-700/80 p-1 flex items-center justify-center shadow-md group-hover:border-primary-400/80 group-hover:bg-slate-800 transition-all shrink-0">
-              <img
-                src="/logo.png"
-                alt="Emirates Front Contracting Company Logo"
-                className="w-full h-full object-contain filter drop-shadow-[0_2px_6px_rgba(59,130,246,0.35)] group-hover:scale-105 transition-transform"
-                width="44"
-                height="44"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-extrabold text-base sm:text-lg uppercase tracking-tight text-white group-hover:text-primary-400 transition-colors leading-tight">
+            <img
+              src="/logo.png"
+              alt="Emirates Front Contracting Company Logo"
+              className="h-14 sm:h-14 lg:h-16 w-auto object-contain group-hover:scale-105 transition-transform shrink-0 filter drop-shadow-[0_2px_12px_rgba(255,255,255,0.18)]"
+              width="60"
+              height="60"
+            />
+            <div className="flex flex-col justify-center">
+              <span className="font-display font-black text-lg sm:text-xl lg:text-2xl uppercase tracking-tight text-white group-hover:text-[#f59e0b] transition-colors leading-tight">
                 Emirates Front
               </span>
-              <span className="font-display text-[11px] font-medium text-slate-400 tracking-wider leading-none">
+              <span className="font-display text-xs sm:text-[13px] font-bold text-slate-300 tracking-wider leading-none mt-1">
                 شركة واجهة الامارات للمقاولات
               </span>
             </div>
@@ -106,9 +100,9 @@ export const Navbar = () => {
 
                     {/* Services Dropdown */}
                     {servicesDropdownOpen && (
-                      <div className="absolute top-full left-0 w-80 bg-slate-950 border border-slate-800 rounded-xl shadow-2xl py-3 px-2 z-50 animate-fade-in backdrop-blur-md">
-                        <div className="px-3 py-1.5 border-b border-white/10 mb-2">
-                          <span className="font-mono text-[10px] text-primary-400 uppercase tracking-widest block">
+                      <div className="absolute top-full left-0 w-80 bg-black border border-neutral-800 rounded-xl shadow-2xl py-3 px-2 z-50 animate-fade-in backdrop-blur-md">
+                        <div className="px-3 py-1.5 border-b border-neutral-800 mb-2">
+                          <span className="font-mono text-[10px] text-[#f59e0b] uppercase tracking-widest block font-bold">
                             Contracting Disciplines
                           </span>
                         </div>
@@ -116,16 +110,16 @@ export const Navbar = () => {
                           <Link
                             key={cat.id}
                             to={`/services#${cat.id}`}
-                            className="block px-3 py-2 rounded-lg text-xs text-white/80 hover:text-white hover:bg-white/10 transition-colors font-display font-semibold"
+                            className="block px-3 py-2 rounded-lg text-xs text-white/80 hover:text-white hover:bg-neutral-900 transition-colors font-display font-semibold"
                           >
-                            <span className="text-primary-400 mr-1.5 font-mono">›</span>
+                            <span className="text-[#f59e0b] mr-1.5 font-mono">›</span>
                             {cat.name}
                           </Link>
                         ))}
-                        <div className="mt-2 pt-2 border-t border-white/10 px-3">
+                        <div className="mt-2 pt-2 border-t border-neutral-800 px-3">
                           <Link
                             to="/services"
-                            className="text-xs font-mono text-primary-400 hover:underline flex items-center justify-between"
+                            className="text-xs font-mono text-[#f59e0b] hover:underline flex items-center justify-between font-bold"
                           >
                             <span>View All Scopes</span>
                             <span>→</span>
@@ -185,11 +179,11 @@ export const Navbar = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2 rounded-lg bg-slate-900 text-white hover:text-primary-400 border border-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 flex items-center gap-1.5"
+              className="lg:hidden p-2.5 rounded-lg bg-neutral-900 text-white hover:text-[#f59e0b] border border-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f59e0b] flex items-center gap-1.5 shadow-sm"
               aria-label="Open navigation menu"
             >
               <FaBars className="w-5 h-5" />
-              <span className="hidden sm:inline text-xs font-mono font-bold uppercase tracking-wider text-white/80">
+              <span className="hidden sm:inline text-xs font-mono font-bold uppercase tracking-wider text-white/90">
                 Menu
               </span>
             </button>
@@ -197,8 +191,8 @@ export const Navbar = () => {
         </div>
       </header>
 
-      {/* Natural document flow spacer for fixed header (strictly constant 72px) */}
-      <div className="h-[72px] w-full shrink-0" aria-hidden="true" />
+      {/* Natural document flow spacer for fixed header (strictly matching header height) */}
+      <div className="h-20 sm:h-24 w-full shrink-0" aria-hidden="true" style={{ backgroundColor: "#000000" }} />
 
       {/* Mobile Menu Drawer (Sheet) */}
       <Sheet
