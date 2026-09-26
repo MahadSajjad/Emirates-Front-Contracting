@@ -26,16 +26,7 @@ export const AboutPage = () => {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Hero Header */}
-      <Section variant="dark" padding="default" className="relative bg-primary-950 text-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=80')`,
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-900/95 to-primary-900/80" />
-        </div>
+      <Section variant="dark" padding="default" className="relative bg-[#225F98] text-white overflow-hidden">
 
         <Container className="relative z-10">
           <div className="max-w-3xl">

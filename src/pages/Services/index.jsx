@@ -43,17 +43,7 @@ export const ServicesPage = () => {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Header */}
-      <Section variant="dark" padding="default" className="relative bg-slate-950 text-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=80')`,
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950" />
-        </div>
-
+      <Section variant="dark" padding="default" className="relative bg-[#225F98] text-white overflow-hidden">
         <Container className="relative z-10">
           <div className="max-w-3xl">
             <Reveal direction="up">
@@ -85,11 +75,10 @@ export const ServicesPage = () => {
             <button
               type="button"
               onClick={() => setActiveCategory("all")}
-              className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold transition-all shrink-0 ${
-                activeCategory === "all"
-                  ? "bg-slate-900 text-white shadow-md font-bold"
-                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold transition-all shrink-0 ${activeCategory === "all"
+                ? "bg-slate-900 text-white shadow-md font-bold"
+                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                }`}
             >
               All Scopes ({services.length})
             </button>
@@ -99,11 +88,10 @@ export const ServicesPage = () => {
                 key={cat.id}
                 type="button"
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold transition-all shrink-0 flex items-center gap-1.5 ${
-                  activeCategory === cat.id
-                    ? "bg-primary-400 text-slate-950 shadow-md font-bold"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
+                className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold transition-all shrink-0 flex items-center gap-1.5 ${activeCategory === cat.id
+                  ? "bg-primary-400 text-slate-950 shadow-md font-bold"
+                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                  }`}
               >
                 {cat.highlight && <span className="text-xs">★</span>}
                 <span>{cat.shortName}</span>

@@ -32,7 +32,7 @@ export const VisualServicesFleetSection = () => {
       categoryName: "Rental Fleet · تأجير أسطول متكامل",
       title: "Full Fleet Vehicle Rental & Equipment Hiring",
       titleAr: "تأجير أسطول المعدات والآليات والشاحنات الكامل",
-      image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1492168732976-2676c584c675?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Full Fleet Vehicle Rental and Equipment Hiring Riyadh - Emirates Front Contracting",
       badge: "Top-Tier Fleet · أسطول متكامل",
       specs: ["Excavators, Dumpers & Pickups", "3-Ton Dynas, Trailers & Cranes", "Daily, Monthly & Annual Contracts"],

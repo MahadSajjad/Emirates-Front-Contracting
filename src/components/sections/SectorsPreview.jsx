@@ -38,7 +38,7 @@ export const SectorsPreview = () => {
         >
           {sectors.map((sector, index) => {
             const sectorImages = {
-              "fleet-fuel-logistics": "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+              "fleet-fuel-logistics": "https://images.unsplash.com/photo-1693212924767-32597c091f20?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEhlYXZ5JTIwRmxlZXQlMjBSZW50YWwlMjAlMjYlMjBPbi1TaXRlJTIwRnVlbCUyMFN1cHBseXxlbnwwfHwwfHx8MA%3D%3D",
               commercial: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
               residential: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
               industrial: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
@@ -58,7 +58,7 @@ export const SectorsPreview = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                    
+
                     {/* Floating Top Badge */}
                     <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-900/90 border border-slate-700 font-mono text-[10px] text-white font-bold tracking-wider uppercase backdrop-blur-sm">
                       Sector 0{index + 1}
