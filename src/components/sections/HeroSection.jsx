@@ -12,14 +12,15 @@ export const HeroSection = () => {
       {/* Vivid Background Construction Photography + Architectural Gradient Overlay */}
 
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left: Concise Editorial Headline & Action (7 cols) */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             <Reveal direction="up" delay={0.2}>
               <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold uppercase tracking-tight text-white leading-[1.08] sm:leading-[1.04]">
-                BUILDING EXCELLENCE. <span className="text-[#f59e0b]">SHAPING THE FUTURE.</span>
+                BUILDING EXCELLENCE.
               </h1>
+              <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold uppercase tracking-tight text-[#f59e0b] leading-[1.08] sm:leading-[1.04]">SHAPING THE FUTURE.</h1>
             </Reveal>
 
             <Reveal direction="up" delay={0.25}>
