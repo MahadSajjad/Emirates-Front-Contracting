@@ -44,7 +44,7 @@ export const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-200 border-b border-neutral-800 shadow-2xl"
         style={{ backgroundColor: "#000000" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
           {/* Brand Logo - Direct Enlarged Image without Box Borders */}
           <Link
             to="/"
@@ -58,7 +58,7 @@ export const Navbar = () => {
               height="60"
             />
             <div className="flex flex-col justify-center">
-              <span className="font-display font-black text-lg sm:text-xl lg:text-2xl uppercase tracking-tight text-white group-hover:text-[#f59e0b] transition-colors leading-tight">
+              <span className="font-display font-black text-md sm:text-lg lg:text-xl uppercase tracking-tight text-white group-hover:text-[#f59e0b] transition-colors leading-tight">
                 Emirates Front
               </span>
               <span className="font-display text-xs sm:text-[13px] font-bold text-slate-300 tracking-wider leading-none mt-1">
