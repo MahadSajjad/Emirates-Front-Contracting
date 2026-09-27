@@ -44,7 +44,7 @@ export const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-200 border-b border-neutral-800 shadow-2xl"
         style={{ backgroundColor: "#000000" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-15 sm:h-20 flex items-center justify-between gap-4">
           {/* Brand Logo - Direct Enlarged Image without Box Borders */}
           <Link
             to="/"
@@ -192,7 +192,7 @@ export const Navbar = () => {
       </header>
 
       {/* Natural document flow spacer for fixed header (strictly matching header height) */}
-      <div className="h-20 sm:h-24 w-full shrink-0" aria-hidden="true" style={{ backgroundColor: "#000000" }} />
+      <div className="h-15 sm:h-20 w-full shrink-0" aria-hidden="true" style={{ backgroundColor: "#000000" }} />
 
       {/* Mobile Menu Drawer (Sheet) */}
       <Sheet
