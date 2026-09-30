@@ -114,9 +114,10 @@ export const Footer = () => {
               <div className="flex items-start gap-2.5">
                 <FaMapMarkerAlt className="w-4 h-4 text-[#0066b2] shrink-0 mt-1" />
                 <div>
-                  <span className="block font-medium text-slate-900">Haroon Rashid Rd, As Sulay (Exit 18)</span>
-                  <span className="block text-xs text-slate-500 font-display">طريق هارون الرشيد، حي السلي، مخرج 18</span>
-                  <span className="block text-xs text-slate-500">Riyadh, Kingdom of Saudi Arabia</span>
+                  <span className="block font-medium text-slate-900">Bldg 3305, Al Hawtah St, Al Sulay</span>
+                  <span className="block text-xs text-slate-500 font-display">مبنى 3305، شارع الحوطه، حي السلي، الرقم 6325</span>
+                  <span className="block text-xs text-[#0066b2] font-mono font-bold">National Address: {siteConfig.nationalAddress.shortAddress}</span>
+                  <span className="block text-xs text-slate-500">Riyadh 14322, Saudi Arabia</span>
                 </div>
               </div>
 
@@ -147,10 +148,52 @@ export const Footer = () => {
           </div>
         </div>
 
+        {/* Official Saudi Registrations & Citations Bar */}
+        <div className="py-6 border-b border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+          <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+            <span className="text-[10px] text-slate-400 block uppercase">Commercial Reg (CR)</span>
+            <span className="font-bold text-slate-900">{siteConfig.crNumber}</span>
+          </div>
+          <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+            <span className="text-[10px] text-slate-400 block uppercase">ZATCA VAT Reg</span>
+            <span className="font-bold text-slate-900">{siteConfig.vatNumber}</span>
+          </div>
+          <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+            <span className="text-[10px] text-slate-400 block uppercase">TGA Freight License</span>
+            <span className="font-bold text-slate-900">{siteConfig.tgaLicenseNumber}</span>
+          </div>
+          <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+            <span className="text-[10px] text-slate-400 block uppercase">National Address Code</span>
+            <span className="font-bold text-[#0066b2]">{siteConfig.nationalAddress.shortAddress}</span>
+          </div>
+        </div>
+
+        {/* Regulatory Authority Citations & Verification Backlinks */}
+        <div className="py-4 border-b border-slate-100 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-slate-500">
+          <span className="font-bold uppercase tracking-wider text-slate-700">Official Accreditations & Portals:</span>
+          <div className="flex flex-wrap items-center gap-4 text-[#0066b2]">
+            <a href="https://mc.gov.sa" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Ministry of Commerce (mc.gov.sa)
+            </a>
+            <span>·</span>
+            <a href="https://zatca.gov.sa" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              ZATCA Tax Portal (zatca.gov.sa)
+            </a>
+            <span>·</span>
+            <a href="https://tga.gov.sa" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Transport Authority (tga.gov.sa)
+            </a>
+            <span>·</span>
+            <a href="https://splonline.com.sa" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Saudi Post SPL (splonline.com.sa)
+            </a>
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            © {currentYear} {siteConfig.name} ({siteConfig.nameAr}). All rights reserved.
+            © {currentYear} {siteConfig.name} ({siteConfig.legalName}). All rights reserved.
           </div>
           <div className="flex items-center gap-6 font-mono text-[11px] text-slate-500">
             <span>Riyadh · Kingdom of Saudi Arabia</span>

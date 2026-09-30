@@ -56,9 +56,10 @@ export const Navbar = () => {
               className="h-14 sm:h-14 lg:h-16 w-auto object-contain group-hover:scale-105 transition-transform shrink-0 filter drop-shadow-[0_2px_12px_rgba(255,255,255,0.18)]"
               width="60"
               height="60"
+              decoding="async"
             />
             <div className="flex flex-col justify-center">
-              <span className="font-display font-black text-md sm:text-lg lg:text-xl uppercase tracking-tight text-white group-hover:text-[#f59e0b] transition-colors leading-tight">
+              <span className=" font-black text-sm sm:text-md lg:text-lg uppercase tracking-tight text-white group-hover:text-[#f59e0b] transition-colors leading-tight">
                 Emirates Front
               </span>
               <span className="font-display text-xs sm:text-[13px] font-bold text-slate-300 tracking-wider leading-none mt-1">

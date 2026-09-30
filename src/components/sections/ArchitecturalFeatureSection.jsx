@@ -31,10 +31,12 @@ export const ArchitecturalFeatureSection = ({
             <div className="absolute top-5 left-5 sm:top-6 sm:left-14 flex items-center gap-2">
               <img
                 src="/logo.png"
-                alt="Emirates Front Emblem"
+                alt="Emirates Front Contracting Corporate Emblem & Architectural Standard"
                 className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-sm"
                 width="56"
                 height="56"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

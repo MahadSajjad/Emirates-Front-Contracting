@@ -1,4 +1,17 @@
+# Robots.txt for Emirates Front Contracting Company (شركة واجهة الإمارات للمقاولات)
+# Official Website: https://emiratesfront.com
+
 User-agent: *
 Allow: /
 
-Sitemap: https://emiratesfront.site/sitemap.xml
+# Disallow system, private, and internal build paths
+Disallow: /api/
+Disallow: /dist/
+Disallow: /*.json$
+Disallow: /assets/*.map$
+
+# Host
+Host: https://emiratesfront.com
+
+# XML Sitemap
+Sitemap: https://emiratesfront.com/sitemap.xml

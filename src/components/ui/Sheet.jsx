@@ -37,10 +37,11 @@ export const Sheet = ({ isOpen, onClose, title, children, side = "right" }) => {
           <div className="flex items-center gap-3.5">
             <img
               src="/logo.png"
-              alt="Emirates Front Contracting Logo"
+              alt="Emirates Front Contracting Company Logo"
               className="h-16 w-auto object-contain shrink-0 filter drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]"
               width="64"
               height="64"
+              decoding="async"
             />
             <div>
               <span className="font-mono text-[10px] text-[#f59e0b] tracking-widest uppercase block font-bold">

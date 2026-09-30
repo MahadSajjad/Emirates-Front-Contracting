@@ -134,10 +134,21 @@ export const ContactPage = () => {
                   <div className="flex items-start gap-3">
                     <FaMapMarkerAlt className="w-4 h-4 text-primary-600 shrink-0 mt-1" />
                     <div>
-                      <span className="font-mono text-xs text-slate-500 block uppercase">Location</span>
-                      <span className="font-display font-semibold text-slate-900">
-                        {location.label} — Riyadh, KSA
+                      <span className="font-mono text-xs text-slate-500 block uppercase">Certified National Address</span>
+                      <span className="font-display font-semibold text-slate-900 block">
+                        {location.address}
                       </span>
+                      <span className="font-mono text-xs text-[#0066b2] font-bold block mt-1">
+                        Short Code: {siteConfig.nationalAddress.shortAddress} · Unit {siteConfig.nationalAddress.secondaryNumber}
+                      </span>
+                      <a
+                        href="https://proof.address.gov.sa/VerityProofNA.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-mono text-slate-500 hover:text-[#0066b2] underline inline-block mt-0.5"
+                      >
+                        Verify via Saudi National Address Portal ↗
+                      </a>
                     </div>
                   </div>
 
@@ -149,6 +160,18 @@ export const ContactPage = () => {
                         {siteConfig.workingHours}
                       </span>
                     </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-slate-200">
+                    <span className="font-mono text-[11px] text-slate-500 block mb-1">
+                      Commercial Registration (CR): <strong className="text-slate-900">{siteConfig.crNumber}</strong>
+                    </span>
+                    <span className="font-mono text-[11px] text-slate-500 block mb-1">
+                      ZATCA VAT: <strong className="text-slate-900">{siteConfig.vatNumber}</strong>
+                    </span>
+                    <span className="font-mono text-[11px] text-slate-500 block">
+                      TGA Freight License: <strong className="text-slate-900">{siteConfig.tgaLicenseNumber}</strong>
+                    </span>
                   </div>
                 </div>
               </div>

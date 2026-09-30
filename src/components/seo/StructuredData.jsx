@@ -6,34 +6,83 @@ import services from "../../data/services.js";
 export const StructuredData = ({ type = "business", breadcrumbs = [], service = null }) => {
   const getOrganizationSchema = () => ({
     "@context": "https://schema.org",
-    "@type": "GeneralContractor",
+    "@type": ["GeneralContractor", "LocalBusiness"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
-    alternateName: siteConfig.nameAr,
-    url: siteConfig.url,
+    legalName: siteConfig.legalName,
+    alternateName: [
+      siteConfig.nameAr,
+      "شركة واجهة الإمارات للمقاولات شركة شخص واحد",
+      "Emirates Front Contracting",
+      "واجهة الامارات للمقاولات",
+    ],
+    url: `${siteConfig.url}/`,
     logo: `${siteConfig.url}/logo.png`,
     image: `${siteConfig.url}/images/og-cover.png`,
     telephone: siteConfig.phone.number,
     email: siteConfig.email,
+    taxID: siteConfig.vatNumber,
+    vatID: siteConfig.vatNumber,
+    identifier: [
+      {
+        "@type": "PropertyValue",
+        name: "Commercial Registration (CR)",
+        value: siteConfig.crNumber,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Unified National Number",
+        value: siteConfig.unifiedNationalNumber,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "TGA Road Freight License",
+        value: siteConfig.tgaLicenseNumber,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Saudi National Address Short Code",
+        value: siteConfig.nationalAddress.shortAddress,
+      },
+    ],
     priceRange: "$$$",
     description:
       "Specialized on-site fuel supply & diesel logistics, full fleet vehicle and machinery rental (excavators, dumpers, 3-ton dynas, trailers, cranes), and comprehensive general contracting services across Riyadh and Saudi Arabia.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Building 3305, Al Hawtah Street, Al Sulay District, Secondary No. 6325",
       addressLocality: "Riyadh",
       addressRegion: "Riyadh Province",
+      postalCode: "14322",
       addressCountry: "SA",
-      streetAddress: "Haroon Rashid Road, As Sulay, Near Exit 18, Riyadh, Saudi Arabia",
     },
     geo: {
       "@type": "GeoCoordinates",
       latitude: 24.6197,
       longitude: 46.8339,
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+        ],
+        opens: "08:00",
+        closes: "18:00",
+      },
+    ],
     areaServed: [
       {
         "@type": "City",
         name: "Riyadh",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Eastern Province",
       },
       {
         "@type": "Country",
@@ -42,7 +91,7 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Contracting Services",
+      name: "Emirates Front Contracting Services",
       itemListElement: services.map((s) => ({
         "@type": "Offer",
         itemOffered: {
@@ -52,6 +101,19 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
           url: `${siteConfig.url}/services/${s.slug}`,
         },
       })),
+    },
+  });
+
+  const getWebSiteSchema = () => ({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.url}/#website`,
+    url: `${siteConfig.url}/`,
+    name: siteConfig.name,
+    alternateName: siteConfig.nameAr,
+    inLanguage: ["en", "ar"],
+    publisher: {
+      "@id": `${siteConfig.url}/#organization`,
     },
   });
 
@@ -77,11 +139,12 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
       "@context": "https://schema.org",
       "@type": "Service",
       name: serviceData.title,
+      alternateName: serviceData.titleAr,
       description: serviceData.description,
       provider: {
         "@type": "GeneralContractor",
         name: siteConfig.name,
-        url: siteConfig.url,
+        url: `${siteConfig.url}/`,
         logo: `${siteConfig.url}/logo.png`,
       },
       areaServed: {
@@ -99,6 +162,7 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
 
   if (type === "business" || type === "all") {
     schemas.push(getOrganizationSchema());
+    schemas.push(getWebSiteSchema());
   }
 
   if (breadcrumbs && breadcrumbs.length > 0) {

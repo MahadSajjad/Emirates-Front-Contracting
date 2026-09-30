@@ -11,21 +11,31 @@ export const SEO = ({
   noIndex = false,
 }) => {
   const siteTitle = siteConfig.name;
-  const fullTitle = title
-    ? `${title} | ${siteTitle}`
-    : `${siteTitle} | Fuel Supply, Fleet Vehicle Rental & Contracting | Riyadh`;
+  
+  // Format title without duplicating brand name if already provided
+  let fullTitle = `${siteTitle} | Fuel Supply, Fleet Vehicle Rental & Contracting | Riyadh`;
+  if (title) {
+    if (title.toLowerCase().includes("emirates front")) {
+      fullTitle = title;
+    } else {
+      fullTitle = `${title} | ${siteTitle}`;
+    }
+  }
 
   const metaDescription =
     description ||
     "Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — 24/7 On-Site Fuel Supply, Full Fleet Vehicle Rental & Machinery Hiring (Excavators, Dumpers, 3-Ton Pickups, Trailers, Cranes) and Comprehensive Contracting in Riyadh, Saudi Arabia.";
 
-  const canonicalUrl = canonical
-    ? `${siteConfig.url}${canonical.startsWith("/") ? canonical : `/${canonical}`}`
-    : siteConfig.url;
+  // Normalize canonical URL (root always ends with slash, subpages do not)
+  let canonicalUrl = `${siteConfig.url}/`;
+  if (canonical && canonical !== "/") {
+    const cleanPath = canonical.startsWith("/") ? canonical : `/${canonical}`;
+    canonicalUrl = `${siteConfig.url}${cleanPath.replace(/\/+$/, "")}`;
+  }
 
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
-    : `${siteConfig.url}${ogImage}`;
+    : `${siteConfig.url}${ogImage.startsWith("/") ? ogImage : `/${ogImage}`}`;
 
   return (
     <Helmet>
@@ -58,16 +68,20 @@ export const SEO = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content={siteTitle} />
       <meta property="og:image" content={fullOgImage} />
+      <meta property="og:image:secure_url" content={fullOgImage} />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Emirates Front Contracting Company Logo & Portfolio" />
+      <meta property="og:image:alt" content="Emirates Front Contracting Company - Heavy Rental Fleet, Fuel Supply and General Contracting in Riyadh" />
       <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="ar_SA" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={fullOgImage} />
+      <meta name="twitter:image:alt" content="Emirates Front Contracting Company Riyadh" />
 
       {/* Geographic / Local SEO Meta */}
       <meta name="geo.region" content="SA-01" />

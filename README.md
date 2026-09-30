@@ -94,10 +94,15 @@ Because this is a static front-end SPA with no database, leads route with zero f
 
 Per the brief, no facts, years in business, project counts, certifications, or revenue figures were fabricated. All items below are marked with `// DRAFT — confirm with client` or `// PLACEHOLDER` in the codebase:
 
-1. **Street Address for Riyadh Office:** Only the Google Maps pin was supplied. The site embeds the exact pin, but the street address text is a placeholder pending client input.
-2. **Company Domain & Website URL:** Configured to `https://emiratesfront.site` across canonical links, robots.txt, sitemap.xml, Open Graph tags, and JSON-LD structured data.
-3. **Email Address Domain:** `emiratesfront@gmail.com` is active; a custom domain email (e.g. `info@emiratesfront.site` or `procurement@emiratesfront.site`) can be added if desired.
-4. **Tagline Sign-off:** *"Your Trusted Front in Construction"* is a deliberate draft play on واجهة (façade / front). Client should confirm or replace.
+1. **Official National Address (Verified):** Building 3305, Al Hawtah Street, Al Sulay District, Secondary No. 6325, Riyadh 14322, Saudi Arabia (Short Address: `RQYC3305`).
+2. **Company Domain & Website URL (Confirmed):** Configured to `https://emiratesfront.com` across canonical links, robots.txt, sitemap.xml, Open Graph tags, and JSON-LD structured data.
+3. **Official Regulatory Registrations (Implemented):**
+   - Commercial Registration: `2050172727` (Ministry of Commerce)
+   - Unified National Number: `7036535123`
+   - VAT Registration: `311814159600003` (ZATCA)
+   - Road Freight Transport License: `11/00052742` (Transport General Authority)
+   - Certified PDF documents stored in `/public/documents/` and linked directly in the About section.
+4. **Email Address Domain:** `emiratesfront@gmail.com` is active; a custom domain email (e.g. `info@emiratesfront.com` or `procurement@emiratesfront.com`) can be added if desired.
 5. **Services Scope Confirmation:** Façade and building envelope work was given prominence reflecting the Arabic name (واجهة). Client should verify their exact operational split across civil, MEP, and envelope scopes.
 6. **Verifiable Numbers:** Years in business, completed project totals, and workforce count are currently non-numeric to maintain honesty. Add real statistics once officially verified.
 7. **Official Logo:** The official Emirates Front architectural emblem is integrated across the navbar, footer, mobile navigation sheet, 404 page, about page, favicons (SVG, ICO, PNG 16/32/180/192/512), and custom OpenGraph 1200x630 social share card.

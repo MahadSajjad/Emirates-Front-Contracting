@@ -2,134 +2,184 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Routes -->
   <url>
-    <loc>https://emiratesfront.site/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://emiratesfront.com/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://emiratesfront.site/services</loc>
+    <loc>https://emiratesfront.com/about</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/sectors</loc>
+    <loc>https://emiratesfront.com/services</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emiratesfront.com/sectors</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/contact</loc>
+    <loc>https://emiratesfront.com/contact</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Service Detail Pages -->
+  <!-- Priority Fleet Rental & Fuel Supply Scopes -->
   <url>
-    <loc>https://emiratesfront.site/services/curtain-wall-cladding</loc>
+    <loc>https://emiratesfront.com/services/fuel-supply-diesel-logistics</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emiratesfront.com/services/fleet-vehicle-rental-hiring</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Building Envelope & Façade Engineering -->
+  <url>
+    <loc>https://emiratesfront.com/services/curtain-wall-cladding</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/glass-facade-systems</loc>
+    <loc>https://emiratesfront.com/services/glass-facade-systems</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/aluminum-composite-panels</loc>
+    <loc>https://emiratesfront.com/services/aluminum-composite-panels</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/waterproofing-systems</loc>
+    <loc>https://emiratesfront.com/services/waterproofing-systems</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Civil & Structural Works -->
   <url>
-    <loc>https://emiratesfront.site/services/civil-construction</loc>
+    <loc>https://emiratesfront.com/services/civil-construction</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/concrete-structural-work</loc>
+    <loc>https://emiratesfront.com/services/concrete-structural-work</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/block-work-masonry</loc>
+    <loc>https://emiratesfront.com/services/block-work-masonry</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/renovations-extensions</loc>
+    <loc>https://emiratesfront.com/services/renovations-extensions</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Electromechanical (MEP) Engineering -->
   <url>
-    <loc>https://emiratesfront.site/services/mechanical-hvac-services</loc>
+    <loc>https://emiratesfront.com/services/mechanical-hvac-services</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/electrical-solutions</loc>
+    <loc>https://emiratesfront.com/services/electrical-solutions</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/plumbing-sanitary-work</loc>
+    <loc>https://emiratesfront.com/services/plumbing-sanitary-work</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/ducting-cable-trays</loc>
+    <loc>https://emiratesfront.com/services/ducting-cable-trays</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Fit-Out & Architectural Finishes -->
+  <url>
+    <loc>https://emiratesfront.com/services/gypsum-board-partitions</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/gypsum-board-partitions</loc>
+    <loc>https://emiratesfront.com/services/painting-coatings</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/painting-coatings</loc>
+    <loc>https://emiratesfront.com/services/marble-tiles-flooring</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/marble-tiles-flooring</loc>
+    <loc>https://emiratesfront.com/services/interior-fitout</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Earthworks & Site Enablement -->
+  <url>
+    <loc>https://emiratesfront.com/services/excavation-demolition</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/interior-fitout</loc>
+    <loc>https://emiratesfront.com/services/grading-backfilling</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://emiratesfront.com/services/site-preparation</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Industrial & Facility Operations -->
+  <url>
+    <loc>https://emiratesfront.com/services/industrial-construction</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://emiratesfront.site/services/excavation-demolition</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://emiratesfront.site/services/grading-backfilling</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://emiratesfront.site/services/site-preparation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://emiratesfront.site/services/industrial-construction</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://emiratesfront.site/services/facility-maintenance-operations</loc>
+    <loc>https://emiratesfront.com/services/facility-maintenance-operations</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

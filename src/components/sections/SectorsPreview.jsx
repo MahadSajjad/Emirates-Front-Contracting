@@ -53,9 +53,12 @@ export const SectorsPreview = () => {
                   <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
                     <img
                       src={imageSrc}
-                      alt={sector.title}
+                      alt={`${sector.title} Projects & Contracting in Riyadh - Emirates Front Contracting`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="400"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
 

@@ -27,10 +27,11 @@ export const NotFoundPage = () => {
             <Link to="/" className="inline-block group focus-visible:outline-none">
               <img
                 src="/logo.png"
-                alt="Emirates Front Contracting"
+                alt="Emirates Front Contracting Company Logo"
                 className="h-24 w-auto mx-auto object-contain filter drop-shadow-[0_4px_16px_rgba(0,102,178,0.5)] group-hover:scale-105 transition-all"
                 width="96"
                 height="96"
+                decoding="async"
               />
             </Link>
 

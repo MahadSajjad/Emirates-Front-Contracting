@@ -206,7 +206,7 @@ export const VisualServicesFleetSection = () => {
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   }`}
               >
-                All Scopes ({servicesData.length})
+                All Scopes
               </button>
               <button
                 type="button"
@@ -216,7 +216,7 @@ export const VisualServicesFleetSection = () => {
                   : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   }`}
               >
-                <span>Fleet Rentals & Fuel Supply</span>
+                <span>Fuel Supply</span>
               </button>
               <button
                 type="button"
