@@ -355,11 +355,6 @@ export const CraneLiftSection = ({
 
               {/* Main Section Card: Crisp White Structural Card */}
               <div className="relative rounded-2xl bg-white border-2 border-slate-200/90 p-5 sm:p-10 lg:p-14 shadow-2xl backdrop-blur-xl">
-                {/* Technical Watermark */}
-                <div className="hidden md:block absolute top-4 right-6 font-mono text-xs text-slate-400 uppercase tracking-widest pointer-events-none">
-                  [SECTION_MODULE_01 // ACTIVE_LIFT]
-                </div>
-
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
                   {/* Left Column: Scope & Headline (7 cols) */}
                   <div className="lg:col-span-7 space-y-4 sm:space-y-5">
