@@ -303,11 +303,10 @@ export const VisualServicesFleetSection = () => {
             return (
               <div
                 key={item.id}
-                className={`group h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between ${
-                  item.isMain
+                className={`group h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between ${item.isMain
                     ? "border-2 border-[#f59e0b] ring-2 ring-[#f59e0b]/20"
                     : "border border-slate-200/90 hover:border-[#0066b2]/50"
-                }`}
+                  }`}
               >
                 {/* Visual Image Banner with Zoom Effect */}
                 <div>
@@ -323,11 +322,10 @@ export const VisualServicesFleetSection = () => {
                     {/* Top Category Badge */}
                     <div className="absolute top-3 left-3">
                       <span
-                        className={`px-2.5 py-1 rounded text-[11px] font-mono font-black uppercase tracking-wider shadow-md ${
-                          item.isMain
+                        className={`px-2.5 py-1 rounded text-[11px] font-mono font-black uppercase tracking-wider shadow-md ${item.isMain
                             ? "bg-[#f59e0b] text-slate-950"
                             : "bg-[#0066b2] text-white"
-                        }`}
+                          }`}
                       >
                         {item.badge}
                       </span>
@@ -420,7 +418,7 @@ export const VisualServicesFleetSection = () => {
             iconPosition="left"
             className="shrink-0 font-extrabold shadow-lg rounded-xl"
           >
-            Direct WhatsApp Yard Line
+            Direct WhatsApp
           </Button>
         </div>
       </div>
