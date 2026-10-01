@@ -44,7 +44,7 @@ src/
   components/
     layout/            # Navbar, Footer, Layout, ScrollToTop
     ui/                # Button, Container, Section, SectionHeading, Eyebrow, Card, Badge, NumberedCard, Accordion, Sheet, Toast
-    sections/          # HeroSection, ExpertiseList (01-06), WhyUsSection, TrustStrip, SectorsPreview, CTASection, ContactForm, MapEmbed, Breadcrumbs, WhatsAppButton
+    sections/          # HeroSection, ExpertiseList (01-06), WhyUsSection, SectorsPreview, CTASection, ContactForm, MapEmbed, Breadcrumbs, WhatsAppButton
     seo/               # SEO.jsx (Helmet wrapper), StructuredData.jsx (JSON-LD schemas)
     motion/            # Reveal.jsx (LazyMotion wrapper with reduced motion support)
   config/

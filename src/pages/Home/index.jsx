@@ -6,7 +6,6 @@ import CraneLiftSection from "../../components/animations/CraneLiftSection.jsx";
 import ArchitecturalFeatureSection from "../../components/sections/ArchitecturalFeatureSection.jsx";
 import VisualServicesFleetSection from "../../components/sections/VisualServicesFleetSection.jsx";
 import WhyUsSection from "../../components/sections/WhyUsSection.jsx";
-import TrustStrip from "../../components/sections/TrustStrip.jsx";
 import SectorsPreview from "../../components/sections/SectorsPreview.jsx";
 import CTASection from "../../components/sections/CTASection.jsx";
 
@@ -38,9 +37,6 @@ export const HomePage = () => {
 
       {/* 4. Visual Fleet & Contracting Services Showcase (Images First) */}
       <VisualServicesFleetSection />
-
-      {/* 5. Honest Non-Numeric Trust Strip */}
-      <TrustStrip />
 
       {/* 6. Why Choose Us (6 Value Props) */}
       <WhyUsSection />
