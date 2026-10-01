@@ -34,7 +34,7 @@ export const Footer = () => {
             </Link>
 
             <p className="text-slate-600 text-sm leading-relaxed max-w-sm">
-              Comprehensive general contracting & heavy plant rentals in Riyadh: Road building, luxury villas, street lighting, civil concrete, and full fleet rentals (excavators, dumpers, 3-ton pickups, trailers & cranes).
+              Specialized Saudi contracting firm in Riyadh: Building construction (Main service), roads construction, excavations, transport, rental equipment, materials supply, manpower, scrap, paint, laboratory testing, and fuel logistics.
             </p>
 
             <div className="pt-2">

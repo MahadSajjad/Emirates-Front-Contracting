@@ -34,8 +34,8 @@ export const ServicesPage = () => {
   return (
     <>
       <SEO
-        title="Fuel Supply, Fleet Vehicle Rental & Contracting Services | Riyadh"
-        description="Comprehensive services: 24/7 On-Site Fuel Supply & Diesel Logistics, Full Fleet Vehicle Rental (Excavators, Dumpers, Pickups, Dynas, Trailers, Cranes), and General Contracting in Riyadh, Saudi Arabia."
+        title="Building Construction, Road Works, Equipment Rental & Contracting Services | Riyadh"
+        description="Emirates Front Contracting Company: Building Construction (Main Service), Roads Construction, Excavations, Transport, Rental Equipment, Construction Materials, Manpower, Scrap, Paint, Lab Testing, Fuel Supply, and Contracting in Riyadh."
         canonical="/services"
       />
       <StructuredData type="all" breadcrumbs={breadcrumbs} />
@@ -58,10 +58,10 @@ export const ServicesPage = () => {
                 SPECIALIZED SCOPES. <span className="text-primary-400">UNIFIED DELIVERY.</span>
               </h1>
               <p className="font-display text-base sm:text-lg text-slate-300 font-medium mb-6">
-                دليل خدمات ومجالات المقاولات العامة والإنشائية وأنظمة الواجهات
+                دليل خدمات ومجالات شركة واجهة الامارات للمقاولات بالرياض
               </p>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
-                Explore our full spectrum of 21+ specialized contracting scopes across envelope engineering, civil structures, electromechanical systems, and interior finishing.
+                Explore our full spectrum of 12 specialized services across building construction, road infrastructure, heavy equipment rentals, fuel supply, and material logistics.
               </p>
             </Reveal>
           </div>
@@ -121,66 +121,93 @@ export const ServicesPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => {
-              const quickWhatsApp = buildWhatsAppLink();
+              const quickWhatsApp = buildWhatsAppLink({
+                service: service.title,
+                message: `Hello Emirates Front Contracting, I am inquiring specifically about your ${service.title} (${service.titleAr}) services in Riyadh.`,
+              });
 
               return (
                 <div
                   key={service.slug}
                   id={service.category}
-                  className="group bg-white border border-slate-200/90 rounded-xl flex flex-col justify-between hover-lift shadow-sm hover:border-primary-400 transition-all duration-300 overflow-hidden"
+                  className={`group bg-white rounded-xl flex flex-col justify-between hover-lift shadow-sm transition-all duration-300 overflow-hidden ${
+                    service.isMain
+                      ? "border-2 border-primary-500 shadow-md ring-2 ring-primary-500/10"
+                      : "border border-slate-200/90 hover:border-primary-400"
+                  }`}
                 >
-                  <div className="p-6 sm:p-8">
-                    {/* Header: Category tag & Title */}
-                    <div className="flex items-center justify-between gap-2 mb-4">
-                      <span className="font-mono text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-primary-50 text-primary-700 border border-primary-200">
-                        {service.categoryName}
-                      </span>
-                      <span className="font-display text-xs text-slate-400">
-                        {service.titleAr}
-                      </span>
+                  {/* Top Image Preview Banner */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
+                    <img
+                      src={service.image}
+                      alt={`${service.title} - Emirates Front Contracting`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20" />
+
+                    {/* Top Badge */}
+                    <div className="absolute top-3 left-3">
+                      {service.isMain ? (
+                        <span className="px-2.5 py-1 rounded bg-[#f59e0b] text-slate-950 font-mono text-[11px] font-black uppercase tracking-wider shadow-md">
+                          ★ Main Service · الخدمة الرئيسية
+                        </span>
+                      ) : (
+                        <span className="px-2.5 py-1 rounded bg-slate-900/80 backdrop-blur-md text-white border border-white/20 font-mono text-[10px] font-bold uppercase tracking-wider">
+                          {service.categoryName}
+                        </span>
+                      )}
                     </div>
 
-                    <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-slate-900 group-hover:text-primary transition-colors mb-3">
-                      <Link to={`/services/${service.slug}`}>
-                        {service.title}
-                      </Link>
-                    </h3>
-
-                    <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                      {service.excerpt}
-                    </p>
-
-                    {/* Key Technical Bullets */}
-                    <div className="space-y-2 mb-6 pt-4 border-t border-slate-100">
-                      {service.bullets.slice(0, 3).map((bullet, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                          <FaCheck className="w-3 h-3 text-primary-600 shrink-0 mt-0.5" />
-                          <span className="line-clamp-1">{bullet}</span>
-                        </div>
-                      ))}
+                    <div className="absolute bottom-2.5 left-3 right-3 text-[11px] font-display text-white/90 truncate">
+                      {service.titleAr}
                     </div>
                   </div>
 
-                  {/* Card Bottom */}
-                  <div className="p-6 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-4">
-                    <Link
-                      to={`/services/${service.slug}`}
-                      className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-slate-900 hover:text-primary-600 transition-colors"
-                    >
-                      <span>Full Scope Specs</span>
-                      <FaArrowRight className="w-3 h-3" />
-                    </Link>
+                  <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-slate-900 group-hover:text-primary transition-colors mb-2.5">
+                        <Link to={`/services/${service.slug}`}>
+                          {service.title}
+                        </Link>
+                      </h3>
 
-                    <a
-                      href={quickWhatsApp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-white hover:bg-slate-900 hover:text-white text-slate-700 border border-slate-200 transition-colors shadow-sm"
-                      title="Quick WhatsApp Inquiry"
-                      aria-label="WhatsApp Inquiry"
-                    >
-                      <FaWhatsapp className="w-4 h-4 text-[#25D366] group-hover:text-white" />
-                    </a>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                        {service.excerpt}
+                      </p>
+
+                      {/* Key Technical Bullets */}
+                      <div className="space-y-2 mb-6 pt-4 border-t border-slate-100">
+                        {service.bullets.slice(0, 3).map((bullet, idx) => (
+                          <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                            <FaCheck className="w-3 h-3 text-primary-600 shrink-0 mt-0.5" />
+                            <span className="line-clamp-1">{bullet}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Card Bottom */}
+                    <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+                      <Link
+                        to={`/services/${service.slug}`}
+                        className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-slate-900 hover:text-primary-600 transition-colors"
+                      >
+                        <span>Full Scope Specs</span>
+                        <FaArrowRight className="w-3 h-3" />
+                      </Link>
+
+                      <a
+                        href={quickWhatsApp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg bg-white hover:bg-slate-900 hover:text-white text-slate-700 border border-slate-200 transition-colors shadow-sm"
+                        title="Quick WhatsApp Inquiry"
+                        aria-label="WhatsApp Inquiry"
+                      >
+                        <FaWhatsapp className="w-4 h-4 text-[#25D366] group-hover:text-white" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               );

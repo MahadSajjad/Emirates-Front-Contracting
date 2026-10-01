@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaBuilding, FaCube, FaBolt, FaPaintRoller, FaTractor, FaIndustry } from "react-icons/fa";
+import { FaArrowRight, FaBuilding, FaRoad, FaTruck, FaGasPump, FaBoxes, FaFlask } from "react-icons/fa";
 import Section from "../ui/Section.jsx";
 import Container from "../ui/Container.jsx";
 import { StaggerContainer, StaggerItem } from "../motion/Reveal.jsx";
@@ -8,21 +8,21 @@ import { serviceCategories } from "../../data/services.js";
 
 export const ExpertiseList = () => {
   const categoryIcons = {
-    facade: FaBuilding,
-    civil: FaCube,
-    mep: FaBolt,
-    finishing: FaPaintRoller,
-    earthworks: FaTractor,
-    industrial: FaIndustry,
+    "building-contracting": FaBuilding,
+    "infrastructure-earthworks": FaRoad,
+    "logistics-transport": FaTruck,
+    "energy-fuel": FaGasPump,
+    "materials-manpower": FaBoxes,
+    "technical-finishing": FaFlask,
   };
 
   const categoryNumbers = {
-    facade: "01",
-    civil: "02",
-    mep: "03",
-    finishing: "04",
-    earthworks: "05",
-    industrial: "06",
+    "building-contracting": "01",
+    "infrastructure-earthworks": "02",
+    "logistics-transport": "03",
+    "energy-fuel": "04",
+    "materials-manpower": "05",
+    "technical-finishing": "06",
   };
 
   return (
@@ -38,7 +38,7 @@ export const ExpertiseList = () => {
               Contracting Disciplines
             </h2>
             <p className="font-display text-sm sm:text-base text-slate-600 font-medium mt-1">
-              مجالات المقاولات والخبرات الرئيسية
+              مجالات المقاولات والخدمات والخبرات الرئيسية
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export const ExpertiseList = () => {
             to="/services"
             className="group inline-flex items-center gap-2 font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 hover:text-primary-600 transition-colors shrink-0"
           >
-            <span>View Full Service Catalog (16+ Scopes)</span>
+            <span>View Full Service Catalog (12 Scopes)</span>
             <FaArrowRight className="w-3 h-3 transform group-hover:translate-x-1.5 transition-transform" />
           </Link>
         </div>

@@ -47,7 +47,7 @@ export const StructuredData = ({ type = "business", breadcrumbs = [], service = 
     ],
     priceRange: "$$$",
     description:
-      "Specialized on-site fuel supply & diesel logistics, full fleet vehicle and machinery rental (excavators, dumpers, 3-ton dynas, trailers, cranes), and comprehensive general contracting services across Riyadh and Saudi Arabia.",
+      "Licensed Saudi contracting firm in Riyadh: Building construction (Main Service), roads construction, excavations, transport, rental equipment, materials supply, manpower, scrap, paint, laboratory testing, and fuel logistics.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Building 3305, Al Hawtah Street, Al Sulay District, Secondary No. 6325",

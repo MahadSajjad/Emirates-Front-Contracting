@@ -14,8 +14,8 @@ export const HomePage = () => {
   return (
     <>
       <SEO
-        title="Fuel Supply, Full Fleet Vehicle Rental & General Contracting | Riyadh"
-        description="Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — 24/7 On-Site Fuel Supply & Diesel Delivery, Full Fleet Vehicle Rental & Machinery Hiring (Excavators, Dumpers, 3-Ton Pickups, Trailers, Cranes) & Civil Contracting in Riyadh."
+        title="Building Construction, Roads, Heavy Equipment & Contracting | Riyadh"
+        description="Emirates Front Contracting Company (شركة واجهة الامارات للمقاولات) — Building Construction (Main Service), Roads Construction, Excavations, Transport, Rental Equipment, Materials & Manpower Supply, and Fuel Logistics in Riyadh."
         canonical="/"
       />
       <StructuredData type="business" />

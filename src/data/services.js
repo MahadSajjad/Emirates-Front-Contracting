@@ -1,673 +1,433 @@
 /**
  * Services Data Taxonomy
- * All service definitions, scopes, categories, and SEO parameters.
- * 
- * NOTE: All service scopes and descriptions are DRAFT — confirm with client.
- * Building Envelope & Façade is given prominent hierarchy reflecting the company's Arabic name (واجهة).
+ * All 12 service definitions, scopes, categories, and SEO parameters.
+ * Building Construction is designated as the Main Service.
  */
 
 export const serviceCategories = [
   {
-    id: "fleet-fuel",
-    name: "Fleet Rental & Fuel Supply",
-    shortName: "Fleet & Fuel Supply",
-    description: "24/7 on-site diesel logistics and full fleet rental (excavators, dumpers, pickups, 3-ton dynas, trailers & cranes).",
+    id: "building-contracting",
+    name: "Building & General Contracting",
+    shortName: "Building & Contracting",
+    description: "Turnkey commercial and residential building construction, structural superstructures, and general contracting delivery.",
     highlight: true,
   },
   {
-    id: "facade",
-    name: "Building Envelope & Façade",
-    shortName: "Façade & Cladding",
-    description: "Architectural envelope engineering, curtain walls, modern ACP cladding, and weatherproofing.",
-    highlight: true, // Prominence flag
+    id: "infrastructure-earthworks",
+    name: "Roads & Infrastructure Earthworks",
+    shortName: "Roads & Excavation",
+    description: "Asphalt road paving, laser-guided sub-base grading, deep basement excavation, and site enablement.",
   },
   {
-    id: "civil",
-    name: "Civil & Structural",
-    shortName: "Civil & Structural",
-    description: "Robust structural foundations, reinforced concrete, masonry, and full-scale expansions.",
+    id: "logistics-transport",
+    name: "Equipment Rental & Heavy Transport",
+    shortName: "Rental & Transport",
+    description: "Comprehensive plant machinery rental and TGA-licensed heavy freight, lowbed, and flatbed transport.",
   },
   {
-    id: "mep",
-    name: "MEP Engineering",
-    shortName: "MEP Solutions",
-    description: "Integrated mechanical, electrical, plumbing, and low-current infrastructure systems.",
+    id: "energy-fuel",
+    name: "Diesel & Petrol Supply",
+    shortName: "Fuel Supply",
+    description: "24/7 on-site bulk diesel and petrol delivery, dedicated mobile fuel bowsers, and jobsite tanker fueling.",
+    highlight: true,
   },
   {
-    id: "finishing",
-    name: "Finishing & Fit-Out",
-    shortName: "Fit-Out & Finishing",
-    description: "High-spec architectural finishes, interior drywall, flooring, and turnkey commercial fit-outs.",
+    id: "materials-manpower",
+    name: "Materials & Manpower Supply",
+    shortName: "Materials & Manpower",
+    description: "Bulk SASO-certified building materials supply and vetted, certified skilled construction manpower deployment.",
   },
   {
-    id: "earthworks",
-    name: "Earthworks & Site Logistics",
-    shortName: "Earthworks & Logistics",
-    description: "Bulk excavation, land grading, soil compaction, and site enablement operations.",
-  },
-  {
-    id: "industrial",
-    name: "Industrial & Maintenance",
-    shortName: "Industrial & Maintenance",
-    description: "Pre-engineered steel structures, industrial facilities, and ongoing civil maintenance.",
+    id: "technical-finishing",
+    name: "Specialized, Scrap & Lab Works",
+    shortName: "Lab, Scrap & Paint",
+    description: "Independent construction laboratory testing, industrial scrap metal purchasing, and architectural paint works.",
   },
 ];
 
 export const services = [
   // ==========================================
-  // Primary Focus: Fuel Supply & Full Fleet Rental
+  // 1. Building Construction (MAIN SERVICE)
   // ==========================================
   {
-    slug: "fuel-supply-diesel-logistics",
-    title: "On-Site Fuel Supply & Diesel Logistics",
-    titleAr: "توريد الديزل والوقود للمواقع الإنشائية والمشاريع",
-    category: "fleet-fuel",
-    categoryName: "Fleet Rental & Fuel Supply",
-    icon: "FaTruck",
-    excerpt: "Direct jobsite diesel delivery, mobile fuel bowsers, and dedicated fuel tankers fueling heavy equipment without project downtime.",
-    description: "Emirates Front delivers uninterrupted on-site fuel supply and certified diesel logistics across Riyadh and Saudi Arabia. Our dedicated fuel bowsers and high-capacity tankers supply heavy plant machinery, power generators, tippers, and vehicle fleets directly at the project site.",
+    slug: "building-construction",
+    title: "Building Construction",
+    titleAr: "أعمال بناء وتشييد المباني (الخدمة الرئيسية)",
+    isMain: true,
+    category: "building-contracting",
+    categoryName: "Building & General Contracting",
+    icon: "FaBuilding",
+    excerpt: "Comprehensive turnkey commercial, residential, and industrial building construction delivered with engineering excellence and Saudi Building Code (SBC) compliance.",
+    description: "Emirates Front Contracting delivers premier building construction services across Riyadh and the Kingdom. As our flagship core discipline, we manage turnkey building projects from structural foundations to superstructure casting, architectural finishing, and full project handover. Our qualified engineering teams adhere strictly to the Saudi Building Code (SBC), civil defense safety codes, and modern project management standards to deliver residential complexes, commercial towers, corporate headquarters, and institutional facilities with unmatched precision.",
     bullets: [
-      "24/7 direct jobsite bulk diesel delivery and fueling",
-      "High-capacity mobile fuel bowsers and certified road tankers",
-      "Direct generator and plant machinery top-ups with zero downtime",
-      "SASO-compliant fuel quality verification and certified metered pumps",
-      "Scheduled daily/weekly fuel delivery routes across Riyadh projects",
-      "Emergency fuel dispatch from our central yard near Exit 18, As Sulay",
+      "Full-scope turnkey construction for residential, commercial, and institutional projects",
+      "Reinforced concrete framing, raft footings, columns, core walls, and post-tensioned slabs",
+      "Exterior building envelope, architectural blockwork, and insulated exterior masonry",
+      "Advanced MEP systems integration and coordinated services rough-ins",
+      "Strict compliance with Saudi Building Code (SBC) and municipal authority regulations",
+      "Rigorous on-site safety management, stage-gate inspections, and quality assurance",
     ],
     specifications: [
-      { label: "Delivery Fleet", value: "Mobile Fuel Bowsers, 10,000L - 32,000L Road Tankers" },
-      { label: "Fuel Grade", value: "SASO Certified High-Grade Saudi Aramco Spec Diesel" },
-      { label: "Coverage", value: "Greater Riyadh, Industrial Cities & Remote KSA Corridors" },
+      { label: "Structure Types", value: "Reinforced Concrete, Post-Tensioned, Steel Framing" },
+      { label: "Project Scope", value: "Full Turnkey, Core & Shell, Structural Framing" },
+      { label: "Standards", value: "Saudi Building Code (SBC) & MOMRA Regulations" },
+      { label: "Coverage", value: "Riyadh, Central Province & All KSA Regions" },
+    ],
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80",
+    metaTitle: "Building Construction Contractor Riyadh | Emirates Front Contracting",
+    metaDescription: "Leading building construction company in Riyadh. Turnkey commercial, residential, and industrial construction adhering to Saudi Building Code (SBC).",
+  },
+
+  // ==========================================
+  // 2. Roads Construction
+  // ==========================================
+  {
+    slug: "roads-construction",
+    title: "Roads Construction",
+    titleAr: "إنشاء وسفلتة الطرق والبنية التحتية",
+    isMain: false,
+    category: "infrastructure-earthworks",
+    categoryName: "Roads & Infrastructure Earthworks",
+    icon: "FaRoad",
+    excerpt: "Complete road construction, highway engineering, asphalt paving, subgrade compaction, and internal network infrastructure across Riyadh.",
+    description: "Emirates Front executes end-to-end road construction and municipal infrastructure works across Riyadh and Central Saudi Arabia. From laser-guided sub-base leveling and Proctor density compaction to heavy-duty hot-mix asphalt paving, curbstone installation, and road marking, our experienced crews and modern fleet of motor graders, asphalt pavers, and vibratory rollers ensure durable transportation corridors compliant with MOT and MOMRA specifications.",
+    bullets: [
+      "Complete site clearing, subgrade preparation, and laser-guided grading",
+      "Aggregate base course (ABC) laying, moisture conditioning, and heavy compaction",
+      "Hot-mix asphalt concrete (HMAC) wearing and binder course paving",
+      "Curbstone, interlock paving, and rainwater drainage culvert installation",
+      "Thermoplastic road marking, reflective cat-eyes, and traffic signage erection",
+      "Internal compound roads, commercial parking lots, and industrial access highways",
+    ],
+    specifications: [
+      { label: "Paving Types", value: "Hot-Mix Asphalt Concrete (HMAC), Cold Milling & Overlay" },
+      { label: "Equipment", value: "Asphalt Pavers, Heavy Tandem & Pneumatic Rollers, Motor Graders" },
+      { label: "Compliance", value: "MOT (Ministry of Transport) & MOMRA Standards" },
+      { label: "Density Target", value: ">98% MDD Compaction Verification" },
+    ],
+    image: "https://images.unsplash.com/photo-1783753445203-76060b777022?w=1200&auto=format&fit=crop&q=80",
+    metaTitle: "Roads Construction & Asphalt Paving Riyadh | Emirates Front",
+    metaDescription: "Professional road construction, asphalt paving, grading, and infrastructure contractor in Riyadh. MOT & MOMRA compliant road works by Emirates Front.",
+  },
+
+  // ==========================================
+  // 3. Excavations
+  // ==========================================
+  {
+    slug: "excavations",
+    title: "Excavations",
+    titleAr: "أعمال الحفر والردم وتجهيز الأراضي",
+    isMain: false,
+    category: "infrastructure-earthworks",
+    categoryName: "Roads & Infrastructure Earthworks",
+    icon: "FaTractor",
+    excerpt: "Deep basement excavations, rock breaking, trenching, bulk earthworks, and site leveling with high-capacity crawler excavators.",
+    description: "We provide professional bulk earthmoving and deep excavation services tailored to Riyadh's demanding limestone geology. Equipped with heavy 20T to 45T hydraulic excavators, high-impact hydraulic rock breakers, and high-capacity tippers, Emirates Front handles deep multi-level basement excavation, foundation pits, pipe trenching, and backfilling with licensed debris disposal in accordance with Riyadh Municipality regulations.",
+    bullets: [
+      "Bulk earth and rock excavation for multi-level basements and high-rise foundations",
+      "Heavy hydraulic rock breaking and hard limestone trenching",
+      "Laser-controlled site leveling, pad preparation, and slope stabilization",
+      "Municipal-approved disposal of excavated spoils and rock debris",
+      "Trenching for underground utilities, drainage pipelines, and electrical conduits",
+      "Shoring and retention wall coordination for safe deep excavation perimeters",
+    ],
+    specifications: [
+      { label: "Fleet", value: "20T - 45T Hydraulic Excavators with Heavy Rock Breakers" },
+      { label: "Applications", value: "Multi-Basement Pits, Utility Trenches, Land Levelling" },
+      { label: "Disposal", value: "Licensed Municipality Dumping Sites & Manifest Clearance" },
+      { label: "Depth Capability", value: "Engineered Deep Foundations & Open Bulk Cuts" },
+    ],
+    image: "https://images.unsplash.com/photo-1719411321415-acfbe793c0aa?q=80&w=1200&auto=format&fit=crop",
+    metaTitle: "Bulk Excavation & Rock Breaking Contractor Riyadh | Emirates Front",
+    metaDescription: "Heavy basement excavation, limestone rock breaking, trenching, and bulk earthmoving services in Riyadh by Emirates Front Contracting.",
+  },
+
+  // ==========================================
+  // 4. Transport
+  // ==========================================
+  {
+    slug: "transport",
+    title: "Transport",
+    titleAr: "خدمات النقل واللوجستيات وشاحنات النقل الثقيل",
+    isMain: false,
+    category: "logistics-transport",
+    categoryName: "Equipment Rental & Heavy Transport",
+    icon: "FaTruckMoving",
+    excerpt: "Licensed heavy freight transport, lowbed trailers, flatbeds, and bulk tippers licensed by the Transport General Authority (TGA).",
+    description: "Holding official Transport General Authority (TGA) Road Freight License No. 11/00052742, Emirates Front operates a reliable commercial transportation fleet across Riyadh and intercity Saudi corridors. We provide heavy lowbed transporters for oversized machinery, flatbed trailers for structural steel and pre-cast concrete, 3-ton Dyna trucks for rapid materials dispatch, and multi-axle tippers for aggregate haulage.",
+    bullets: [
+      "Officially licensed under TGA Road Freight License (11/00052742)",
+      "Heavy lowbed trailer transport for oversized plant machinery and heavy equipment",
+      "Flatbed trailer haulage for rebar, structural steel, and precast concrete elements",
+      "High-capacity tipper trucks for bulk sand, aggregate, and sub-base transport",
+      "Fast-dispatch 3-ton Dyna trucks and box pickups for localized site distribution",
+      "Comprehensive GPS tracking, transit insurance, and experienced licensed drivers",
+    ],
+    specifications: [
+      { label: "License", value: "TGA Road Freight License 11/00052742" },
+      { label: "Fleet Types", value: "Lowbeds (Up to 100T), Flatbeds (40ft), 3T Dynas, Tippers" },
+      { label: "Coverage", value: "Riyadh Province, Eastern Province & All Saudi Transport Hubs" },
+      { label: "Service", value: "Single Trip Dispatch or Long-Term Project Logistics Contracts" },
+    ],
+    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
+    metaTitle: "Heavy Transport & Freight Logistics Riyadh | Emirates Front (TGA Licensed)",
+    metaDescription: "TGA licensed heavy transport, lowbed trailers, flatbeds, and tipper haulage in Riyadh. Safe, reliable equipment and freight transport across KSA.",
+  },
+
+  // ==========================================
+  // 5. Rental Equipment
+  // ==========================================
+  {
+    slug: "rental-equipment",
+    title: "Rental Equipment",
+    titleAr: "تأجير المعدات الثقيلة والآليات الإنشائية",
+    isMain: false,
+    category: "logistics-transport",
+    categoryName: "Equipment Rental & Heavy Transport",
+    icon: "FaTruck",
+    excerpt: "Comprehensive heavy plant machinery rental: Excavators, Dumpers, Dynas, Pickups, Trailers, and Mobile Cranes with flexible leases.",
+    description: "Operating from our central dispatch yard near Exit 18 on Haroon Rashid Road, Al Sulay, Riyadh, Emirates Front offers an extensive rental inventory of heavy construction machinery. Available on daily, weekly, monthly, or annual contracts, our well-maintained plant fleet is available bare or with certified, experienced operators to keep your construction timeline ahead of schedule.",
+    bullets: [
+      "Crawler and wheel hydraulic excavators (20T-45T) with rock breakers and buckets",
+      "Heavy tipper dump trucks (16m³ to 32m³) for earthmoving and site clearance",
+      "Mobile hydraulic cranes (25T to 100T) and boom trucks with certified riggers",
+      "Commercial 3-ton Dyna trucks and 4x4 site inspection pickups",
+      "Heavy lowbed and flatbed trailers for equipment mobilization",
+      "Flexible commercial lease terms: daily, monthly, and long-term project leases",
+    ],
+    specifications: [
+      { label: "Fleet Units", value: "Excavators, Dumpers, Dynas, Pickups, Lowbeds, Cranes" },
+      { label: "Rental Terms", value: "Daily, Weekly, Monthly & Multi-Year Project Leases" },
+      { label: "Operator", value: "Bare Rental or With Certified Third-Party Approved Operators" },
+      { label: "Yard Location", value: "Haroon Rashid Road, Exit 18, Al Sulay, Riyadh" },
+    ],
+    image: "https://images.unsplash.com/photo-1492168732976-2676c584c675?q=80&w=1200&auto=format&fit=crop",
+    metaTitle: "Heavy Equipment Rental Riyadh | Excavators, Dumpers, Cranes & Dynas",
+    metaDescription: "Comprehensive heavy equipment and vehicle rental in Riyadh. Excavators, tippers, dynas, pickups, and cranes available 24/7 by Emirates Front.",
+  },
+
+  // ==========================================
+  // 6. Supply Construction Material
+  // ==========================================
+  {
+    slug: "supply-construction-material",
+    title: "Supply Construction Material",
+    titleAr: "توريد مواد البناء والإنشاءات",
+    isMain: false,
+    category: "materials-manpower",
+    categoryName: "Materials & Manpower Supply",
+    icon: "FaBoxes",
+    excerpt: "Direct bulk supply of SASO-certified construction materials: Aggregates, sub-base, sand, ready-mix concrete, steel rebar, and masonry blocks.",
+    description: "Emirates Front provides dependable bulk supply of certified building materials directly to project sites throughout Riyadh. Leveraging direct partnerships with premier Saudi quarries, steel mills, and ready-mix batching plants, we supply graded aggregates, sub-base materials, structural steel rebar, red and concrete blocks, cement, and quality-assured ready-mix concrete on scheduled delivery manifests.",
+    bullets: [
+      "High-grade sub-base material (Class A & B), aggregate base course, and granular fill",
+      "Washed sand, red sand, and bedding materials delivered in bulk tippers",
+      "SASO-certified structural steel rebar (Grade 60) cut and bent to specifications",
+      "Quality ready-mix concrete supply coordinated with certified batching plants",
+      "Thermal insulated blocks, AAC lightweight blocks, and solid masonry units",
+      "Timely delivery manifests and material test certifications provided with every batch",
+    ],
+    specifications: [
+      { label: "Materials", value: "Aggregates, Sub-Base, Sand, Steel Rebar, Ready-Mix, Blocks" },
+      { label: "Standards", value: "SASO & Saudi Building Code (SBC) Certified" },
+      { label: "Delivery", value: "Bulk Multi-Axle Tippers, Flatbeds, and Transit Mixers" },
+      { label: "Verification", value: "Complete Mill Test Certificates & Quarry Batch Sheets" },
+    ],
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
+    metaTitle: "Construction Materials Supply Riyadh | Aggregates, Sand, Steel & Blocks",
+    metaDescription: "Bulk supply of SASO certified construction materials in Riyadh: Sub-base, sand, aggregates, structural steel, and concrete blocks by Emirates Front.",
+  },
+
+  // ==========================================
+  // 7. Manpower Supply
+  // ==========================================
+  {
+    slug: "manpower-supply",
+    title: "Manpower Supply",
+    titleAr: "توريد الكوادر البشرية والعمالة المهنية",
+    isMain: false,
+    category: "materials-manpower",
+    categoryName: "Materials & Manpower Supply",
+    icon: "FaUsers",
+    excerpt: "Certified skilled labor and technical site workforce: Equipment operators, carpenters, masons, steel fixers, electricians, and supervisors.",
+    description: "Emirates Front supplies vetted, skilled, and certified construction manpower to major contractors and infrastructure projects across Riyadh. We provide certified heavy equipment operators, skilled shuttering carpenters, steel fixers, masonry workers, painters, MEP technicians, certified riggers, and site HSE officers on flexible short-term and long-term supply arrangements with complete statutory compliance.",
+    bullets: [
+      "Certified heavy equipment and crane operators with valid Saudi licenses",
+      "Skilled civil trades: Shuttering carpenters, rebar steel fixers, and masonry craftsmen",
+      "MEP technicians: Certified electricians, plumbers, duct fitters, and welders",
+      "Professional site support: HSE safety officers, surveyors, and field supervisors",
+      "Full statutory compliance with Saudi labor laws, Qiwa, and insurance coverage",
+      "Rapid mobilization for peak construction phases, shutdowns, and fast-track schedules",
+    ],
+    specifications: [
+      { label: "Trades", value: "Operators, Carpenters, Steel Fixers, Masons, Electricians, Riggers" },
+      { label: "Compliance", value: "Qiwa Certified, Ajeer Approved, GOSI & Medical Insurance" },
+      { label: "Mobilization", value: "Rapid Deployment to Greater Riyadh & Industrial Sites" },
+      { label: "Terms", value: "Short-Term Shutdowns, Monthly Contracts, or Full Project Duration" },
+    ],
+    image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+    metaTitle: "Skilled Construction Manpower Supply Riyadh | Emirates Front",
+    metaDescription: "Reliable supply of certified skilled construction labor in Riyadh. Equipment operators, carpenters, steel fixers, masons, and technicians.",
+  },
+
+  // ==========================================
+  // 8. Scrap Works
+  // ==========================================
+  {
+    slug: "scrap-works",
+    title: "Scrap Works",
+    titleAr: "أعمال السكراب وشراء وإزالة مخلفات المعادن",
+    isMain: false,
+    category: "technical-finishing",
+    categoryName: "Specialized, Scrap & Lab Works",
+    icon: "FaRecycle",
+    excerpt: "Professional scrap metal purchasing, industrial dismantling, rebar recovery, site metal clearance, and licensed recycling disposal.",
+    description: "Emirates Front provides specialized industrial scrap handling, metal purchasing, and structural demolition salvage across Riyadh. We buy and safely dismantle decommissioned steel structures, redundant pipelines, demolition rebar, machinery scrap, aluminum, copper, and industrial plant surplus. Our licensed recycling operations ensure safe site clearance and competitive market valuations for all metal assets.",
+    bullets: [
+      "Purchasing and haulage of ferrous and non-ferrous industrial scrap metal",
+      "Demolition scrap clearance, rebar extraction, and sorting on project sites",
+      "Safe dismantling and cutting of obsolete steel structures, tanks, and pipelines",
+      "Modern metal cutting equipment, mobile magnet cranes, and scrap transport tippers",
+      "Environmental and municipality compliant transport and recycling disposal",
+      "Transparent weighing, prompt evaluation, and competitive commercial contracts",
+    ],
+    specifications: [
+      { label: "Materials", value: "Heavy Structural Steel, Rebar, Copper, Aluminum, Industrial Plant Scrap" },
+      { label: "Capabilities", value: "On-Site Oxy-Fuel Cutting, Crane Lifting, Scrap Bulk Haulage" },
+      { label: "Permitting", value: "Municipality & Environmental Recycling Compliance" },
+      { label: "Payment", value: "Transparent Weighbridge Verification & Prompt Settlement" },
+    ],
+    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=80",
+    metaTitle: "Industrial Scrap Works & Metal Buying Riyadh | Emirates Front",
+    metaDescription: "Scrap metal buying, structural steel dismantling, rebar salvage, and industrial site metal clearance in Riyadh by Emirates Front Contracting.",
+  },
+
+  // ==========================================
+  // 9. Paint Works
+  // ==========================================
+  {
+    slug: "paint-works",
+    title: "Paint Works",
+    titleAr: "أعمال الدهانات والطلاء والتشطيبات المعمارية",
+    isMain: false,
+    category: "technical-finishing",
+    categoryName: "Specialized, Scrap & Lab Works",
+    icon: "FaPaintRoller",
+    excerpt: "Interior and exterior architectural painting, exterior textured profile coatings, epoxy flooring, and industrial protective coatings.",
+    description: "Emirates Front delivers expert architectural painting and surface coating solutions for commercial buildings, residential developments, and industrial facilities. Utilizing certified premium coatings from leading brands like Jotun and Jazeera, our skilled painters apply multi-coat interior emulsions, weather-resistant exterior textured coatings, high-durability epoxy floor systems, and anti-corrosive industrial coatings engineered for Saudi Arabia's climate.",
+    bullets: [
+      "Comprehensive interior surface preparation, skimming, putty, and emulsion topcoats",
+      "Weatherproof exterior profile and textured acrylic coatings (graffiato, heritage)",
+      "Heavy-duty epoxy floor coatings for warehouses, workshops, and parking garages",
+      "Anti-carbonation and protective sealants for exposed civil concrete structures",
+      "Fire-retardant (intumescent) and anti-corrosive coatings for structural steelwork",
+      "Color consultation, sample mock-ups, and flawless airless spray application",
+    ],
+    specifications: [
+      { label: "Coatings", value: "Interior Emulsion, Exterior Texture, Epoxy Flooring, Intumescent" },
+      { label: "Brands", value: "Jotun, Jazeera Paints, National Paints (SASO Approved)" },
+      { label: "Surface Prep", value: "Mechanical Grinding, Pressure Washing, Crack Repair, Primer" },
+      { label: "Applications", value: "Towers, Villas, Showrooms, Warehouses & Car Parks" },
+    ],
+    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80",
+    metaTitle: "Architectural Painting & Epoxy Coating Contractors Riyadh | Emirates Front",
+    metaDescription: "Professional interior painting, exterior texture coatings, and industrial epoxy flooring services in Riyadh by Emirates Front Contracting.",
+  },
+
+  // ==========================================
+  // 10. Construction Laboratory Work
+  // ==========================================
+  {
+    slug: "construction-laboratory-work",
+    title: "Construction Laboratory Work",
+    titleAr: "أعمال المختبرات وفحوصات المواد الإنشائية",
+    isMain: false,
+    category: "technical-finishing",
+    categoryName: "Specialized, Scrap & Lab Works",
+    icon: "FaFlask",
+    excerpt: "Independent geotechnical and construction material testing: Concrete cube crushing, soil compaction, asphalt quality, and SASO certification.",
+    description: "Quality and structural integrity depend on rigorous empirical verification. Emirates Front provides on-site field testing and certified laboratory material analysis for construction projects across Riyadh. We conduct slump tests, concrete compressive strength cube crushing (7 & 28-day), soil Proctor compaction tests, plate load tests, asphalt density checks, and aggregate sieve grading to ensure full compliance with the Saudi Building Code (SBC) and project specifications.",
+    bullets: [
+      "Fresh concrete sampling, slump testing, and certified temperature monitoring",
+      "Laboratory compressive strength cube crushing tests (at 7, 14, and 28 days)",
+      "In-situ soil compaction testing using nuclear density gauges and sand cone methods",
+      "Standard and Modified Proctor compaction and plate load testing (MDD > 95%)",
+      "Asphalt core extraction, asphalt density analysis, and bitumen content testing",
+      "Comprehensive formal test reports stamped for consultant and municipal approvals",
+    ],
+    specifications: [
+      { label: "Testing Scopes", value: "Concrete, Soil, Sub-Base, Asphalt, Steel Rebar, Aggregates" },
+      { label: "Standards", value: "ASTM, AASHTO, SASO, and Saudi Building Code (SBC)" },
+      { label: "Deliverables", value: "Certified Third-Party Stamped Test Certificates" },
+      { label: "Field Testing", value: "On-Site Slump & Nuclear Density Field Units Available" },
+    ],
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    metaTitle: "Construction Material Testing & Laboratory Services Riyadh | Emirates Front",
+    metaDescription: "Certified construction laboratory testing in Riyadh: Concrete cube testing, soil compaction, asphalt analysis, and SASO compliance reports.",
+  },
+
+  // ==========================================
+  // 11. Diesel and Petrol Supply
+  // ==========================================
+  {
+    slug: "diesel-petrol-supply",
+    title: "Diesel and Petrol Supply",
+    titleAr: "توريد الديزل والبنزين والمحروقات للمواقع",
+    isMain: false,
+    category: "energy-fuel",
+    categoryName: "Diesel & Petrol Supply",
+    icon: "FaGasPump",
+    excerpt: "24/7 on-site bulk diesel and petrol delivery, dedicated mobile fuel bowsers, and tanker logistics powering project machinery with zero downtime.",
+    description: "Emirates Front provides dependable, round-the-clock on-site fuel supply and certified petroleum logistics across Riyadh and surrounding industrial zones. Operating certified fuel bowsers and high-capacity road tankers, we deliver Aramco-specification diesel and petrol directly to your jobsite, refueling excavators, dumpers, generators, cranes, and vehicle fleets with metered accuracy, eliminating equipment downtime and maximizing productivity.",
+    bullets: [
+      "24/7 direct jobsite bulk diesel and petrol delivery across Riyadh projects",
+      "High-capacity mobile fuel bowsers and certified road tankers (10,000L to 32,000L)",
+      "Direct top-up of site power generators, tower lights, and stationary plant machinery",
+      "SASO-compliant fuel quality verification and certified digital metered dispensers",
+      "Scheduled daily or weekly contracted fuel delivery routes for major developments",
+      "Emergency rapid-dispatch fuel mobilization from our yard near Exit 18, Al Sulay",
+    ],
+    specifications: [
+      { label: "Delivery Fleet", value: "Mobile Fuel Bowsers, 10,000L - 32,000L Certified Road Tankers" },
+      { label: "Fuel Grades", value: "Saudi Aramco Spec Diesel & High-Grade Commercial Petrol" },
+      { label: "Metering", value: "Calibrated Digital Flow Meters with Verified Delivery Slips" },
       { label: "Availability", value: "24/7 Rapid Mobilization & Scheduled Contract Routes" },
     ],
-    image: "https://images.unsplash.com/photo-1528457616777-84ce44cc3699?w=800&auto=format&fit=crop&q=80",
-    metaTitle: "On-Site Fuel Supply & Diesel Delivery Riyadh | Emirates Front",
-    metaDescription: "24/7 direct jobsite fuel supply, bulk diesel delivery, and mobile tanker fueling for heavy equipment in Riyadh by Emirates Front.",
-  },
-  {
-    slug: "fleet-vehicle-rental-hiring",
-    title: "Full Fleet Vehicle Rental & Equipment Hiring",
-    titleAr: "تأجير أسطول المعدات والآليات والشاحنات الكامل",
-    category: "fleet-fuel",
-    categoryName: "Fleet Rental & Fuel Supply",
-    icon: "FaTruck",
-    excerpt: "Comprehensive vehicle and heavy plant equipment rental: Excavators, Dumpers, 3-Ton Pickups, Trailers, and Cranes.",
-    description: "Emirates Front operates an extensive, modern vehicle and heavy machinery rental fleet based at our yard on Haroon Rashid Road, Exit 18, Riyadh. We offer hydraulic excavators, heavy tipper dumpers, 3-ton pickups and Dyna box trucks, lowbed trailers, and 25T-100T mobile cranes on daily, monthly, or annual operational contracts.",
-    bullets: [
-      "Crawler & wheel hydraulic excavators (20T to 45T) with rock breakers",
-      "Heavy tipper dump trucks (16m³ to 32m³) for earth clearance & backfill",
-      "Commercial 3-ton Dyna trucks and flatbeds for fast materials distribution",
-      "Field utility pickups (4x4 single/double cab) for site engineers and crews",
-      "Heavy lowbed transporters and flatbed trailers for oversized machinery",
-      "Certified 25T to 100T mobile hydraulic cranes with certified riggers",
-    ],
-    specifications: [
-      { label: "Fleet Lineup", value: "Excavators, Dumpers, 3T Dynas, Pickups, Lowbeds, Cranes" },
-      { label: "Rental Terms", value: "Daily, Weekly, Monthly & Annual Project Leases" },
-      { label: "Crew Option", value: "Bare Equipment or With Certified Experienced Operators" },
-      { label: "Mobilization", value: "Immediate Dispatch from Haroon Rashid Road, Exit 18 Yard" },
-    ],
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
-    metaTitle: "Equipment & Vehicle Rental Fleet Riyadh | Emirates Front Contracting",
-    metaDescription: "Heavy equipment and vehicle rental in Riyadh: Excavators, Dumpers, 3-Ton Dynas, Pickups, Trailers, and Cranes by Emirates Front.",
+    image: "https://images.unsplash.com/photo-1528457616777-84ce44cc3699?w=1200&auto=format&fit=crop&q=80",
+    metaTitle: "On-Site Diesel & Petrol Supply Riyadh | Emirates Front (24/7 Fuel Logistics)",
+    metaDescription: "24/7 direct jobsite diesel and petrol supply in Riyadh. Certified fuel bowsers and tankers refueling heavy machinery, generators, and fleets without downtime.",
   },
 
   // ==========================================
-  // Category 1: Building Envelope & Façade
+  // 12. Contracting Work
   // ==========================================
   {
-    slug: "curtain-wall-cladding",
-    title: "Curtain Wall & Cladding",
-    titleAr: "أنظمة واجهات الزجاج والكلادينج",
-    category: "facade",
-    categoryName: "Building Envelope & Façade",
-    icon: "FaBuilding",
-    excerpt: "Engineered architectural curtain wall systems and high-durability exterior cladding engineered for Riyadh's climate.",
-    // DRAFT — confirm with client
-    description: "Emirates Front delivers architectural curtain wall installations and building envelope cladding. From unitized glass facades to exterior rainscreens, our envelope solutions are engineered to withstand extreme thermal variations, solar radiation, and wind loads common in central Saudi Arabia.",
-    bullets: [
-      "Unitized and stick curtain wall system assembly",
-      "Thermally broken aluminum sub-frame engineering",
-      "High-performance low-E and acoustic glazing integration",
-      "Exterior ventilated rainscreen installations",
-      "Complete perimeter flashing and silicone weather sealing",
-      "Compliance with Saudi Building Code (SBC) energy standards",
-    ],
-    specifications: [
-      { label: "Applications", value: "Commercial Towers, Corporate HQs, Retail Centers" },
-      { label: "Glazing Types", value: "Double/Triple Glazed Low-E, Laminated, Tinted" },
-      { label: "Sub-structure", value: "Extruded Aluminum 6063-T6 / Galvanized Steel" },
-      { label: "Quality Standard", value: "ASTM & SBC compliant structural testing" },
-    ],
-    image: "/images/services/curtain-wall.jpg",
-    metaTitle: "Curtain Wall & Architectural Cladding in Riyadh | Emirates Front",
-    metaDescription: "Professional curtain wall and exterior cladding contracting in Riyadh. Energy-efficient glass facades and premium building envelopes by Emirates Front.",
-  },
-  {
-    slug: "glass-facade-systems",
-    title: "Glass Façade Systems",
-    titleAr: "أنظمة الواجهات الزجاجية",
-    category: "facade",
-    categoryName: "Building Envelope & Façade",
-    icon: "FaLayerGroup",
-    excerpt: "Frameless, spider, and structural glass assemblies delivering expansive transparency and clean architectural lines.",
-    // DRAFT — confirm with client
-    description: "Specialized glass facade engineering offering spider-fitting glass walls, tension-rod systems, and point-fixed structural glazing. Designed to maximize natural daylight while optimizing thermal insulation in commercial and institutional developments.",
-    bullets: [
-      "Spider-fitting point-supported glass facades",
-      "Structural silicone glazed (SSG) curtain systems",
-      "Suspended glass walls and skylight canopies",
-      "Tempered, heat-strengthened, and laminated safety glass",
-      "Sun-shading louvers and integrated brise-soleil",
-    ],
-    specifications: [
-      { label: "System Types", value: "Point-Fixed, Spider, 2-Sided / 4-Sided SSG" },
-      { label: "Hardware", value: "Grade 316 Stainless Steel Castings & Tension Rods" },
-      { label: "Safety Rating", value: "Impact resistant & thermal safety compliant" },
-    ],
-    image: "/images/services/glass-facade.jpg",
-    metaTitle: "Glass Façade Systems Contracting Riyadh | Emirates Front",
-    metaDescription: "Structural glass facades, spider-glazing systems, and architectural glass canopies engineered for commercial properties in Riyadh.",
-  },
-  {
-    slug: "aluminum-composite-panels",
-    title: "Aluminum & Composite Panels (ACP)",
-    titleAr: "ألواح الألمنيوم المركبة (الكلادينج)",
-    category: "facade",
-    categoryName: "Building Envelope & Façade",
-    icon: "FaThLarge",
-    excerpt: "Fire-rated ACP cladding, solid aluminum cassettes, and custom perforated decorative facade panels.",
-    // DRAFT — confirm with client
-    description: "Supply and precision installation of fire-rated (Class A2/B1) Aluminum Composite Panels (ACP) and solid sheet aluminum rainscreens. Ideal for modern commercial facades, showroom refurbishments, and industrial frontages requiring crisp finishes and low maintenance.",
-    bullets: [
-      "Fire-resistant mineral core ACP (FR/A2 rated)",
-      "PVDF multi-layer surface coatings with UV resistance",
-      "CNC grooving, routing, and precision corner folding",
-      "Hidden fastener and hung-tray installation systems",
-      "Custom laser-cut perforated decorative screens and mashrabiyas",
-    ],
-    specifications: [
-      { label: "Panel Thickness", value: "4mm – 6mm with 0.5mm aluminum skin" },
-      { label: "Fire Rating", value: "Class A2 / B1 compliant (Civil Defense approved)" },
-      { label: "Coating", value: "70% Kynar 500 / PVDF resin finish" },
-    ],
-    image: "/images/services/acp-cladding.jpg",
-    metaTitle: "Aluminum Composite Panel (ACP) Cladding Riyadh | Emirates Front",
-    metaDescription: "Fire-rated ACP panel installation and aluminum facade cladding in Riyadh. Quality fabrication and installation by Emirates Front Contracting.",
-  },
-  {
-    slug: "waterproofing-systems",
-    title: "Waterproofing & Envelope Sealing",
-    titleAr: "العزل المائي والحراري للمباني",
-    category: "facade",
-    categoryName: "Building Envelope & Façade",
-    icon: "FaShieldAlt",
-    excerpt: "Comprehensive roof membrane systems, basement tanking, and structural joint weatherproofing.",
-    // DRAFT — confirm with client
-    description: "Multi-tier waterproofing and thermal barrier solutions for building envelopes, foundations, wet areas, and flat roofs. We apply bituminous, cementitious, liquid polyurethane, and EPDM membrane systems to safeguard structural longevity.",
-    bullets: [
-      "SBS and APP modified bituminous torch-applied membranes",
-      "Polyurethane liquid elastomeric roof coatings",
-      "Sub-structure foundation tanking and damp-proofing",
-      "Expansion joint sealants and waterstops",
-      "Extruded polystyrene (XPS) rigid thermal roof insulation",
-    ],
-    specifications: [
-      { label: "Membranes", value: "Torch-on Bitumen (4mm), PVC, EPDM, Liquid PU" },
-      { label: "Testing", value: "48-72 hour flood testing prior to handover" },
-      { label: "Warranty Focus", value: "Long-term membrane integrity protection" },
-    ],
-    image: "/images/services/waterproofing.jpg",
-    metaTitle: "Waterproofing & Roof Insulation Contractor Riyadh | Emirates Front",
-    metaDescription: "Commercial and residential waterproofing, roof membrane insulation, and foundation damp-proofing in Riyadh.",
-  },
-
-  // ==========================================
-  // Category 2: Civil & Structural
-  // ==========================================
-  {
-    slug: "civil-construction",
-    title: "Civil Work & General Contracting",
-    titleAr: "أعمال المقاولات العامة والإنشاءات المدنية",
-    category: "civil",
-    categoryName: "Civil & Structural",
+    slug: "contracting-work",
+    title: "Contracting Work",
+    titleAr: "أعمال المقاولات العامة وإدارة المشاريع",
+    isMain: false,
+    category: "building-contracting",
+    categoryName: "Building & General Contracting",
     icon: "FaHardHat",
-    excerpt: "Comprehensive turnkey civil engineering and structural execution for residential, commercial, and institutional projects.",
-    // DRAFT — confirm with client
-    description: "Emirates Front oversees end-to-end civil contracting operations in Riyadh. From setting out and foundations to superstructure delivery, we coordinate site execution with strict adherence to local building regulations, safety standards, and project schedules.",
+    excerpt: "Full-scope general contracting, civil and structural engineering, MEP infrastructure, and turnkey project management across Saudi Arabia.",
+    description: "As a licensed Saudi general contracting company, Emirates Front undertakes comprehensive turnkey contracting packages across civil, structural, electromechanical, and infrastructure disciplines. We coordinate site mobilization, engineering submittals, procurement, structural execution, MEP rough-ins, architectural fit-outs, and authority sign-offs under a unified, accountable management structure that delivers on time and within budget.",
     bullets: [
-      "Complete site mobilization and temporary utility setup",
-      "Excavation, backfilling, and sub-base preparation",
-      "Cast-in-situ concrete foundations and retaining walls",
-      "Superstructure concrete framing and masonry",
-      "Civil defense and municipality regulatory coordination",
+      "End-to-end general contracting and comprehensive turnkey project execution",
+      "Project planning, engineering submittals, shop drawings, and authority approvals",
+      "Civil and structural execution from deep foundations to structural superstructure",
+      "Integrated MEP engineering: Electrical distribution, HVAC, plumbing, and low-current",
+      "Specialized industrial facility construction, warehouses, and structural expansions",
+      "Transparent project reporting, BOQ pricing, and dedicated site supervision",
     ],
     specifications: [
-      { label: "Scope", value: "Turnkey General Contracting & Shell Package" },
-      { label: "Standard", value: "Saudi Building Code (SBC) Standards" },
-      { label: "Project Types", value: "Commercial, Residential, Light Industrial" },
+      { label: "Scope", value: "Turnkey General Contracting, Core & Shell Packages, Civil & MEP" },
+      { label: "Classification", value: "Certified Saudi General Contracting Firm (CR: 2050172727)" },
+      { label: "Standards", value: "Saudi Building Code (SBC) & MOMRA Municipal Guidelines" },
+      { label: "Sectors", value: "Commercial, Residential, Industrial, Infrastructure & Logistics" },
     ],
-    image: "/images/services/civil-works.jpg",
-    metaTitle: "Civil Contracting & General Construction Riyadh | Emirates Front",
-    metaDescription: "Reliable civil contracting, foundations, and turnkey general construction services across Riyadh and Central KSA.",
-  },
-  {
-    slug: "concrete-structural-work",
-    title: "Concrete & Structural Work",
-    titleAr: "الأعمال الخرسانية والإنشائية",
-    category: "civil",
-    categoryName: "Civil & Structural",
-    icon: "FaCube",
-    excerpt: "Reinforced concrete foundations, raft footings, columns, core walls, and post-tensioned / solid slab systems.",
-    // DRAFT — confirm with client
-    description: "Heavy structural concrete execution utilizing modern formwork systems and quality-controlled ready-mix batches. We construct isolated footings, combined rafts, concrete columns, lift cores, retaining structures, and suspended slabs.",
-    bullets: [
-      "Raft and isolated foundation reinforcement and casting",
-      "Heavy rebar cutting, bending, and placement per structural drawings",
-      "System formwork (timber, steel, and aluminum modular shutters)",
-      "Strict temperature-controlled hot-weather concreting procedures",
-      "Third-party slump and compressive strength cube test management",
-    ],
-    specifications: [
-      { label: "Concrete Grades", value: "C25 to C50 Ready-Mix with certified additives" },
-      { label: "Rebar", value: "High-yield deformed steel bars (Grade 60)" },
-      { label: "Quality Check", value: "Independent 7 & 28-day laboratory cube testing" },
-    ],
-    image: "/images/services/concrete-structural.jpg",
-    metaTitle: "Reinforced Concrete & Structural Work Riyadh | Emirates Front",
-    metaDescription: "Expert reinforced concrete, raft foundations, and superstructure casting in Riyadh. Reliable structural execution.",
-  },
-  {
-    slug: "block-work-masonry",
-    title: "Block Work & Brick Masonry",
-    titleAr: "أعمال البلوك والمباني",
-    category: "civil",
-    categoryName: "Civil & Structural",
-    icon: "FaBorderAll",
-    excerpt: "High-precision hollow, solid, insulated, and AAC block masonry for internal partitions and exterior perimeter walls.",
-    // DRAFT — confirm with client
-    description: "Systematic masonry construction using insulated thermal blocks, standard hollow concrete blocks, lightweight Autoclaved Aerated Concrete (AAC), and sound-dampening acoustic bricks, complete with lintels, ties, and wire mesh reinforcement.",
-    bullets: [
-      "Thermal insulated blockwork for exterior envelope efficiency",
-      "AAC lightweight block wall construction for interior divisions",
-      "Galvanized block ties, ladder mesh, and expansion gap installation",
-      "Precast and cast-in-place reinforced concrete lintels and stiffeners",
-      "Perimeter boundary walls and security fencing foundations",
-    ],
-    specifications: [
-      { label: "Block Types", value: "Insulated Thermal, Hollow Concrete, AAC, Solid" },
-      { label: "Reinforcement", value: "Galvanized wire mesh every two courses" },
-    ],
-    image: "/images/services/block-work.jpg",
-    metaTitle: "Block Work & Masonry Contractors Riyadh | Emirates Front",
-    metaDescription: "Precision block work, thermal insulated exterior masonry, and internal partitioning contractor in Riyadh.",
-  },
-  {
-    slug: "renovations-extensions",
-    title: "Renovations & Structural Extensions",
-    titleAr: "الترميم والتوسعات الإنشائية",
-    category: "civil",
-    categoryName: "Civil & Structural",
-    icon: "FaTools",
-    excerpt: "Structural retrofits, building modernizations, mezzanine additions, and spatial floor reconfigurations.",
-    // DRAFT — confirm with client
-    description: "Specialized renovation contracting that extends building lifespans and adapts spaces to new commercial demands. We execute carbon-fiber structural strengthening, steel mezzanine insertion, facade modernization, and spatial layout overhauls.",
-    bullets: [
-      "Structural assessment and load-bearing alterations",
-      "Steel mezzanine platform fabrication and installation",
-      "Old facade removal and contemporary recladding",
-      "Concrete repair, crack injection, and spall rehabilitation",
-      "Fast-track phasing to minimize operational downtime",
-    ],
-    specifications: [
-      { label: "Sectors", value: "Corporate Offices, Retail Outlets, Private Estates" },
-      { label: "Methods", value: "Steel framing, CFRP strengthening, selective demolition" },
-    ],
-    image: "/images/services/renovations.jpg",
-    metaTitle: "Commercial & Residential Renovations Riyadh | Emirates Front",
-    metaDescription: "Turnkey building renovations, structural extensions, and facade modernization contractor in Riyadh.",
-  },
-
-  // ==========================================
-  // Category 3: MEP Engineering
-  // ==========================================
-  {
-    slug: "mechanical-hvac-services",
-    title: "Mechanical & HVAC Solutions",
-    titleAr: "أنظمة التكييف والتهوية الميكانيكية",
-    category: "mep",
-    categoryName: "MEP Engineering",
-    icon: "FaFan",
-    excerpt: "Central HVAC, package units, VRF systems, chilled water piping, and mechanical ventilation installations.",
-    // DRAFT — confirm with client
-    description: "Full-scale mechanical engineering services for commercial, industrial, and high-end residential applications. We install and commission ducted split, VRF/VRV, package, and central chiller HVAC plants tailored to high-ambient conditions.",
-    bullets: [
-      "VRF / VRV and ducted split system sizing and installation",
-      "Rooftop package units and air handling units (AHU / FCU)",
-      "GI and PIR ductwork fabrication with acoustic lining",
-      "Smoke extract, stairwell pressurization, and fresh air systems",
-      "Testing, adjusting, and air balancing (TAB) with certified reports",
-    ],
-    specifications: [
-      { label: "Systems", value: "VRF/VRV, Ducted Split, Chillers, Package Units" },
-      { label: "Duct Material", value: "Galvanized Iron (GI) to SMACNA, Pre-insulated PIR" },
-      { label: "Standard", value: "ASHRAE & SASO compliance" },
-    ],
-    image: "/images/services/hvac-mep.jpg",
-    metaTitle: "HVAC & Mechanical Contracting Riyadh | Emirates Front",
-    metaDescription: "Commercial HVAC installation, central air conditioning, and ventilation systems in Riyadh by Emirates Front.",
-  },
-  {
-    slug: "electrical-solutions",
-    title: "Electrical Solutions & Low-Current",
-    titleAr: "الأعمال والحلول الكهربائية والتيار الخفيف",
-    category: "mep",
-    categoryName: "MEP Engineering",
-    icon: "FaBolt",
-    excerpt: "Main distribution boards, conduit routing, cable pulling, lighting design, and low-current network integration.",
-    // DRAFT — confirm with client
-    description: "Certified electrical installation services covering primary LV distribution, MDBs/SMDBs, wiring devices, architectural LED lighting, grounding systems, and low-current data/CCTV cabling for commercial and residential facilities.",
-    bullets: [
-      "Main and sub-main electrical distribution panel assembly",
-      "Cable tray routing, ladder racks, and fire-resistant cabling",
-      "Indoor, outdoor, and architectural facade lighting systems",
-      "Earthing, grounding pits, and lightning protection systems",
-      "Structured cabling, CCTV conduits, and access control pre-wiring",
-    ],
-    specifications: [
-      { label: "Voltage", value: "Low Voltage (LV) 220V/380V distribution" },
-      { label: "Standards", value: "SEC (Saudi Electricity Company) approved materials" },
-    ],
-    image: "/images/services/electrical.jpg",
-    metaTitle: "Electrical & Low-Current Contractors Riyadh | Emirates Front",
-    metaDescription: "Commercial electrical installation, MDB panel boards, lighting, and low-current systems in Riyadh.",
-  },
-  {
-    slug: "plumbing-sanitary-work",
-    title: "Plumbing & Sanitary Networks",
-    titleAr: "أعمال السباكة والشبكات الصحية",
-    category: "mep",
-    categoryName: "MEP Engineering",
-    icon: "FaWater",
-    excerpt: "PPR water supply networks, UPVC drainage stacks, booster pump sets, and sanitary fixture fitments.",
-    // DRAFT — confirm with client
-    description: "Reliable hydraulic and sanitary engineering for reliable domestic water pressure and gravity drainage. We install PPR potable water lines, silent drainage stacks, sump pits, greywater management, and booster pump sets.",
-    bullets: [
-      "Hot and cold PPR / PEX water supply piping networks",
-      "Acoustic insulated UPVC / HDPE drainage and soil stacks",
-      "Variable speed booster and transfer pump station setup",
-      "Roof storage tanks and water filtration system integration",
-      "Sanitary fixture rough-in and trim installation",
-    ],
-    specifications: [
-      { label: "Supply Pipes", value: "PPR PN16/PN20, Cross-linked Polyethylene (PEX)" },
-      { label: "Drainage", value: "Class 4 UPVC, HDPE, Sound-dampened pipes" },
-    ],
-    image: "/images/services/plumbing.jpg",
-    metaTitle: "Plumbing & Sanitary Contracting Riyadh | Emirates Front",
-    metaDescription: "Commercial and residential plumbing, water supply networks, and drainage piping contracting in Riyadh.",
-  },
-  {
-    slug: "ducting-cable-trays",
-    title: "Ducting & Cable Tray Infrastructure",
-    titleAr: "تمديدات مجاري الهواء وحوامل الكابلات",
-    category: "mep",
-    categoryName: "MEP Engineering",
-    icon: "FaCogs",
-    excerpt: "Galvanized sheet metal duct fabrication, perforated cable trays, and containment raceways.",
-    // DRAFT — confirm with client
-    description: "Industrial containment and airflow pathways engineered for longevity. We supply and erect heavy-duty perforated cable trays, cable ladders, wire mesh baskets, and SMACNA-standard galvanized ductwork for large facilities.",
-    bullets: [
-      "Custom sheet metal duct fabrication in line with SMACNA specs",
-      "Hot-dip galvanized (HDG) cable ladders and perforated trays",
-      "Seismic supports, unistrut channeling, and threaded rod hangers",
-      "Thermal fiberglass and elastomeric rubber insulation wrapping",
-      "Fire damper and motorized volume control damper integration",
-    ],
-    specifications: [
-      { label: "Tray Finish", value: "Pre-galvanized, Hot-Dip Galvanized to BS EN ISO 1461" },
-      { label: "Duct Gauge", value: "24 to 18 gauge galvanized steel" },
-    ],
-    image: "/images/services/ducting.jpg",
-    metaTitle: "Ducting & Cable Tray Contracting Riyadh | Emirates Front",
-    metaDescription: "Galvanized air ducting and heavy cable tray containment installation services across Riyadh.",
-  },
-
-  // ==========================================
-  // Category 4: Finishing & Fit-Out
-  // ==========================================
-  {
-    slug: "gypsum-board-partitions",
-    title: "Gypsum Ceilings & Drywall Partitions",
-    titleAr: "أعمال الجبس بورد والقواطع الجدارية",
-    category: "finishing",
-    categoryName: "Finishing & Fit-Out",
-    icon: "FaThLarge",
-    excerpt: "False ceilings, cove lighting bulkheads, moisture-resistant board, and fire-rated drywall divisions.",
-    // DRAFT — confirm with client
-    description: "High-standard interior drywalling and false ceiling execution. We create acoustic partitioned offices, shadow-line perimeter details, decorative drop ceilings with recessed lighting slots, and moisture-resistant installations for wet areas.",
-    bullets: [
-      "Suspended false ceilings with shadow gap perimeter trims",
-      "Fire-rated (Type X) and moisture-resistant (Green Board) partitions",
-      "Curved bulkheads, indirect LED cove lighting troughs",
-      "Acoustic insulation batts insertion for soundproofing",
-      "Seamless tape, joint compound, and skim coating to Level 4/5 finish",
-    ],
-    specifications: [
-      { label: "Board Types", value: "Regular, Moisture Resistant (MR), Fire Resistant (FR)" },
-      { label: "Framing", value: "Galvanized lightweight steel studs and tracks (0.55mm+)" },
-    ],
-    image: "/images/services/gypsum.jpg",
-    metaTitle: "Gypsum Board & False Ceiling Contractor Riyadh | Emirates Front",
-    metaDescription: "Quality gypsum board partitions, false ceilings, and acoustic drywall installation in Riyadh.",
-  },
-  {
-    slug: "painting-coatings",
-    title: "Architectural Painting & Coatings",
-    titleAr: "أعمال الدهانات والتشطيبات الخارجية والداخلية",
-    category: "finishing",
-    categoryName: "Finishing & Fit-Out",
-    icon: "FaPaintRoller",
-    excerpt: "Interior emulsion, decorative stuccos, exterior acrylic textures, and epoxy protective coatings.",
-    // DRAFT — confirm with client
-    description: "Interior and exterior surface coating solutions delivering durable, flawless aesthetics. From multi-coat washable interior paints to heavy textured exterior coatings and chemical-resistant epoxy floors for commercial workshops and car parks.",
-    bullets: [
-      "Interior surface preparation, putty application, and topcoats",
-      "Exterior weather-shield acrylic texture and profile painting",
-      "Epoxy floor coatings and polyurethane sealers",
-      "Decorative finishes: Stucco, velvet, and metallic textures",
-      "Anti-fungal and antibacterial coatings for sensitive facilities",
-    ],
-    specifications: [
-      { label: "Brands", value: "Jotun, Jazeera, National Paints or client-specified" },
-      { label: "Surface Prep", value: "Mechanical sanding, primer, 2x putty, 2-3 topcoats" },
-    ],
-    image: "/images/services/painting.jpg",
-    metaTitle: "Painting & Coating Contractors Riyadh | Emirates Front",
-    metaDescription: "Professional interior painting, exterior texture coatings, and industrial epoxy floors in Riyadh.",
-  },
-  {
-    slug: "marble-tiles-flooring",
-    title: "Marble, Granite & Ceramic Tiling",
-    titleAr: "أعمال الرخام والجرانيت والسيراميك",
-    category: "finishing",
-    categoryName: "Finishing & Fit-Out",
-    icon: "FaTh",
-    excerpt: "Natural marble laying, large-format porcelain slabs, exterior interlock pavers, and granite staircases.",
-    // DRAFT — confirm with client
-    description: "Precision stone and tile masonry for lobbies, corridors, executive suites, and external hardscaping. We execute bookmatched marble flooring, large format porcelain slabs (up to 320x160cm), anti-slip ceramic tiles, and heavy interlock pavers.",
-    bullets: [
-      "Natural marble and granite dry/wet installation and polishing",
-      "Large-format porcelain and ceramic wall and floor tiling",
-      "Stair treads, risers, and skirtings with chamfered edges",
-      "High-adhesion modified thinset mortars and epoxy grouting",
-      "Exterior interlock, curbstone, and parking pavement installation",
-    ],
-    specifications: [
-      { label: "Materials", value: "Italian/Omani Marble, Large Porcelain, Exterior Interlock" },
-      { label: "Grouting", value: "Stain-resistant Epoxy / Polymer-modified Grout" },
-    ],
-    image: "/images/services/marble-tiling.jpg",
-    metaTitle: "Marble & Tile Installation Riyadh | Emirates Front Contracting",
-    metaDescription: "Commercial marble flooring, porcelain tile laying, and external interlock paving in Riyadh.",
-  },
-  {
-    slug: "interior-fitout",
-    title: "Commercial & Office Fit-Out",
-    titleAr: "التشطيب الداخلي والديكور التجاري",
-    category: "finishing",
-    categoryName: "Finishing & Fit-Out",
-    icon: "FaDraftingCompass",
-    excerpt: "Turnkey fit-out solutions transforming core-and-shell spaces into high-functioning corporate and retail environments.",
-    // DRAFT — confirm with client
-    description: "End-to-end interior fit-out execution combining partitions, glass doors, custom joinery, flooring, MEP tie-ins, and final finishes. We execute corporate offices, retail stores, food & beverage outlets, and clinic fit-outs.",
-    bullets: [
-      "Complete core & shell to turnkey fit-out execution",
-      "Frameless glass office partitions with acoustic seals",
-      "Coordination of electrical floor boxes, access points, and data",
-      "Integrated architectural lighting and custom joinery fitment",
-      "Handover with snag-free punch list and authority approvals",
-    ],
-    specifications: [
-      { label: "Scope", value: "Turnkey Design-to-Build Execution" },
-      { label: "Project Types", value: "Offices, Retail, F&B, Clinics, Showrooms" },
-    ],
-    image: "/images/services/interior-fitout.jpg",
-    metaTitle: "Turnkey Office & Commercial Fit-Out Riyadh | Emirates Front",
-    metaDescription: "Corporate office fit-out, retail shopfitting, and commercial interior contracting services in Riyadh.",
-  },
-
-  // ==========================================
-  // Category 5: Earthworks & Site Logistics
-  // ==========================================
-  {
-    slug: "excavation-demolition",
-    title: "Bulk Excavation & Demolition",
-    titleAr: "أعمال الحفر والردم والهدم",
-    category: "earthworks",
-    categoryName: "Earthworks & Site Logistics",
-    icon: "FaTractor",
-    excerpt: "Deep basement excavation, rock breaking, controlled demolition, and authorized debris disposal.",
-    // DRAFT — confirm with client
-    description: "Heavy earthmoving and structural demolition operations across Riyadh's diverse terrain. Equipped with hydraulic excavators, rock breakers, and dump trucks, we handle rock excavation, foundation pits, and selective building demolition.",
-    bullets: [
-      "Bulk earth excavation for multi-level basements and foundations",
-      "Hydraulic rock breaking and hard limestone excavation",
-      "Controlled structural demolition with safety perimeter fencing",
-      "Muncipality-licensed transport and disposal of construction debris",
-      "Shoring support coordination and slope stabilization",
-    ],
-    specifications: [
-      { label: "Machinery", value: "20T-40T Excavators, Rock Hammers, 24m3 Tipper Trucks" },
-      { label: "Compliance", value: "Municipality dumping permits & safety standards" },
-    ],
-    image: "/images/services/excavation.jpg",
-    metaTitle: "Excavation & Demolition Contractors Riyadh | Emirates Front",
-    metaDescription: "Basement excavation, rock breaking, and controlled demolition services in Riyadh by Emirates Front.",
-  },
-  {
-    slug: "grading-backfilling",
-    title: "Grading & Soil Compaction",
-    titleAr: "التسوية والدك وضبط المناسيب",
-    category: "earthworks",
-    categoryName: "Earthworks & Site Logistics",
-    icon: "FaMountain",
-    excerpt: "Engineered backfilling, laser-guided level grading, sub-base compaction, and proctor density testing.",
-    // DRAFT — confirm with client
-    description: "Sub-base preparation and compaction services for building pads, parking lots, and access roads. We lay approved fill material in compacted layers with verified field density testing to guarantee unyielding structural support.",
-    bullets: [
-      "Layer-by-layer backfilling with clean granular A-1-a/A-1-b fill",
-      "Heavy vibratory roller compaction and moisture conditioning",
-      "Laser-guided motor grader land leveling and slope formation",
-      "Plate load and nuclear gauge compaction testing (95%+ MDD)",
-      "Preparation of road base and asphalt foundation subgrades",
-    ],
-    specifications: [
-      { label: "Testing", value: "Standard/Modified Proctor (ASTM D1557) > 95%" },
-      { label: "Layers", value: "Lift thicknesses not exceeding 25-30cm per layer" },
-    ],
-    image: "/images/services/grading.jpg",
-    metaTitle: "Grading & Soil Compaction Riyadh | Emirates Front Contracting",
-    metaDescription: "Land grading, engineered backfilling, and soil compaction testing services in Riyadh.",
-  },
-  {
-    slug: "site-preparation",
-    title: "Site Preparation & Enablement",
-    titleAr: "تجهيز الموقع والخدمات اللوجستية",
-    category: "earthworks",
-    categoryName: "Earthworks & Site Logistics",
-    icon: "FaTruck",
-    excerpt: "Boundary hoardings, site clearance, temporary access roads, and early-stage utility connections.",
-    // DRAFT — confirm with client
-    description: "Enabling works and site logistics to establish a safe, organized, and compliant construction site. We clear debris, erect corrugated perimeter hoarding, build temporary access tracks, and establish on-site engineer offices.",
-    bullets: [
-      "Site clearing, grubbing, and leveling of natural ground",
-      "Corrugated GI perimeter hoarding and access gate erection",
-      "Stabilized temporary haul roads for heavy machinery access",
-      "Site office porta-cabins, security guardhouses, and welfare facilities",
-      "Temporary power generator and water supply infrastructure",
-    ],
-    specifications: [
-      { label: "Deliverables", value: "Turnkey Site Enablement & Hoarding" },
-      { label: "Safety", value: "Compliant with Ministry of Municipal Affairs guidelines" },
-    ],
-    image: "/images/services/site-prep.jpg",
-    metaTitle: "Site Preparation & Hoarding Contractor Riyadh | Emirates Front",
-    metaDescription: "Site clearing, hoarding erection, and construction logistics enablement services in Riyadh.",
-  },
-
-  // ==========================================
-  // Category 6: Industrial & Maintenance
-  // ==========================================
-  {
-    slug: "industrial-construction",
-    title: "Industrial & Steel Structures",
-    titleAr: "المنشآت الصناعية والهياكل المعدنية",
-    category: "industrial",
-    categoryName: "Industrial & Maintenance",
-    icon: "FaIndustry",
-    excerpt: "Pre-Engineered Buildings (PEB), steel portal frames, industrial warehouse construction, and cladding.",
-    // DRAFT — confirm with client
-    description: "Construction of industrial warehouses, logistics hubs, workshops, and commercial sheds. We install primary anchor bolts, steel structural frames, crane gantries, insulated sandwich roof panels, and heavy-duty industrial concrete slab floors.",
-    bullets: [
-      "Anchor bolt casting and structural steel portal frame erection",
-      "Pre-Engineered Building (PEB) assembly and bracing",
-      "Insulated sandwich panel roof and wall cladding (PIR/PU core)",
-      "High-load laser-screeded industrial concrete floor slabs with hardeners",
-      "Overhead crane beam installation and industrial roll-up doors",
-    ],
-    specifications: [
-      { label: "Applications", value: "Warehouses, Logistics Hubs, Factories, Workshops" },
-      { label: "Steel Grades", value: "ASTM A36 / S275 / S355 Structural Steel" },
-    ],
-    image: "/images/services/industrial-steel.jpg",
-    metaTitle: "Industrial Warehouse & Steel Structure Contractors Riyadh",
-    metaDescription: "PEB warehouse construction, structural steel erection, and industrial building contracting in Riyadh.",
-  },
-  {
-    slug: "facility-maintenance-operations",
-    title: "Facility Maintenance & Operations",
-    titleAr: "أعمال الصيانة والتشغيل للمباني",
-    category: "industrial",
-    categoryName: "Industrial & Maintenance",
-    icon: "FaWrench",
-    excerpt: "Preventive and corrective civil, MEP, and facade maintenance contracts for corporate and commercial properties.",
-    // DRAFT — confirm with client
-    description: "Post-handover and operational support ensuring buildings maintain their aesthetic appeal and operational performance. We offer civil repairs, MEP upkeep, facade inspection, sealant replacement, and emergency restoration works.",
-    bullets: [
-      "Annual Maintenance Contracts (AMC) for civil and MEP assets",
-      "Routine facade sealant inspection, cleaning access, and reglazing",
-      "HVAC filter servicing, coil cleaning, and electrical panel thermography",
-      "Emergency plumbing repairs and roof waterproofing leak rectification",
-      "Planned preventative maintenance (PPM) logging and reporting",
-    ],
-    specifications: [
-      { label: "Contracts", value: "AMC, Call-out, Planned Preventative Maintenance" },
-      { label: "Response", value: "Priority commercial SLA response times" },
-    ],
-    image: "/images/services/maintenance.jpg",
-    metaTitle: "Building Maintenance & Civil Operations Riyadh | Emirates Front",
-    metaDescription: "Corporate facility maintenance, MEP upkeep, and facade restoration contracting in Riyadh.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
+    metaTitle: "General Contracting & Turnkey Civil Engineering Riyadh | Emirates Front",
+    metaDescription: "Turnkey general contracting and project management in Riyadh. Comprehensive civil, structural, MEP, and industrial contracting by Emirates Front.",
   },
 ];
 

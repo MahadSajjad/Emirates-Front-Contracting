@@ -254,51 +254,11 @@ export const ContactForm = ({ defaultService = "" }) => {
             className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded text-sm text-slate-900 transition-colors focus:bg-white focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400"
           >
             <option value="General Contracting Inquiry">General Contracting Inquiry (Full Scope)</option>
-            <optgroup label="Building Envelope & Façade">
-              {services
-                .filter((s) => s.category === "facade")
-                .map((s) => (
-                  <option key={s.slug} value={s.title}>
-                    {s.title}
-                  </option>
-                ))}
-            </optgroup>
-            <optgroup label="Civil & Structural">
-              {services
-                .filter((s) => s.category === "civil")
-                .map((s) => (
-                  <option key={s.slug} value={s.title}>
-                    {s.title}
-                  </option>
-                ))}
-            </optgroup>
-            <optgroup label="MEP Engineering">
-              {services
-                .filter((s) => s.category === "mep")
-                .map((s) => (
-                  <option key={s.slug} value={s.title}>
-                    {s.title}
-                  </option>
-                ))}
-            </optgroup>
-            <optgroup label="Finishing & Fit-Out">
-              {services
-                .filter((s) => s.category === "finishing")
-                .map((s) => (
-                  <option key={s.slug} value={s.title}>
-                    {s.title}
-                  </option>
-                ))}
-            </optgroup>
-            <optgroup label="Earthworks & Industrial">
-              {services
-                .filter((s) => s.category === "earthworks" || s.category === "industrial")
-                .map((s) => (
-                  <option key={s.slug} value={s.title}>
-                    {s.title}
-                  </option>
-                ))}
-            </optgroup>
+            {services.map((s) => (
+              <option key={s.slug} value={s.title}>
+                {s.title} {s.isMain ? "★ (Main Service)" : ""}
+              </option>
+            ))}
           </select>
         </div>
 
