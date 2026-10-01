@@ -67,7 +67,7 @@ export const AboutPage = () => {
                 عن شركة واجهة الامارات للمقاولات — السجل التجاري والتراخيص المعتمدة بالمملكة
               </p>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
-                Emirates Front Contracting is a Riyadh-based contractor delivering on-site fuel supply, heavy rental fleets, civil superstructures, and specialized building envelope engineering across the Kingdom.
+                Emirates Front Contracting is a contractor providing road construction, heavy rental fleets, civil superstructures, and specialized building envelope engineering across the Kingdom.
               </p>
             </Reveal>
           </div>
